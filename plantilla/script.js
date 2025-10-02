@@ -1,3 +1,4 @@
+
 // Función simple para manipular el DOM
 function mostrarAlerta() {
   alert("¡Hola desde JavaScript!");
