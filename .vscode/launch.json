@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Abrir HTML actual en Chrome",
+      "file": "${file}"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Chrome against localhost",
+      "url": "http://localhost/",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Depurar JS con Node",
+      "program": "${file}"
+    }
+  ]
+}

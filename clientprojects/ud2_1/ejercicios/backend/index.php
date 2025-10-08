@@ -2,7 +2,6 @@
 // Simple ejemplo en PHP
 $mensaje = "¡Hola desde PHP!";
 $fecha = date("d/m/Y H:i:s");
-// echo("eooooo");
 ?>
 <!DOCTYPE html>
 <html lang="es">
