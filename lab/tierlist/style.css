@@ -1,0 +1,59 @@
+.tier-row {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  min-height: 120px;       /* aumenta altura mínima */
+  display: flex;
+  flex-direction: column;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100px;       /* suficiente para drag & drop */
+  gap: 5px;
+  padding: 5px;
+  border: 1px dashed rgba(255,255,255,0.5);
+  border-radius: 5px;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  cursor: grab;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  flex-shrink: 0;          /* evita que se encoja */
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;     /* para que el drag se detecte en el wrapper */
+}
+
+.item:active {
+  transform: scale(1.05);
+}
+
+.remove-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: rgba(255,0,0,0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}

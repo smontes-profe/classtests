@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tier List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container py-4">
+    <h1 contenteditable="true" id="themeTitle">Movies</h1>
+    
+    <div id="tierList">
+      <div class="tier-row bg-danger text-white">
+        <div class="tier-label">Masterpiece</div>
+        <div class="items"></div>
+      </div>
+      <div class="tier-row bg-warning text-dark">
+        <div class="tier-label">Amazing</div>
+        <div class="items"></div>
+      </div>
+      <div class="tier-row bg-info text-white">
+        <div class="tier-label">Good</div>
+        <div class="items"></div>
+      </div>
+      <div class="tier-row bg-secondary text-white">
+        <div class="tier-label">Meh</div>
+        <div class="items"></div>
+      </div>
+      <div class="tier-row bg-dark text-white">
+        <div class="tier-label">Trash</div>
+        <div class="items"></div>
+      </div>
+    </div>
+
+    <h3 class="mt-4">Items disponibles</h3>
+    <div id="availableItems" class="d-flex flex-wrap gap-2 mb-3"></div>
+
+    <label class="btn btn-primary">
+      Añadir imagen
+      <input type="file" id="fileInput" accept="image/*" hidden>
+    </label>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
