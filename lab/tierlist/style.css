@@ -57,3 +57,14 @@
   justify-content: center;
   z-index: 10;
 }
+.tier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.tier-controls button {
+  margin-left: 2px;
+  padding: 0 5px;
+}
