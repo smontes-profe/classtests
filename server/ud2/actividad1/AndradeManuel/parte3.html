@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 3</title>
+      <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<form method="get" action="parte3.php">
+    <h2>Introduce tus datos</h2>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="apellido1">Primer Apellido:</label>
+    <input type="text" id="apellido1" name="apellido1" required>
+
+    <label for="apellido2">Segundo Apellido:</label>
+    <input type="text" id="apellido2" name="apellido2">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="anioNacimiento">Año de Nacimiento:</label>
+    <input type="number" id="anioNacimiento" name="anioNacimiento" min="1920" max="2025" required>
+
+    <label for="movil">Móvil:</label>
+    <input type="text" id="movil" name="movil" min="1000000" required>
+
+    <input type="submit" value="Enviar Datos">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel 2 - Condicionales</title>
+    <script src="nivel2.js"></script>
+</head>
+
+<body>
+    <h2>Poción peligrosa</h2>
+
+    <label for="nivelMagia">Nivel de magia:</label>
+    <input type="number" id="nivelMagia" />
+
+    <br><br>
+
+    <label for="capa">Elige tu capa:</label>
+    <select id="capa">
+        <option value="invisible">Invisible</option>
+        <option value="roja">Roja</option>
+        <option value="negra">Negra</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="evaluarAmenaza()">Evaluar amenaza</button>
+
+    <p id="resultado"></p>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!--
+3. parte3.html y part3.php:
+Es el mismo ejercicio anterior, pero separando la lógica. 
+En el html crearemos el formulario para introducir los datos,   
+los enviamos por GET y en el PHP los recogemos y generamos la tabla con los datos recibidos 
+(intentad aprovechad al máximo la parte de html y css del ejercicio anterior para ganar tiempo).  
+//2 PUNTOS.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parte3</title>
+</head>
+<body>
+  <div class="container">
+
+    <h2>Introduce tus datos</h2>
+
+    <form action="parte3.php" method="get">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+
+      <label for="apellido1">Primer apellido:</label>
+      <input type="text" id="apellido1" name="apellido1">
+
+      <label for="apellido2">Segundo apellido:</label>
+      <input type="text" id="apellido2" name="apellido2">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="anyo">Año de nacimiento:</label>
+      <input type="number" id="anyo" name="anyo">
+
+      <label for="movil">Móvil:</label>
+      <input type="text" id="movil" name="movil">
+
+      <button type="submit">Enviar</button>
+      
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario Datos</title>
+</head>
+<body>
+<h2>Formulario de Datos</h2>
+<form action="parte3.php" method="get">
+  <fieldset>
+    <legend>Datos Personales</legend>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" required><br><br>
+
+    <label for="apellido1">Primer Apellido:</label>
+    <input type="text" id="apellido1" name="apellido1" placeholder="Introduce tu primer apellido" required><br><br>
+
+    <label for="apellido2">Segundo Apellido:</label>
+    <input type="text" id="apellido2" name="apellido2" placeholder="Introduce tu segundo apellido" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required><br><br>
+
+    <label for="anioNacimiento">Año de Nacimiento:</label>
+    <input type="number" id="anioNacimiento" name="anioNacimiento" placeholder="2000" required><br><br>
+
+    <label for="movil">Móvil:</label>
+    <input type="text" id="movil" name="movil" placeholder="655123456" required><br><br>
+
+  </fieldset>
+
+  <button type="reset">Reset</button>
+  <button type="submit">Enviar</button>
+</form>
+</body>
+</html>

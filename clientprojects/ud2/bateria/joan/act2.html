@@ -1,0 +1,82 @@
+<!-- 
+ 
+Nivel 2 – Condicionales y operadores (3 puntos)
+
+Poción peligrosa:
+Un input (nivelMagia, entero) y un desplegable capa con valores invisible, roja, negra. Y un botón de "evaluar amenaza".
+Si nivelMagia > 70 mostrar un mensaje "¡Cuidado, magia poderosa!", si es menor "Magia inofensiva".
+Decisión múltiple:
+Dependiendo del valor seleccionado en capa (usando switch):
+"invisible" → "Puedes espiar sin ser visto"
+"roja" → "Todos te miran"
+"negra" → "Sospechoso"
+Entrega: El html con el script incluido.
+
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nivel 2 – Condicionales y operadores (3 puntos)</title>
+</head>
+<body>
+
+  <h1>Poción peligrosa</h1>
+
+  <label for="nivelMagia">Nivel de magia:</label>
+  <input type="number" id="nivelMagia">
+
+  <br><br>
+
+  <label for="capa">Capa:</label>
+  <select id="capa">
+    <option value="invisible">invisible</option>
+    <option value="roja">roja</option>
+    <option value="negra">negra</option>
+  </select>
+
+  <br><br>
+
+  <button onclick="evaluarAmenaza()">Evaluar amenaza</button>
+
+  <p id="resultado"></p>
+
+
+
+
+
+  <script>
+
+
+    function evaluarAmenaza() {
+      let nivelMagia = parseInt(document.getElementById("nivelMagia").value);
+      let capa = document.getElementById("capa").value;
+      let resultado = "";
+
+      if (nivelMagia > 70) {
+        resultado += "¡Cuidado, magia poderosa! ";
+      } else {
+        resultado += "Magia inofensiva. ";
+      }
+
+      switch (capa) {
+        case "invisible":
+          resultado += "Puedes espiar sin ser visto.";
+          break;
+        case "roja":
+          resultado += "Todos te miran.";
+          break;
+        case "negra":
+          resultado += "Sospechoso.";
+          break;
+      }
+
+      document.getElementById("resultado").textContent = resultado;
+    }
+  </script>
+
+
+
+
+</body>
+</html>

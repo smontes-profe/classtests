@@ -1,0 +1,30 @@
+let ingredienteGlobal = "agua"; // Variable global
+
+function prepararPocion() {
+  let ingredienteLocal = "dragón lágrima"; // Variable local a la función
+  console.log("Dentro de la función:", ingredienteGlobal); 
+  // Devuelve "agua" porque las variables globales son accesibles dentro de cualquier función.
+
+  console.log("Dentro de la función:", ingredienteLocal); 
+  // Devuelve "dragón lágrima" porque la variable se declaró dentro de la función y existe ahí.
+
+  if (true) {
+    let ingredienteBloque = "polvo de unicornio"; 
+    console.log("Dentro del bloque:", ingredienteBloque);
+    // Devuelve "polvo de unicornio" porque la variable fue declarada dentro de este bloque { } 
+    // y está siendo usada dentro del mismo.
+  }
+
+  // console.log(ingredienteBloque); 
+  // Daría error (ReferenceError), porque ingredienteBloque solo existe dentro del if 
+  // y fuera de él deja de estar disponible.
+}
+
+prepararPocion();
+
+console.log("Fuera de la función:", ingredienteGlobal); 
+// Devuelve "agua" porque es una variable global y está disponible en todo el programa.
+
+// console.log(ingredienteLocal); 
+// Daría error (ReferenceError), porque ingredienteLocal solo existe dentro de la función
+// prepararPocion y no puede usarse fuera de ella.

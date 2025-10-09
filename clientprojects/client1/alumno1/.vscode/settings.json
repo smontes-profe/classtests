@@ -1,0 +1,10 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "php": "html"
+  },
+  "liveServer.settings.port": 5500,
+  "files.autoSave": "afterDelay"
+}

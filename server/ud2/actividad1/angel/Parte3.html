@@ -1,0 +1,37 @@
+<!-- Este es el archivo Parte3.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Datos</title>
+</head>
+
+<body>
+    <h2>Formulario de Datos</h2>
+    <form action="Parte3.php" method="GET">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="primerApellido">Primer Apellido:</label><br>
+        <input type="text" id="primerApellido" name="primerApellido" required><br><br>
+
+        <label for="segundoApellido">Segundo Apellido:</label><br>
+        <input type="text" id="segundoApellido" name="segundoApellido" required><br><br>
+
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="nacimiento">Año de Nacimiento:</label><br>
+        <input type="number" id="nacimiento" name="nacimiento"min="1900" max="2025" required><br><br>
+
+        <label for="movil">Móvil:</label><br>
+        <input type="tel" id="movil" name="movil"pattern="[0-9]{9}" required><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

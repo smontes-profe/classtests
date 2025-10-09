@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de mis datos personales</title>
+</head>
+<body>
+
+<h2>Introduce tus datos personales</h2>
+
+<form action="parte3.php" method="get">
+    <label>Mi nombre:
+        <input type="text" name="nombre" required>
+    </label>
+
+    <label>Mi primer apellido:
+        <input type="text" name="apellido1" required>
+    </label>
+
+    <label>Mi segundo apellido:
+        <input type="text" name="apellido2" required>
+    </label>
+
+    <label>Mi email:
+        <input type="email" name="email" required>
+    </label>
+
+    <label>Mi año de nacimiento:
+        <input type="number" name="anioNacimiento" min="1900" max="2025" required>
+    </label>
+
+    <label>Mi telefono:
+        <input type="text" name="movil" required>
+    </label>
+
+    <input type="submit" value="Enviar datos">
+</form>
+
+</body>
+</html>

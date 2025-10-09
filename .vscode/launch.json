@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+    
+        
+
+        {
+            "name": "Listen for Xdebug",
+            "type": "php",
+            "request": "launch",
+            "port": 9003,
+            "pathMappings": {
+                "C:\\xampp\\htdocs\\php_actividades": "${workspaceFolder}"
+            }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Depurar JS con Node",
+            "program": "${file}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Abrir HTML actual en Chrome",
+            "file": "${file}"
+        }
+    ]
+}

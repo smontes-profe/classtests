@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 3</title>
+</head>
+<body>
+
+    <h1>Formulario</h1>
+
+    <form action="parte3.php" method="get">
+        <label>Nombre: </label><br>
+        <input type="text" name="nombre" required><br>
+
+        <label>Primer apellido: </label><br>
+        <input type="text" name="primerApellido" required><br>
+
+        <label>Segundo apellido: </label><br>
+        <input type="text" name="segundoApellido" required><br>
+
+        <label>Email: </label><br>
+        <input type="email" name="email" required><br>
+
+        <label>Año de nacimiento: </label><br>
+        <input type="number" name="anioNacimiento" min="1900" max="2025" required><br>
+
+        <label>Móvil: </label><br>
+        <input type="number" name="movil" required><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+    
+</body>
+</html>
