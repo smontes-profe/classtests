@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sistema Solar — vistas múltiples corregidas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Hacer viewport horizontalmente desplazable en opción 3 */
+    .viewport.scrollable { overflow-x: auto; white-space: nowrap; }
+    .planets.scrollable .planet { display: inline-block; position: relative; vertical-align: middle; transform: none; }
+    .sun.scrollable { display: inline-block; margin-right: 0; vertical-align: middle; transform: none; }
+  </style>
+</head>
+<body>
+  <div class="space">
+    <h2>Sistema Solar</h2>
+    <p class="hint">Pasa el ratón o toca un planeta para ver su nombre.</p>
+
+    <div style="margin-bottom:12px;">
+      <button data-view="scaleDistance" style="padding:6px 12px; margin-right:6px; cursor:pointer;">Distancias a escala (visual)</button>
+      <button data-view="scaleSize" style="padding:6px 12px; margin-right:6px; cursor:pointer;">Tamaños a escala (equidistantes)</button>
+      <button data-view="scaleDistanceReal" style="padding:6px 12px; cursor:pointer;">Distancias reales + tamaños visibles</button>
+    </div>
+
+    <div class="viewport" id="viewport" role="img" aria-label="Representación del sistema solar">
+      <div class="orbit-line"></div>
+      <div class="sun" aria-hidden="true">☉</div>
+
+      <div class="planets" id="planets">
+        <a href="#" class="planet" data-planet="mercury" data-name="Mercurio" data-au="0.39" data-diameter="10"></a>
+        <a href="#" class="planet" data-planet="venus" data-name="Venus" data-au="0.72" data-diameter="16"></a>
+        <a href="#" class="planet" data-planet="earth" data-name="Tierra" data-au="1" data-diameter="16"></a>
+        <a href="#" class="planet" data-planet="mars" data-name="Marte" data-au="1.52" data-diameter="12"></a>
+        <a href="#" class="planet" data-planet="jupiter" data-name="Júpiter" data-au="5.20" data-diameter="38"></a>
+        <a href="#" class="planet" data-planet="saturn" data-name="Saturno" data-au="9.58" data-diameter="34"></a>
+        <a href="#" class="planet" data-planet="uranus" data-name="Urano" data-au="19.20" data-diameter="22"></a>
+        <a href="#" class="planet" data-planet="neptune" data-name="Neptuno" data-au="30.05" data-diameter="22"></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const viewport = document.getElementById('viewport');
+      const planets = Array.from(document.querySelectorAll('.planet'));
+      const sun = document.querySelector('.sun');
+      const buttons = document.querySelectorAll('button[data-view]');
+      let currentView = 'scaleDistance';
+
+      function positionPlanets(){
+        const vpRect = viewport.getBoundingClientRect();
+        const sunRect = sun.getBoundingClientRect();
+        let sunCenterX = sunRect.left + sunRect.width/2 - vpRect.left;
+        const rightPadding = 18;
+
+        // Reset clases scrollable
+        viewport.classList.remove('scrollable');
+        sun.classList.remove('scrollable');
+        document.getElementById('planets').classList.remove('scrollable');
+
+        if(currentView === 'scaleDistance'){ // Distancias a escala visual
+          sun.style.width = 'var(--sun-size)';
+          sun.style.height = 'var(--sun-size)';
+
+          const auValues = planets.map(p=> parseFloat(p.getAttribute('data-au')));
+          const maxAU = Math.max(...auValues);
+          const available = vpRect.width - sunCenterX - rightPadding;
+          const scale = available / maxAU;
+
+          planets.forEach(p=>{
+            const au = parseFloat(p.getAttribute('data-au'));
+            p.style.left = (sunCenterX + au * scale) + 'px';
+            const diameter = parseFloat(p.getAttribute('data-diameter'));
+            p.style.width = diameter + 'px';
+            p.style.height = diameter + 'px';
+          });
+        }
+        else if(currentView === 'scaleSize'){ // Tamaños a escala, equidistantes
+          const spacing = (vpRect.width - sunCenterX - rightPadding) / planets.length;
+          planets.forEach((p,i)=>{
+            const x = sunCenterX + spacing * (i+1);
+            const diameter = parseFloat(p.getAttribute('data-diameter'));
+            p.style.left = x + 'px';
+            p.style.width = diameter + 'px';
+            p.style.height = diameter + 'px';
+          });
+          sun.style.width = '10px'; sun.style.height = '10px';
+        }
+        else if(currentView === 'scaleDistanceReal'){ // Distancias reales, tamaños visibles
+          viewport.classList.add('scrollable');
+          sun.classList.add('scrollable');
+          document.getElementById('planets').classList.add('scrollable');
+
+          const auValues = planets.map(p=> parseFloat(p.getAttribute('data-au')));
+          const scale = 40; // Factor de escala mayor para que se note la distancia real
+
+          sun.style.width = 'var(--sun-size)';
+          sun.style.height = 'var(--sun-size)';
+          sun.style.marginLeft = '0px';
+
+          planets.forEach(p=>{
+            const au = parseFloat(p.getAttribute('data-au'));
+            const x = sunCenterX + au * scale;
+            p.style.left = x + 'px';
+            const diameter = parseFloat(p.getAttribute('data-diameter'));
+            p.style.width = diameter + 'px';
+            p.style.height = diameter + 'px';
+          });
+        }
+      }
+
+      buttons.forEach(btn=> btn.addEventListener('click', ()=>{
+        currentView = btn.getAttribute('data-view');
+        positionPlanets();
+      }));
+
+      window.addEventListener('resize', positionPlanets);
+      planets.forEach(p=> p.addEventListener('click', e=> e.preventDefault()));
+
+      positionPlanets();
+    })();
+  </script>
+</body>
+</html>
