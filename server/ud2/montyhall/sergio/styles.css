@@ -1,0 +1,101 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #f7f8fc, #e2e8f0);
+  color: #222;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #2c5282;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #2b6cb0;
+  margin-top: 10px;
+}
+
+h3 {
+  color: #2d3748;
+}
+
+form {
+  display: inline-block;
+  margin: 10px;
+}
+
+input[type="submit"] {
+  background-color: #3182ce;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #2b6cb0;
+  transform: scale(1.05);
+}
+
+.puertas-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.puerta {
+  text-align: center;
+}
+
+.puerta img {
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.puerta img:hover {
+  transform: rotateY(10deg) scale(1.05);
+}
+
+.btn-puerta {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+hr {
+  border: 1px solid #cbd5e0;
+  margin: 30px auto;
+  width: 60%;
+}
+
+.stats {
+  margin-top: 20px;
+  background-color: #edf2f7;
+  padding: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stats strong {
+  color: #2b6cb0;
+}
+
+.resultado-ganado {
+  color: green;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.resultado-perdido {
+  color: red;
+  font-weight: bold;
+  font-size: 1.2rem;
+}

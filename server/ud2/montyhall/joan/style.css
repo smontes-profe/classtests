@@ -1,0 +1,164 @@
+/* === CAOS VISUAL 9000 === */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&family=Paprika&display=swap');
+
+body {
+  background: radial-gradient(circle, #ff00ff, #00ffff, #ffff00);
+  background-size: 400% 400%;
+  animation: fondoMov 10s infinite linear;
+  font-family: 'Comic Sans MS', cursive;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+@keyframes fondoMov {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 10px #000, 0 0 20px #ff0, 0 0 40px #f0f;
+  animation: parpadeo 1s infinite alternate;
+}
+
+@keyframes parpadeo {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+h2, h3 {
+  text-shadow: 0 0 10px #000, 0 0 20px #0ff;
+}
+
+.doors {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.door, .door-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px groove #fff;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #fff;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+  background-size: 200% 200%;
+  animation: colorShift 3s infinite alternate;
+  transition: transform 0.2s;
+}
+
+@keyframes colorShift {
+  0% { background-position: left; }
+  100% { background-position: right; }
+}
+
+.door-btn:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.door img, .door-btn img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+
+.selected {
+  border-color: gold;
+  box-shadow: 0 0 30px gold;
+}
+
+.actions {
+  margin-top: 40px;
+}
+
+.action-btn {
+  font-size: 1.3em;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #00f, #f0f, #ff0);
+  background-size: 400% 400%;
+  color: white;
+  cursor: pointer;
+  animation: colorShift 2s infinite alternate;
+  text-shadow: 0 0 10px #000;
+  margin: 10px;
+  box-shadow: 0 0 20px #fff;
+}
+
+.action-btn:hover {
+  transform: scale(1.1);
+}
+
+.play-again {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 1.5em;
+  background: lime;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 20px lime;
+  animation: parpadeo 0.7s infinite alternate;
+}
+
+.win {
+  color: lime;
+  font-size: 2em;
+  text-shadow: 0 0 20px #0f0;
+}
+
+.lose {
+  color: red;
+  font-size: 2em;
+  text-shadow: 0 0 20px #f00;
+}
+
+/* === LUCES LOCAS === */
+.luz {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff, transparent);
+  opacity: 0.8;
+  pointer-events: none;
+  animation: flotar 10s infinite linear;
+}
+
+        body { margin-bottom: 120px; } /* margen para no tapar contenido */
+        .stats-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #222;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .stats-bar p { margin: 0; }
+        .win { color: green; }
+        .lose { color: red; }
+    
+
+@keyframes flotar {
+  0% { transform: translateY(0) scale(1); opacity: 0.8; }
+  50% { transform: translateY(-200px) scale(1.5); opacity: 0.3; }
+  100% { transform: translateY(0) scale(1); opacity: 0.8; }
+}
+    
