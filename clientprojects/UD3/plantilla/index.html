@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Proyecto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>¡Hola Mundo con HTML, CSS, JS y PHP!</h1>
+  </header>
+
+  <h3 id="saludo"></h3>
+<input id="nombre" placeholder="Tu nombre">
+<button id="guardar">Guardar</button>
+
+<script>
+  // Recuperar nombre guardado
+  let nombreGuardado = localStorage.getItem("nombre");
+  if (nombreGuardado) {
+    document.getElementById("saludo").textContent = `¡Hola ${nombreGuardado}!`;
+  }
+
+  // Guardar nuevo nombre
+  document.getElementById("guardar").addEventListener("click", () => {
+    let nombre = document.getElementById("nombre").value;
+    localStorage.setItem("nombre", nombre);
+    document.getElementById("saludo").textContent = `¡Hola ${nombre}!`;
+  });
+</script>
+</body>
+</html>

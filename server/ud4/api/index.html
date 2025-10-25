@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Completo de Empleados</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; }
+        h1, h2 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        input[type="text"], input[type="number"] { width: 95%; padding: 5px; }
+        button { cursor: pointer; padding: 5px 10px; margin-right: 5px; }
+        .acciones { width: 150px; text-align: center; }
+        #seccion-crear { background-color: #e9f5ff; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        #mensaje { margin-top: 15px; padding: 10px; border-radius: 5px; text-align: center; font-weight: bold; visibility: hidden; }
+        .exito { background-color: #d4edda; color: #155724; visibility: visible; }
+        .error { background-color: #f8d7da; color: #721c24; visibility: visible; }
+    </style>
+</head>
+<body>
+
+    <h1>Gestión de Empleados (CRUD)</h1>
+
+    <div id="seccion-crear">
+        <h2>Añadir Nuevo Empleado</h2>
+        <form id="form-crear">
+            <input type="text" id="nombre-crear" placeholder="Nombre" required>
+            <input type="text" id="puesto-crear" placeholder="Puesto" required>
+            <input type="number" id="salario-crear" placeholder="Salario" required>
+            <button type="submit">Crear Empleado</button>
+        </form>
+    </div>
+
+    <div id="mensaje"></div>
+
+    <button id="btn-cargar">Actualizar Lista de Empleados</button>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Puesto</th>
+                <th>Salario (€)</th>
+                <th class="acciones">Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-empleados-body">
+            </tbody>
+    </table>
+
+
+    <script>
+        // --- CONFIGURACIÓN Y REFERENCIAS ---
+        const API_URL = 'api.php';
+        const tablaBody = document.getElementById('tabla-empleados-body');
+        const formCrear = document.getElementById('form-crear');
+        const btnCargar = document.getElementById('btn-cargar');
+        const divMensaje = document.getElementById('mensaje');
+
+        // --- FUNCIÓN PARA MOSTRAR MENSAJES ---
+        function mostrarMensaje(texto, tipo = 'exito') {
+            divMensaje.textContent = texto;
+            divMensaje.className = tipo; // Asigna 'exito' o 'error'
+            setTimeout(() => { divMensaje.className = ''; }, 3000); // Oculta el mensaje después de 3 segundos
+        }
+
+        // --- (R)EAD: FUNCIÓN PARA CARGAR Y PINTAR LA TABLA ---
+        async function cargarEmpleados() {
+            try {
+                const response = await fetch(`${API_URL}?recurso=empleados`);
+                if (!response.ok) throw new Error('Error al obtener los datos.');
+                
+                const empleados = await response.json();
+                tablaBody.innerHTML = ''; // Limpiamos la tabla antes de pintarla
+
+                if (empleados.length === 0) {
+                    tablaBody.innerHTML = '<tr><td colspan="4" style="text-align:center;">No hay empleados registrados.</td></tr>';
+                    return;
+                }
+
+                empleados.forEach(empleado => {
+                    const tr = document.createElement('tr');
+                    // Guardamos el ID en el dataset de la fila para acceder a él fácilmente
+                    tr.dataset.id = empleado.id; 
+                    
+                    tr.innerHTML = `
+                        <td><input type="text" class="nombre-input" value="${empleado.nombre}"></td>
+                        <td><input type="text" class="puesto-input" value="${empleado.puesto}"></td>
+                        <td><input type="number" class="salario-input" value="${empleado.salario}"></td>
+                        <td class="acciones">
+                            <button class="btn-editar">💾 Guardar</button>
+                            <button class="btn-eliminar">🗑️ Eliminar</button>
+                        </td>
+                    `;
+                    tablaBody.appendChild(tr);
+                });
+            } catch (error) {
+                mostrarMensaje(error.message, 'error');
+            }
+        }
+
+        // --- (C)REATE: MANEJO DEL FORMULARIO DE CREACIÓN ---
+        formCrear.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const nuevoEmpleado = {
+                nombre: document.getElementById('nombre-crear').value,
+                puesto: document.getElementById('puesto-crear').value,
+                salario: parseFloat(document.getElementById('salario-crear').value)
+            };
+
+            try {
+                const response = await fetch(`${API_URL}?recurso=empleados`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(nuevoEmpleado)
+                });
+                if (!response.ok) throw new Error('Error al crear el empleado.');
+                
+                const data = await response.json();
+                mostrarMensaje(`Empleado creado con ID: ${data.id}`);
+                formCrear.reset();
+                cargarEmpleados(); // Recargamos la tabla para ver el nuevo empleado
+            } catch (error) {
+                mostrarMensaje(error.message, 'error');
+            }
+        });
+
+        // --- (U)PDATE Y (D)ELETE: MANEJO DE CLICS EN LA TABLA (Event Delegation) ---
+        tablaBody.addEventListener('click', async (e) => {
+            const tr = e.target.closest('tr'); // Encuentra la fila (tr) más cercana al elemento clickeado
+            if (!tr) return; // Si no se hizo clic dentro de una fila, no hacer nada
+
+            const id = tr.dataset.id;
+
+            // Si se pulsó el botón de GUARDAR (EDITAR)
+            if (e.target.classList.contains('btn-editar')) {
+                const empleadoActualizado = {
+                    nombre: tr.querySelector('.nombre-input').value,
+                    puesto: tr.querySelector('.puesto-input').value,
+                    salario: parseFloat(tr.querySelector('.salario-input').value)
+                };
+
+                try {
+                    // La URL debe incluir el ID para que la API sepa qué registro actualizar
+                    const response = await fetch(`${API_URL}?recurso=empleados&id=${id}`, {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(empleadoActualizado)
+                    });
+                    if (!response.ok) throw new Error('Error al actualizar el empleado.');
+
+                    mostrarMensaje(`Empleado ID ${id} actualizado correctamente.`);
+                    // Opcional: podrías no recargar toda la tabla para una mejor UX, pero recargarla es más simple y seguro.
+                    cargarEmpleados();
+                } catch (error) {
+                    mostrarMensaje(error.message, 'error');
+                }
+            }
+
+            // Si se pulsó el botón de ELIMINAR
+            if (e.target.classList.contains('btn-eliminar')) {
+                if (confirm(`¿Estás seguro de que quieres eliminar al empleado con ID ${id}?`)) {
+                    try {
+                        const response = await fetch(`${API_URL}?recurso=empleados&id=${id}`, {
+                            method: 'DELETE'
+                        });
+                        if (!response.ok) throw new Error('Error al eliminar el empleado.');
+
+                        mostrarMensaje(`Empleado ID ${id} eliminado correctamente.`);
+                        cargarEmpleados(); // Recargamos la tabla para que desaparezca la fila
+                    } catch (error) {
+                        mostrarMensaje(error.message, 'error');
+                    }
+                }
+            }
+        });
+
+        // --- EVENTOS INICIALES ---
+        btnCargar.addEventListener('click', cargarEmpleados);
+        // Cargar los empleados cuando la página se carga por primera vez
+        document.addEventListener('DOMContentLoaded', cargarEmpleados);
+    </script>
+</body>
+</html>
