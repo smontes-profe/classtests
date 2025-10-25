@@ -1,0 +1,63 @@
+/* estilos.css */
+
+/* Fondo y fuente general */
+body {
+    background-color: #ffccff; /* rosa candy */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    color: #660066;
+}
+
+/* Título principal */
+h1 {
+    font-size: 3em;
+    color: #ff3399;
+    text-shadow: 2px 2px #ffff66;
+}
+
+/* Botones estilo candy */
+button {
+    background-color: #ff66cc;
+    color: white;
+    border: 3px dashed #ff0066;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 5px 5px 0 #ff99cc;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: rotate(-5deg) scale(1.1);
+    background-color: #ff99cc;
+}
+
+/* Tabla estilo “cutre” */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffff99;
+    border: 4px double #ff3399;
+    font-size: 1.2em;
+}
+
+th, td {
+    border: 2px dotted #ff3399;
+    padding: 10px 20px;
+}
+
+/* Mensajes finales */
+p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff0066;
+    text-shadow: 1px 1px #ffff66;
+}
+
+/* Pequeño toque animado para estadísticas */
+tbody tr:hover {
+    background-color: #ffcc66;
+    transform: scale(1.05);
+}

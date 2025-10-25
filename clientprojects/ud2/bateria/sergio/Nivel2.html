@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Nivel2.js" ></script>
+</head>
+<body>
+
+  <h1>Poción peligrosa</h1>
+  
+  <label for="nivelMagia">Nivel de magia:</label>
+  <input type="number" id="nivelMagia" placeholder="Introduce un número">
+
+  <br><br>
+
+  <label for="capa">Selecciona tu capa:</label>
+  <select id="capa">
+    <option value="invisible">Invisible</option>
+    <option value="roja">Roja</option>
+    <option value="negra">Negra</option>
+  </select>
+
+  <br><br>
+
+  <button onclick="evaluarAmenaza()">Evaluar amenaza</button>
+
+  <p id="resultado"></p>
+</body>
+</html>

@@ -1,0 +1,37 @@
+/*BODY*/
+body {
+  font-size: 18px;
+  color: white;
+  background-color: lightgrey;
+  font-family: 'Oxygen', sans-serif;
+}
+
+/*HEADER*/
+
+#page-heading{
+	background-color: steelblue;	
+	height: 60px;
+	font-size: 2em;
+	padding-top: 12px;
+	margin-block: 0;
+}
+
+#main-content{
+
+}
+
+#menu-tile, #menu-tile-DAW2, #menu-tile-DAW1, #menu-tile-DAM2{
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+  background-color: skyblue;
+}
+#menu-tiles-title{
+  font-size: 1.5em;
+  color: steelblue;
+}
