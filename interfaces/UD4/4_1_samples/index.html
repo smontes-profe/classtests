@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<button class="boton-animado">
+  Pasa el ratón
+</button>
+<br><p></p>
+<button id="miBoton">
+  Mostrar/Ocultar
+</button>
+<p id="miTexto">
+  Hola Mundo
+</p>
+</body>
+<script>
+    const boton =  document.querySelector('#miBoton');
+    const texto =  document.querySelector('#miTexto');
+    boton.addEventListener('click', () => {
+        texto.classList.toggle('oculto');
+    });
+</script>
+</html>

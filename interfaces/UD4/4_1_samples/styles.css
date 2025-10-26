@@ -1,0 +1,18 @@
+.boton-animado {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.boton-animado:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+}
+
+.oculto {
+  display: none;
+}
