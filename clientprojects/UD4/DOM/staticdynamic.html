@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div id="garaje">
+        <p class="coche">Coche 1</p>
+    </div>
+    <button id="btn-anadir">Añadir Coche</button>
+</body>
+<script>
+    // 1. Seleccionamos las listas ANTES de hacer nada
+    const listaFoto = document.querySelectorAll('.coche');
+    const listaCamara = document.getElementsByClassName('coche');
+
+    console.log('--- INICIO ---');
+    console.log('Foto (querySelectorAll):', listaFoto.length);       // Imprime 1
+    console.log('Cámara (getElementsBy...):', listaCamara.length); // Imprime 1
+
+    // 2. Ahora, añadimos un coche nuevo al DOM
+    const boton = document.querySelector('#btn-anadir');
+    const garaje = document.querySelector('#garaje');
+
+    boton.addEventListener('click', () => {
+        // Creamos y añadimos un coche nuevo
+        const cocheNuevo = document.createElement('p');
+        cocheNuevo.classList.add('coche');
+        cocheNuevo.textContent = 'Coche Nuevo';
+        garaje.appendChild(cocheNuevo);
+
+        console.log('--- DESPUÉS DE AÑADIR (al hacer clic) ---');
+        
+            // 3. Comprobamos las listas OTRA VEZ (sin volver a seleccionarlas)
+            console.log('Foto (querySelectorAll):', listaFoto.length);       // Sigue imprimiendo 1
+            console.log('Cámara (getElementsBy...):', listaCamara.length); // ¡Ahora imprime 2!
+    });
+</script>
+</html>
