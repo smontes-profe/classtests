@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificar Atributos</title>
+</head>
+<body>
+    <img id="miImagen" src="imagen-original.jpg" alt="Imagen Original">
+    <a id="miEnlace" href="https://ejemplo.com">Visitar Ejemplo</a>
+
+    <script>
+        // Seleccionar los elementos
+        const imagen = document.querySelector('#miImagen');
+        const enlace = document.querySelector('#miEnlace');
+
+        // Leer atributos (HTML)
+        console.log('SRC original:', imagen.getAttribute('src')); // imagen-original.jpg
+        console.log('HREF original:', enlace.getAttribute('href')); // https://ejemplo.com
+
+        // Modificar atributos (HTML)
+        imagen.setAttribute('src', 'nueva-imagen.png');
+        enlace.setAttribute('href', 'https://midominio.com/nuevo-destino');
+
+        // Leer y modificar propiedades (DOM)
+        console.log('SRC actualizado (propiedad):', imagen.src); // URL completa a nueva-imagen.png
+        console.log('HREF actualizado (propiedad):', enlace.href); // URL completa a nuevo-destino
+        imagen.alt = "Nueva Imagen Descripcion"; // Modifica la propiedad 'alt'
+
+    </script>
+</body>
+</html>

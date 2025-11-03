@@ -1,0 +1,30 @@
+/* --- style.css --- */
+
+/* Clase para el contenedor del producto */
+.producto {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 16px;
+  margin: 10px;
+  width: 250px;
+  border-radius: 5px;
+}
+
+/* Clase para el título (h2) */
+.producto-titulo {
+  color: navy;
+  margin-top: 0;
+}
+
+/* Clase para el precio (p) */
+.producto-precio {
+  color: green;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Clase para el estado "agotado" (p) */
+.agotado {
+  color: red;
+  font-style: italic;
+}
