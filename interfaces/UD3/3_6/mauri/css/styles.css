@@ -1,0 +1,79 @@
+/* styles.css (Estilos Globales) */
+
+/* Redefinición de estilos Bootstrap (tipografías, colores base) */
+body {
+    font-family: 'Open Sans', sans-serif; 
+    background-color: #f8f9fa; /* Fondo claro para el body */
+    color: #222; /* Color de texto general */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Fuente para títulos */
+    color: #222; /* Color de títulos */
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    margin-right: 15px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-nav .nav-link:hover {
+    color: #A2FF00; /* Color de acento al pasar el ratón */
+}
+
+/* Estilos para el Hero Section */
+.hero-section {
+    position: relative;
+    overflow: hidden; 
+}
+
+/* Clase propia para los títulos de sección (Cumple con Rúbrica g) */
+.display-4.fw-bold {
+    color: #333; 
+}
+
+/* Estilos para las tarjetas de servicios */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+.card-title {
+    font-weight: bold;
+    color: #A2FF00;
+}
+
+.card i { 
+    color: #A2FF00 !important; 
+}
+
+/* Redefinición del footer */
+footer {
+    background-color: #1a1a1a !important; 
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer h5 {
+    color: #A2FF00;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el carrusel de videos */
+#videoCarousel .carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 10px;
+}

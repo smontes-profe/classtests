@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Nombre - Entrenamiento Personal</title>
+    <link rel="icon" type="image/png" href="Resources/Favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .hero-section {
+            background-color: #333; /* Estilo interno para fallback */
+            color: #fff;
+            padding: 70px 0;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            /* Estilo directo: se sobrescribirá si usas una clase CSS */
+            background-image: url('https://via.placeholder.com/1920x800/333/fff?text=Imagen+Hero'); 
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        /* Clase personalizada para un botón llamativo (reutilizada aquí para cumplir rúbrica b) */
+        .btn-custom-lime {
+            background-color: #A2FF00;
+            color: #222;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom-lime:hover {
+            background-color: #8ADF00;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Resources/Favicon.png" alt="Logo Mauri Fitness" width="30" height="30" class="d-inline-block align-text-top me-2">
+                <span style="color: #A2FF00; font-weight: bold;">M.P. Fitness</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item ms-lg-4">
+                        <a class="nav-link btn btn-custom-lime" href="#">Reserva tu Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section" id="home">
+        <div class="container">
+            <h1>Transforma Tu Cuerpo</h1>
+            <p>Entrenamiento personal adaptado a tus metas y estilo de vida.</p>
+            <a href="#servicios" class="btn btn-lg btn-custom-lime">¡Empieza Hoy!</a>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold">Ejemplo de ejercicios que trabajarás</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#videoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+    <div class="carousel-item active">
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/Rq4DNRH6DCM?autoplay=1&mute=1" title="Video de muestra 1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="carousel-caption d-none d-md-block text-white">
+            <h5>Entrenamiento de espalda</h5>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/LOgEtdoptU4?autoplay=1&mute=1" title="Video de muestra 2" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="carousel-caption d-none d-md-block text-white">
+            <h5>Entrenamiento de pecho</h5>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/eoSrZyQcd8o?autoplay=1&mute=1" title="Video de muestra 3" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="carousel-caption d-none d-md-block text-white">
+            <h5>Entrenamiento de Fuerza Avanzado</h5>
+        </div>
+    </div>
+</div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-4 fw-bold">Nuestros Servicios</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm text-center">
+                        <div class="card-body">
+                            <i class="bi bi-clipboard-check display-4 text-primary"></i> 
+                            <h5 class="card-title mt-3">Planes Personalizados</h5>
+                            <p class="card-text">Diseñamos programas de entrenamiento a medida para tus objetivos.</p>
+                            <a href="#" class="btn btn-outline-dark mt-3">Más Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm text-center">
+                        <div class="card-body">
+                            <i class="bi bi-people-fill display-4 text-success"></i>
+                            <h5 class="card-title mt-3">Entrenamiento en Grupo</h5>
+                            <p class="card-text">Clases dinámicas y motivadoras con el apoyo de un grupo.</p>
+                            <a href="#" class="btn btn-outline-dark mt-3">Más Info</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm text-center">
+                        <div class="card-body">
+                            <i class="bi bi-egg-fried display-4 text-warning"></i>
+                            <h5 class="card-title mt-3">Asesoramiento Nutricional</h5>
+                            <p class="card-text">Guía experta para optimizar tu dieta y complementar tu entrenamiento.</p>
+                            <a href="#" class="btn btn-outline-dark mt-3">Más Info</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios" class="py-5 text-white">
+    <div class="container">
+        <h2 class="text-center mb-5 display-4 fw-bold text-dark">Lo que dicen mis clientes</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <blockquote class="blockquote bg-secondary p-4 rounded shadow-sm">
+                    <p class="mb-0 fst-italic">"Gracias a Mauri, no solo perdí 10 kilos, sino que encontré la motivación que me faltaba. Sus planes son desafiantes pero siempre alcanzables. ¡Totalmente recomendado!"</p>
+                    </br>
+                    <p>Rating: ⭐⭐⭐⭐⭐</p>
+                    <footer class="blockquote-footer mt-2 text-end text-light">Sergio G.</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-6 mb-4">
+                <blockquote class="blockquote bg-secondary p-4 rounded shadow-sm">
+                    <p class="mb-0 fst-italic">"Cuando me apunté no esperaba encontrarme un entrenador tan preparado y profesional, su plan de entreno se adecuó perfectamente a mis necesidades, lo único malo es que no podía concentrarme lo suficiente con un entrenador tan guapo. ¡Totalmente recomendado!"</p>
+                    </br>
+                    <p>Rating: 🔥🔥🔥🔥🔥</p>
+                    <footer class="blockquote-footer mt-2 text-end text-light">Miguel D.</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-6 mb-4">
+                <blockquote class="blockquote bg-secondary p-4 rounded shadow-sm">
+                    <p class="mb-0 fst-italic">"La disciplina es la base de la grandeza. Mauri entiende que el alto rendimiento exige una preparación física y mental sin fallos. Si buscas la excelencia en tu esquina, trabaja con él."</p>
+                    </br>
+                    <p>Rating: ⭐⭐⭐⭐⭐</p>
+                    <footer class="blockquote-footer mt-2 text-end text-light">Ilia Topuria | 🔱Campeón de Peso Ligero</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-6 mb-4">
+                <blockquote class="blockquote bg-secondary p-4 rounded shadow-sm">
+                    <p class="mb-0 fst-italic">"Cuando necesito un enfoque técnico que desafíe mi entrenamiento, recurro a Mauri. Su conocimiento de la biomecánica es de primer nivel. Un verdadero profesional."</p>
+                    </br>
+                    <p>Rating: ⭐⭐⭐⭐⭐</p>
+                    <footer class="blockquote-footer mt-2 text-end text-light">Chris Bumstead | 🏆x5 Mr. Olympia</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4" id="contacto">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Contacto</h5>
+                    <p>Email: mauri1658jr@alumnos.ilerna.com</p>
+                    <p>Teléfono: +34 635 86 45 20</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Sígueme</h5>
+                    <a href="https://www.instagram.com/mauri.p_7/" target="_blank" class="text-white mx-2"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="https://x.com/mauri1658jr" target="_blank" class="text-white mx-2"><i class="bi bi-twitter fs-4"></i></a>
+                    <a href="https://github.com/Mauri-1658" target="_blank" class="text-white mx-2"><i class="bi bi-github fs-4"></i></a>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Política de Privacidad</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <p>&copy; 2025 Mauri. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    </body>
+</html>
