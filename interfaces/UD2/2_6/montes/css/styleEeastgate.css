@@ -1,0 +1,89 @@
+@import url(styleHome.css);
+
+/*
+!=========================
+?== SECCIÓN EASTGATE =====
+!=========================
+*/
+
+#eastgate {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../resources/img/eastgate.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Efecto parallax */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.eastgate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-overlay-oscuro);
+    z-index: 1;
+}
+
+.eastgate-content {
+    position: relative;
+    z-index: 2;
+    color: var(--color-claro);
+}
+
+.eastgate-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.eastgate-subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-ver-mas {
+    background-color: var(--color-principal);
+    color: var(--color-claro);
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-shadow: none;
+}
+
+.btn-ver-mas:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-claro);
+    border-color: var(--color-claro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .eastgate-title {
+        font-size: 2.5rem;
+    }
+
+    .eastgate-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .btn-ver-mas {
+        font-size: 1rem;
+        padding: 0.65rem 1.75rem;
+    }
+}

@@ -1,0 +1,273 @@
+:root {
+    /*
+!=================
+?=== VARIABLES ===
+!=================
+*/
+    --padding-vertical-header: 1.5rem;
+    /*
+!=========================
+?=== PALETA DE COLORES ===
+!=========================
+*/
+    --color-fondo: #bca989;
+    --color-principal: #4a2b17;
+    --color-secundario: #93562e;
+    --color-claro: #e3dccc;
+    --color-verdeOscuro: #393b2b;
+    --color-verdeClaro: #717555;
+    /* ? OTROS COLORES */
+    --color-overlay-oscuro: rgba(0, 0, 0, 0.6);
+    --color-overlay-transparente: rgba(0, 0, 0, 0);
+
+    /*
+!=========================
+?=== TIPOGRAFÍA ==========
+!=========================
+*/
+    --fuente-principal: 'Pathway Extreme', sans-serif;
+}
+
+/* 
+!=========================
+?=== BODY + ==============
+!========================= 
+*/
+body {
+    /* TODO no funciona la fuente cambiar pora alguna parecida */
+    font-family: var(--fuente-principal);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*
+!=========================
+?=== HEADER ==============
+!=========================
+*/
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    padding-top: var(--padding-vertical-header);
+    padding-bottom: var(--padding-vertical-header);
+    background: linear-gradient(to bottom,
+            var(--color-overlay-oscuro) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            var(--color-overlay-transparente) 100%);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Header oculto al hacer scroll down */
+.main-header.hidden {
+    transform: translateY(-100%);
+}
+
+/* Header con fondo sólido cuando no está en video intro */
+.main-header.scrolled {
+    background: var(--color-principal);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.navbar-brand .logo-text {
+    color: var(--color-claro);
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin: 0;
+}
+
+/* Navegación */
+.navbar-nav {
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--color-claro) !important;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0 !important;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-claro);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--color-fondo) !important;
+}
+
+.btn-link {
+    color: var(--color-claro);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+    color: var(--color-fondo);
+}
+
+.contact-btn {
+    background-color: var(--color-secundario);
+    color: var(--color-claro);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contact-btn:hover {
+    background-color: var(--color-claro);
+    color: var(--color-principal);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón hamburguesa personalizado */
+.navbar-toggler {
+    border: 2px solid var(--color-claro);
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(227, 220, 204, 0.25);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(227, 220, 204, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Responsive - Menú móvil */
+@media (max-width: 991px) {
+    .main-header {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--color-principal);
+        padding: 1.5rem;
+        margin-top: 0.5rem;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+    
+    .navbar-nav {
+        gap: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .nav-item {
+        border-bottom: 1px solid rgba(227, 220, 204, 0.2);
+    }
+    
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-link {
+        padding: 1rem 0 !important;
+        display: block;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .d-flex.align-items-center {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 1rem !important;
+        width: 100%;
+    }
+    
+    .btn-link {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem;
+        border: 1px solid var(--color-claro);
+        border-radius: 8px;
+        display: block;
+    }
+    
+    .contact-btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .navbar-brand .logo-text {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .navbar-collapse {
+        padding: 1rem;
+    }
+}

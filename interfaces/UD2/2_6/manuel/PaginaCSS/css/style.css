@@ -1,0 +1,251 @@
+@font-face {
+  font-family: 'soloist1';
+  src: url('../fonts/Death\ Star.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'soloist1', sans-serif;
+  background-color: rgba(224, 224, 224, 0.541);
+  background-image: url('../images/Background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: url('../images/cursor.cur') 4 4, auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a:hover,
+button:hover,
+.card:hover,
+#darkModeToggle:hover,
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  cursor: url('../images/pointer.cur'), pointer;
+}
+
+main.flex-fill {
+  flex: 1;
+}
+
+/* FOOTER */
+footer {
+  background-image: url('../images/Intro.png');
+  background-size: contain; 
+  background-position: top center; 
+  background-repeat: no-repeat;
+  color: white;
+  margin-top: auto;
+  min-height: 100px; 
+  position: relative;
+  background-color: #0539e5 !important;
+}
+
+.github-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.github-left {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.github-right {
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* CARRUSEL */
+
+#carouselTestimonials {
+  height: 300px;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item blockquote {
+  color: black;
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+
+.carousel-item small {
+  color: red !important;
+}
+.carrusel-fondo-bmo {
+  background-image: url('../images/BMO.png');
+  background-size: 110% 125%; 
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 1110px; 
+}
+
+nav {
+  background-color: #fff8dc;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  flex: .94;
+}
+
+.navbar-nav .nav-item {
+  flex: 1;
+  text-align: center;
+}
+
+/* DARK MODE */
+
+.dark-mode {
+  background-color: #121212 !important;
+  background-image: url('../images/Background_Dark.png');
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .intro-section {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+.dark-mode .card {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+.dark-mode .card .card-title,
+.dark-mode .card .card-text {
+  color: #fff !important;
+}
+
+.dark-mode footer {
+  background-image: url('../images/Intro.png');
+  background-color: #000000 !important;
+}
+
+#darkModeToggle img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+#darkModeToggle {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+#darkModeToggle img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+#darkModeToggle span {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.dark-mode nav {
+  background-color: #062a4f !important;
+}
+
+.dark-mode .navbar-light .navbar-nav .nav-link {
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .navbar-light .navbar-brand img {
+  filter: brightness(0.9);
+}
+
+.intro-section {
+  background-color: rgba(0, 123, 255, 0.3);
+  padding: 3rem;
+  border-radius: 12px;
+}
+
+/* JAKE */
+
+.jake-info-box {
+  background-color: rgba(187, 193, 6, 0.559);
+  color: #000000; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.jake-image {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+@media (min-width: 768px) {
+  .jake-image {
+    width: 400px;
+  }
+}
+
+
+.finn-info-box {
+  background-color: rgba(71, 202, 220, 0.559);  
+  color: #000000;                               
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* CARDS */
+
+.card {
+  position: relative; 
+}
+
+.card-img-top {
+  transition: opacity 0.3s ease;
+}
+
+/* VIDEO */
+
+.video-container {
+  position: relative;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-container:hover video {
+  opacity: 1; 
+}
+
+.video-container:hover img {
+  opacity: 0; 
+}

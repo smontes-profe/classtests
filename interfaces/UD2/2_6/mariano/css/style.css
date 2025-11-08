@@ -1,0 +1,376 @@
+/* ======== BASE ======== */
+body {
+  margin: 0;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ======== HEADER ======== */
+header {
+  position: relative;
+  background-color: #51d3e2;
+  overflow: hidden;
+  padding-bottom: 40px;
+}
+
+.imagen-sol {
+  position: absolute;
+  top: -50px;
+  left: -95px;
+  width: 200px;
+}
+
+nav {
+  position: relative;
+  z-index: 15;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  margin: 0;
+  padding: 20px 60px;
+  flex-wrap: wrap;
+}
+
+.nube {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+}
+
+.imagen-nube {
+  width: 150px;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.nube span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+}
+
+.nube:hover .imagen-nube {
+  transform: scale(1.1);
+}
+
+.imagen-cesped {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  z-index: 5;
+}
+
+/* ======== SECCIÓN TIERRA ======== */
+.tierra {
+  background: url("../img/tierra.jpg") no-repeat center;
+  background-size: cover;
+  padding: 150px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.titulo {
+  font-size: 4em;
+  font-family: "Georgia", serif;
+  margin-bottom: 60px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-shadow: 0 3px 5px #000;
+  transition: transform 0.3s;
+  z-index: 10;
+}
+
+.titulo:hover {
+  transform: scale(1.05);
+}
+
+
+.ramas {
+  display: flex;
+  justify-content: center;
+  gap: 140px;
+  opacity: 0;
+  transition: opacity 1s ease;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+
+.rama {
+  position: relative;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+  min-width: 200px;
+}
+
+
+.rama.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.rama-titulo {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.rama-titulo:hover {
+  color: #ffe08a;
+  transform: scale(1.05);
+}
+
+
+.subramas {
+  margin-top: 15px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.subramas.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.subramas p {
+  margin: 5px 0;
+  color: #ddd;
+  font-size: 1.1em;
+}
+
+/* 🌿 RAÍCES MÁS LARGAS Y ANIMADAS 🌿 */
+.rama::before {
+  content: "";
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  width: 5px;
+  height: 110px;
+  background: linear-gradient(to bottom, #f0c98b, #5a3a1b);
+  transform-origin: top;
+  transform: translateX(-50%) scaleY(0);
+  border-radius: 2px;
+  opacity: 0;
+}
+
+.rama.visible::before {
+  animation: raizCrece 1.4s ease-out forwards;
+  opacity: 1;
+}
+
+
+.rama-izquierda::before {
+  transform: rotate(-30deg) translateX(-50%) scaleY(0);
+  transform-origin: top right;
+}
+
+.rama-derecha::before {
+  transform: rotate(30deg) translateX(-50%) scaleY(0);
+  transform-origin: top left;
+}
+
+@keyframes raizCrece {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* ======== FOOTER ======== */
+footer {
+  background: url("../img/lava.jpeg") no-repeat center;
+  background-size: cover;
+  color: white;
+  padding: 20px 40px;
+  border-top: 3px solid #b22222;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  flex: 1;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.redes {
+  flex: 1;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.img-footer-facebook {
+  width: 50px;
+  margin: 0 10px;
+}
+
+.img-footer-x {
+  width: 70px;
+}
+
+.img-footer-vimeo,
+.img-footer-youtube {
+  width: 50px;
+  margin: 0 10px;
+}
+
+.copyright {
+  text-align: left;
+  flex: 1;
+  font-size: 0.9em;
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+
+
+@media (max-width: 1024px) {
+  nav ul {
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .titulo {
+    font-size: 3em;
+  }
+
+  .ramas {
+    gap: 80px;
+  }
+
+  .rama-titulo {
+    font-size: 1.8em;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .imagen-sol {
+    width: 140px;
+    left: -60px;
+  }
+
+  .imagen-nube {
+    width: 120px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .titulo {
+    font-size: 2.6em;
+  }
+
+  .ramas {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .rama::before {
+    height: 80px;
+    top: -80px;
+  }
+
+  .rama-titulo {
+    font-size: 1.6em;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links,
+  .redes,
+  .copyright {
+    flex: 100%;
+    text-align: center;
+  }
+
+  .img-footer-facebook,
+  .img-footer-vimeo,
+  .img-footer-youtube {
+    width: 45px;
+  }
+
+  .img-footer-x {
+    width: 60px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 2.2em;
+  }
+
+  .rama-titulo {
+    font-size: 1.4em;
+  }
+
+  .ramas {
+    gap: 30px;
+  }
+
+  .rama::before {
+    height: 60px;
+    top: -60px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .redes img {
+    width: 40px;
+    margin: 0 6px;
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Laboratorio de Eventos</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        #zona-sensible {
+            width: 300px; 
+            height: 200px;
+            background-color: #f0f0f0; 
+            border: 2px dashed #999;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            text-align: center; 
+            margin-top: 10px;
+            transition: background-color 0.3s; /* Efecto suave */
+        }
+        #log-eventos {
+            width: 400px; 
+            height: 200px; 
+            border: 1px solid #ccc;
+            overflow-y: scroll; /* Para que aparezca scroll si hay muchos logs */
+            background-color: #fafafa;
+            margin-top: 10px; 
+            list-style: none; 
+            padding: 5px;
+        }
+        /* Esta clase la añadirá y quitará JS */
+        .highlight { 
+            background-color: #ffffdd; /* Un amarillo suave */
+            border-color: #E2C044;
+        }
+        li {
+            border-bottom: 1px dotted #ddd;
+            padding: 2px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Laboratorio de Eventos (Caza-Eventos)</h2>
+
+    <input type="text" id="input-teclado" placeholder="Escribe algo aquí...">
+
+    <div id="zona-sensible">
+        Pasa el ratón por encima, entra, sal y haz clic aquí.
+    </div>
+
+    <h3>Log de Eventos:</h3>
+    <ul id="log-eventos">
+        </ul>
+    
+    <script defer src="app.js"></script>
+</body>
+</html>

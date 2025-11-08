@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page - Clone Wars</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/Icon.png">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./images/Logo.png" alt="Logo" class="img-fluid" style="max-height: 50px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#footer">Footer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://myflixerz.to/tv/star-wars-the-clone-wars-39278">Watch
+                            Online</a></li>
+                    <li class="nav-item"><a class="nav-link" href="BestEpisodes.html">Best Episodes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Republic.html">The Republic</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Quizz.html">Quiz</a></li>
+                </ul>
+                <button id="darkModeToggle" class="btn btn-dark ms-auto d-flex align-items-center gap-2">
+                    <img id="modeIcon" src="./images/DarkMode_Off.png" alt="Dark mode" />
+                    <span id="modeLabel">Dark Mode</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-fill">
+        <div class="container-fluid d-flex justify-content-center mt-4">
+            <div class="intro-section text-center text-white w-100">
+                <h1>Welcome to the Clone Wars</h1>
+                <h4 class="lead">
+                    Dive into the galaxy-spanning conflict between the Galactic Republic and the Separatists.
+                    Follow Jedi Knights, clone troopers, and heroes across the stars as they battle for peace,
+                    loyalty, and the fate of the galaxy.
+                </h4>
+            </div>
+        </div>
+
+        <!-- Characters -->
+        <div class="container mt-5">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="video-container">
+                            <video class="card-img-top" src="./videos/Anakin-video.mp4" alt="Anakin Skywalker"
+                                style="height: 200px; object-fit: cover;" autoplay muted loop></video>
+                            <img src="./images/Anakin.jpg" class="card-img-top" alt="Anakin Skywalker"
+                                style="height: 200px; object-fit: cover;" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Anakin Skywalker</h5>
+                            <p class="card-text">Once a gifted Jedi Knight, Anakin is a fearless warrior and mentor to
+                                Ahsoka Tano, driven by his emotions and strong sense of justice.</p>
+                        </div>
+                        <a href="Anakin.html" class="btn btn-info">See more</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="video-container">
+                            <video class="card-img-top" src="./videos/ObiWan-video.mp4"
+                                alt="Obi-Wan Kenobi" style="height: 200px; object-fit: cover;" autoplay muted
+                                loop></video>
+                            <img src="./images/Obi-Wan Kenobi.jpg" class="card-img-top" alt="Obi-Wan Kenobi"
+                                style="height: 200px; object-fit: cover;" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Obi-Wan Kenobi</h5>
+                            <p class="card-text">A wise and skilled Jedi Master, Obi-Wan is known for his calm nature,
+                                loyalty to the Order, and unbreakable faith in the Force.</p>
+                        </div>
+                        <a href="Kenobi.html" class="btn btn-info">See more</a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="video-container">
+                            <video class="card-img-top" src="./videos/Ahsoka-video.mp4" alt="Ahsoka Tano"
+                                style="height: 200px; object-fit: cover;" autoplay muted loop></video>
+                            <img src="./images/Ahsoka.jpg" class="card-img-top" alt="Ahsoka Tano"
+                                style="height: 200px; object-fit: cover;" />
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Ahsoka Tano</h5>
+                            <p class="card-text">Anakin's Padawan, Ahsoka grows from a young learner into a strong and
+                                independent leader who challenges the ideals of the Jedi Order.</p>
+                        </div>
+                        <a href="Ahsoka.html" class="btn btn-info">See more</a>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="video-container">
+                                <video class="card-img-top" src="./videos/Rex-video.mp4" alt="Captain Rex"
+                                    style="height: 200px; object-fit: cover;" autoplay muted loop></video>
+                                <img src="./images/Rex.jpg" class="card-img-top" alt="Captain Rex"
+                                    style="height: 200px; object-fit: cover;" />
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Captain Rex</h5>
+                                <p class="card-text">A loyal clone commander who fights bravely beside the Jedi,
+                                    known for his strategic mind, courage, and deep sense of brotherhood.</p>
+                            </div>
+                            <a href="Rex.html" class="btn btn-info">See more</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="video-container">
+                                <video class="card-img-top" src="./videos/Dooku-video.mp4" alt="Count Dooku"
+                                    style="height: 200px; object-fit: cover;" autoplay muted loop></video>
+                                <img src="./images/Dooku.jpg" class="card-img-top" alt="Count Dooku"
+                                    style="height: 200px; object-fit: cover;" />
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Count Dooku</h5>
+                                <p class="card-text">Once a Jedi Master, now a Sith Lord leading the Separatists.
+                                    Dooku seeks to reshape the galaxy under the rule of the Dark Side.</p>
+                            </div>
+                            <a href="Dooku.html" class="btn btn-info">See more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel -->
+            <div id="carouselTestimonials" class="carousel slide container mt-5 mb-5 carrusel-fondo-bmo"
+                data-bs-ride="carousel" style="max-width: 600px;">
+                <div class="carousel-inner text-black">
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-column justify-content-center align-items-center h-100 text-center p-4">
+                            <blockquote class="blockquote">
+                                <p class="mb-4" style="color: yellow;">“In my experience, there is no such thing as luck.”</p>
+                                <small style="color: red;">Obi-Wan Kenobi</small>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column justify-content-center align-items-center h-100 text-center p-4">
+                            <blockquote class="blockquote">
+                                <p class="mb-4" style="color: yellow;">“I’m not the Jedi I should be. I want more.”</p>
+                                <small style="color: red;">Anakin Skywalker</small>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex flex-column justify-content-center align-items-center h-100 text-center p-4">
+                            <blockquote class="blockquote">
+                                <p class="mb-4" style="color: yellow;">“Sometimes we must stand apart from the Order to do what’s right.”</p>
+                                <small style="color: red;">Ahsoka Tano</small>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="text-white py-4 mt-5 position-relative">
+        <div class="container text-center">
+            <a href="https://github.com/ManuelAnd25" target="_blank" class="github-left">
+                <img class="github-logo" src="./images/github-logo.png" alt="GitHub User 1">
+            </a>
+            <a href="https://github.com/ManuelAnd25" target="_blank" class="github-right">
+                <img class="github-logo" src="./images/github-logo.png" alt="GitHub User 2">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/obscureMode.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2 - Calculadora de Pedido</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input {
+            padding: 5px;
+            font-size: 1em;
+        }
+        #total-pedido {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            width: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Ejercicio 2: Calculadora de Pedido 🛒</h2>
+
+    <div>
+        <label for="producto">Selecciona un producto:</label>
+        <select id="producto">
+            <option value="10">Producto Básico (10€)</option>
+            <option value="20">Producto Estándar (20€)</option>
+            <option value="50">Producto Premium (50€)</option>
+        </select>
+    </div>
+
+    <div>
+        <input type="checkbox" id="envio-urgente" value="5">
+        <label for="envio-urgente">Envío Urgente (+5€)</label>
+    </div>
+
+    <hr>
+
+    <div id="total-pedido">
+        Total: 10€
+    </div>
+
+    <script defer src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+:root {
+    --verde-montaña: #7BAE7F;
+    --verde-oscuro: #4F7C58;
+    --marron-tierra: #C3A776;
+    --beige-claro: #F4F1E3;
+    --blanco: #FFFFFF;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--beige-claro);
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.content-wrapper {
+    flex: 1 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--verde-oscuro) !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.nav-link {
+    color: var(--blanco) !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--marron-tierra) !important;
+}
+
+/* Hero */
+.hero-section {
+    background-color: var(--verde-montaña);
+    color: var(--blanco);
+}
+
+.hero-section h1 {
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+}
+
+.hero-section .btn {
+    background-color: var(--marron-tierra);
+    color: var(--blanco);
+    border: none;
+    transition: 0.3s;
+}
+
+.hero-section .btn:hover {
+    background-color: var(--verde-oscuro);
+}
+
+/* Mapas */
+.map-frame {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--verde-oscuro);
+}
+
+/* Sección rutas */
+.rutas-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.rutas-section h2 {
+    color: var(--verde-oscuro);
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+/* Carrusel y tarjetas */
+.carousel-inner {
+    overflow: visible;
+    padding: 1rem 0;
+}
+
+.ruta-card {
+    border: none;
+    border-radius: 20px;
+    background-color: var(--blanco);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    overflow: hidden;
+    transform: translateZ(0);
+}
+
+.ruta-card:hover {
+    transform: scale(1.04) translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.ruta-card img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.card-title {
+    color: var(--verde-oscuro);
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--verde-oscuro);
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--marron-tierra);
+}
+
+/* Controles carrusel */
+.custom-prev, .custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: var(--verde-oscuro);
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.custom-prev:hover, .custom-next:hover {
+    opacity: 1;
+}
+
+.custom-prev { left: -25px; }
+.custom-next { right: -25px; }
+
+.custom-prev .carousel-control-prev-icon,
+.custom-next .carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+/* Footer */
+footer {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    flex-shrink: 0;
+}
+
+footer a {
+    color: var(--blanco);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--marron-tierra);
+}
+
+/* Espacios entre columnas para evitar corte del zoom */
+.row.g-4 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.row.g-4 > [class*="col-"] {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 992px) {
+    .hero-section .col-12.col-md-6 { text-align: center; }
+    .hero-section .btn { margin-top: 1rem; }
+}
+
+@media (max-width: 768px) {
+    .custom-prev { left: 5px; }
+    .custom-next { right: 5px; }
+    .custom-prev, .custom-next { width: 40px; height: 40px; }
+}
+
+@media (max-width: 576px) {
+    .map-frame { aspect-ratio: 4/3; }
+    .rutas-section h2 { margin-bottom: 2.5rem; }
+    .custom-prev, .custom-next { width: 30px; height: 30px; }
+}

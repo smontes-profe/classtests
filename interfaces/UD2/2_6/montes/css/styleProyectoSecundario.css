@@ -1,0 +1,207 @@
+@import url(styleHome.css);
+
+/*
+!=================================
+?== SECCIÓN PROYECTO SECUNDARIO ==
+!=================================
+*/
+
+#proyecto-secundario {
+    padding: 6rem 0;
+    background-color: #ffffff;
+}
+
+.proyecto-secundario-img {
+    position: relative;
+    padding-right: 2rem;
+}
+
+.proyecto-secundario-img img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.proyecto-secundario-img img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+/* Decoración adicional */
+.proyecto-secundario-img::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-verdeClaro);
+    opacity: 0.3;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.proyecto-secundario-img::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+    background-color: var(--color-fondo);
+    opacity: 0.4;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.proyecto-secundario-content {
+    padding-left: 3rem;
+}
+
+.proyecto-tag {
+    display: inline-block;
+    background-color: var(--color-verdeClaro);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.proyecto-secundario-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--color-principal);
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.proyecto-secundario-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-verdeOscuro);
+    margin-bottom: 1.5rem;
+}
+
+.proyecto-secundario-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+}
+
+/* Botón estilo outline */
+.btn-primary-outline {
+    background-color: transparent;
+    color: var(--color-principal);
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--color-principal);
+    border-radius: 8px;
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary-outline:hover {
+    background-color: var(--color-principal);
+    color: var(--color-claro);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 43, 23, 0.3);
+}
+
+/* Botón estilo link con icono */
+.btn-secondary-link {
+    background-color: transparent;
+    color: var(--color-verdeClaro);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.btn-secondary-link::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-verdeClaro);
+    transition: width 0.3s ease;
+}
+
+.btn-secondary-link:hover::after {
+    width: calc(100% - 30px);
+}
+
+.btn-secondary-link:hover {
+    color: var(--color-verdeOscuro);
+    transform: translateX(5px);
+}
+
+.btn-secondary-link svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-secondary-link:hover svg {
+    transform: translateY(3px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    #proyecto-secundario {
+        padding: 4rem 0;
+    }
+    
+    .proyecto-secundario-img {
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+    
+    .proyecto-secundario-img img {
+        height: 400px;
+    }
+    
+    .proyecto-secundario-content {
+        padding-left: 0;
+    }
+    
+    .proyecto-secundario-title {
+        font-size: 2.2rem;
+    }
+    
+    .proyecto-secundario-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .btn-primary-outline,
+    .btn-secondary-link {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .proyecto-secundario-title {
+        font-size: 1.8rem;
+    }
+    
+    .proyecto-secundario-text {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,44 @@
+:root {
+    --verde-montaña: #5A8C5A;
+    --verde-oscuro: #2E4F3B;
+    --marron-tierra: #8C6D4B;
+    --beige-claro: #1E1E1E;
+    --blanco: #FFFFFF;
+    --gris-texto: #CCCCCC;
+}
+
+body {
+    background-color: var(--beige-claro);
+    color: var(--gris-texto);
+}
+
+.hero-section { background-color: var(--verde-montaña); color: var(--blanco); }
+
+.hero-section .btn {
+    background-color: var(--marron-tierra);
+    color: var(--blanco);
+}
+
+.hero-section .btn:hover { background-color: var(--verde-oscuro); }
+
+.ruta-card {
+    background-color: #2B2B2B;
+    color: var(--gris-texto);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.ruta-card:hover {
+    transform: scale(1.04) translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+.ruta-card .card-title { color: var(--blanco); }
+.ruta-card .card-text { color: var(--gris-texto); }
+
+.btn-primary { background-color: var(--verde-oscuro); color: var(--blanco); }
+.btn-primary:hover { background-color: var(--marron-tierra); }
+
+.custom-prev, .custom-next { background-color: var(--verde-oscuro); opacity: 0.8; }
+footer { background-color: var(--verde-oscuro); color: var(--blanco); }
+footer a { color: var(--blanco); }
+footer a:hover { color: var(--marron-tierra); }

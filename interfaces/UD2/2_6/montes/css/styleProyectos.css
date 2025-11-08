@@ -1,0 +1,251 @@
+@import url(styleHome.css);
+
+/*
+!=========================
+?== SECCIÓN PROYECTOS ====
+!=========================
+*/
+
+#proyecto {
+    padding: 4rem 0;
+    background-color: var(--color-claro);
+    overflow: hidden;
+}
+
+.proyectos-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-principal);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Carrusel */
+.proyectos-carousel {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s ease;
+}
+
+.proyecto-slide {
+    min-width: calc(33.333% - 1.5rem);
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+.proyecto-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.proyecto-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 2rem;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.proyecto-slide:hover img {
+    transform: scale(1.1);
+}
+
+.proyecto-slide:hover .proyecto-overlay {
+    transform: translateY(0);
+}
+
+.proyecto-overlay h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.proyecto-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Botones del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-principal);
+    color: var(--color-claro);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: var(--color-secundario);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn.prev {
+    left: 0;
+}
+
+.carousel-btn.next {
+    right: 0;
+}
+
+/* Modal */
+.proyecto-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    overflow-y: auto;
+}
+
+.proyecto-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--color-claro);
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--color-principal);
+    color: var(--color-claro);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.modal-close:hover {
+    background-color: var(--color-secundario);
+}
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.modal-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.modal-info {
+    color: var(--color-principal);
+}
+
+.modal-info h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-verdeOscuro);
+}
+
+.modal-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--color-secundario);
+}
+
+.modal-info p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .proyecto-slide {
+        min-width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .proyectos-title {
+        font-size: 2.5rem;
+    }
+
+    .proyecto-slide {
+        min-width: 100%;
+    }
+
+    .proyectos-carousel {
+        padding: 0 3rem;
+    }
+
+    .modal-body {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    .modal-gallery {
+        grid-template-columns: 1fr;
+    }
+}
