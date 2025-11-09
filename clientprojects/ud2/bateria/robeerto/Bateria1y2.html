@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad Hechizos</title>
+</head>
+<body>
+
+    <!-- Nivel 2 – Poción peligrosa -->
+    <h2>Poción peligrosa</h2>
+    <label for="nivelMagia">Nivel de Magia:</label>
+    <input type="number" id="nivelMagia">
+    <br><br>
+    
+    <label for="capa">Capa:</label>
+    <select id="capa">
+        <option value="invisible">Invisible</option>
+        <option value="roja">Roja</option>
+        <option value="negra">Negra</option>
+    </select>
+    <br><br>
+    
+    <button onclick="evaluarAmenaza()">Evaluar amenaza</button>
+    
+    <p id="resultado"></p>
+
+    <script>
+        // Lvl1
+        // Variables del mago
+        var nombre = "Merlín";
+        var edad = 150;
+        var esBlanco = true;
+
+        // Transformación rápida
+        console.log(nombre + " tiene " + edad.toString() + " años.");
+
+        // Lvl2
+        function evaluarAmenaza() {
+            var nivelMagia = parseInt(document.getElementById("nivelMagia").value);
+            var capa = document.getElementById("capa").value;
+            var mensaje = "";
+
+            // Poción peligrosa
+            if (nivelMagia > 70) {
+                mensaje += "¡Cuidado, magia poderosa! ";
+            } else {
+                mensaje += "Magia inofensiva. ";
+            }
+
+            // Decisión múltiple según la capa
+            switch(capa) {
+                case "invisible":
+                    mensaje += "Puedes espiar sin ser visto.";
+                    break;
+                case "roja":
+                    mensaje += "Todos te miran.";
+                    break;
+                case "negra":
+                    mensaje += "Sospechoso.";
+                    break;
+                default:
+                    mensaje += "Capa desconocida.";
+            }
+
+            document.getElementById("resultado").innerText = mensaje;
+        }
+    </script>
+
+</body>
+</html>

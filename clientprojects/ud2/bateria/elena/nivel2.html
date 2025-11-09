@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel 2</title>
+</head>
+<body>
+    
+    <h1>Poción peligrosa</h1>
+
+    <label for="nivelMagia">Nivel de magia: </label>
+    <input type="number" id="nivelMagia" placeholder="Introduce nivel de magia">
+
+    <br><br>
+
+    <label for="capa">Tipo de capa: </label>
+    <select id="capa">
+      <option value="invisible">Invisible</option>
+      <option value="roja">Roja</option>
+      <option value="negra">Negra</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="evaluarAmenaza()">Evaluar amenaza</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      function evaluarAmenaza() {
+        let nivelMagia = parseInt(document.getElementById("nivelMagia").value);
+        let capa = document.getElementById("capa").value;
+        let mensaje = "";
+
+        if (nivelMagia > 70) {
+        mensaje += "¡Cuidado, magia poderosa! ";
+        } else {
+          mensaje += "Magia inofensiva. ";
+        }
+
+        switch (capa) {
+          case "invisible":
+            mensaje += "Puedes espiar sin ser visto";
+            break;
+          case "roja":
+            mensaje += "Todos te miran";
+            break;
+          case "negra":
+            mensaje += "Sospechoso";
+            break;
+          default:
+            mensaje += "No has elegido capa";
+        }
+
+        document.getElementById("resultado").innerHTML = mensaje;
+      }
+    </script>
+
+</body>
+</html>
+
+

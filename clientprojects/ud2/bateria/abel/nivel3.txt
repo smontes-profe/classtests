@@ -1,0 +1,9 @@
+1º Log: Devolveria "Dentro de la función: agua", ya que la variable ingredienteGlobal se puede utilizar en todo el documento
+
+2º Log: Devolveria "Dentro de la función: dragón lágrima" ya que la variable ha sido creada en la función y entonces se puede utilizar en ella misma
+
+3º Log: Devolveria "Dentro del bloque: polvo de unicornio" y lo haría poruqe esta declarada dentro del if y es accesible para el 
+
+4º Log: Devolvería un fallo, porque es una variable que se ha declarado en la función y solo se podría utilizar dentro de ella misma
+
+Palabra de que no ha sido probado el codigo.

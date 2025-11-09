@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nivel 1</title>
+    <script>
+        let nombre = "Juan";
+        let edad = 30;
+        let esBlanco = true;
+
+        var nombreEdad = nombre + " " + edad.toString();
+
+        console.log("Nombre: " + nombreEdad.concat(", Edad: " + edad) + ", Es Blanco: " + esBlanco);
+    </script>
+</head>
+<body>
+    <p id="fraseCompleta"></p>
+
+    <script>
+        const frase = "Nombre: " + nombreEdad.concat(", Edad: " + edad) + ", Es Blanco: " + esBlanco;
+        document.getElementById('fraseCompleta').textContent = frase;
+    </script>
+</body>
+</html>
