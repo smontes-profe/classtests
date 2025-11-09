@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arte Raiz | Contacto</title>
+
+    <link rel="icon" href="../assets/img/logo.png" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.js" defer></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/generales/header.css" />
+    <link rel="stylesheet" href="../css/generales/footer.css" />
+    <link rel="stylesheet" href="../css/generales/general.css" />
+    <link rel="stylesheet" href="../css/header/contacto.css" />
+    <link rel="stylesheet" href="../css/darkMode.css">
+
+    <!-- JS -->
+    <script src="../js/header.js" defer></script>
+    <script src="../js/darkMode.js" defer></script>
+
+    <!-- Font Awesome para íconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header
+      class="header d-flex justify-content-between align-items-center px-5 py-3"
+    >
+      <!-- LOGO + NOMBRE -->
+      <h1 class="site-title mb-0">
+        <a
+          href="../index.html"
+          class="d-flex align-items-center text-decoration-none"
+        >
+          <img
+            src="../assets/img/header/LogoHeader.png"
+            alt="Logo Arte Raíz"
+            class="logo me-2"
+          />
+          <span class="text-light">Arte Raíz</span>
+        </a>
+      </h1>
+
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- NAV con nubes como imágenes -->
+      <nav class="nav">
+        <ul class="nav-list d-flex gap-4 mb-0">
+          <li>
+            <a href="../index.html" class="nav-link">
+              <img
+                src="../assets/img/header/nubeHeader.png"
+                alt="Nube Home"
+                class="nube-img"
+              />
+              <span class="nube-text">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="sobreNosotros.html" class="nav-link">
+              <img
+                src="../assets/img/header/nubeHeader.png"
+                alt="Nube Sobre Nosotros"
+                class="nube-img"
+              />
+              <span class="nube-text">Sobre Nosotros</span>
+            </a>
+          </li>
+          <li>
+            <a href="contacto.html" class="nav-link">
+              <img
+                src="../assets/img/header/nubeHeader.png"
+                alt="Nube Contacto"
+                class="nube-img"
+              />
+              <span class="nube-text">Contacto</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contacto-main">
+      <section class="contacto-section container py-5">
+        <h2 class="contacto-titulo text-center mb-4">
+          🌱 Ponte en contacto con nosotros
+        </h2>
+        <p class="contacto-descripcion text-center mb-5">
+          Si tienes dudas, ideas o simplemente quieres saludar, escríbenos. Nos
+          encanta conectar con quienes sienten el arte desde la raíz.
+        </p>
+
+        <form class="contacto-form mx-auto">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              class="form-control"
+              placeholder="Tu nombre completo"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="ejemplo@correo.com"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              class="form-control"
+              rows="5"
+              placeholder="Escribe tu mensaje aquí..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn-contacto">Enviar mensaje</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer position-relative py-4">
+      <div
+        class="footer-container d-flex justify-content-between align-items-center"
+      >
+        <p class="footer-text mb-0">
+          © 2025 Arte Raíz | Creciendo desde lo más profundo
+        </p>
+
+        <!-- Redes sociales a la derecha -->
+        <div class="footer-socials d-flex gap-5">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="text-light fs-4 social-link"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            class="text-light fs-4 social-link"
+          >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            class="text-light fs-4 social-link"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Burbujas animadas -->
+      <div class="lava-bubbles">
+        <span></span><span></span><span></span><span></span><span></span
+        ><span></span><span></span>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    width: 100%;
+}
+
+/* Parte del azul */
+.sky-section {
+    background: #5bc0de;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+/* Sol logo */
+.sun-logo {
+    width: 80px;
+    height: 80px;
+    background-image: url('sol.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    flex-shrink: 0; 
+}
+
+/* Menú con nubes a la derecha */
+.cloud-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.cloud-link {
+    text-decoration: none;
+}
+
+.cloud {
+    background-image: url('nube.png');
+    background-size: cover;
+    background-position: center;
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cloud:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Parte del verde */
+.grass-section {
+    background: #4caf50;
+    height: 10px;
+}
+
+/* Main */
+.main-soil {
+    background-image: url('tierra.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Color de respaldo */
+    background-color: #5d4037;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    min-height: 500px;
+}
+
+/* árbol de botones */
+.tree-structure {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Botón principal */
+.btn-arte {
+    background: #8d6e63;
+    color: white;
+    border: none;
+    padding: 20px 50px;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-arte:hover {
+    background: #a1887f;
+    transform: scale(1.05);
+}
+
+/* Nivel 2 */
+.level-2 {
+    display: none;
+    gap: 30px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+}
+
+.level-2.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-category {
+    background: #6d4c41;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-category:hover {
+    background: #8d6e63;
+    transform: scale(1.05);
+}
+
+/* Nivel 3 */
+.level-3 {
+    display: none;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+}
+
+.level-3.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-final {
+    background: #4e342e;
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-final:hover {
+    background: #6d4c41;
+    transform: scale(1.05);
+}
+
+/* footer */
+.footer {
+    background-image: url('nucleo.png');
+    background-size: cover;
+    background-position: center;
+    /* Color de respaldo */
+    background-color: #d84315;
+    padding: 30px 50px;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-center {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffeb3b;
+}
+
+.footer-right {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sky-section {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .cloud-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .level-2, .level-3 {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}

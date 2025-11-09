@@ -1,0 +1,161 @@
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden; /*Para no hacer scroll*/
+  background-color: #121212; /*Fondo oscuro general*/
+  color: #eaeaea; /*Texto claro*/
+}
+
+
+
+/* Video de fondo */
+.video-background {
+  position: fixed; /*Se queda fijo detrás*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /*Se queda detrás*/
+  filter: brightness(0.5); /* Oscurece el video */
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*Se ajusta al tamaño*/
+}
+
+
+
+/* Header */
+header {
+  height: 80px;
+  backdrop-filter: blur(6px); /*Desenfoque*/
+  padding: 0 2rem;
+  transition: background 0.3s ease;
+  position: absolute; /*Para que se ponga encima del video*/
+  width: 100%;
+  background: linear-gradient( /*Degradado oscuro*/
+    to bottom,
+    rgba(20, 12, 6, 0.9),
+    rgba(20, 12, 6, 0.5),
+    rgba(20, 12, 6, 0)
+  );
+  color: white;
+  z-index: 10; /*Para que se ponga encima del video*/
+}
+
+#titulo {
+  color: #f4a261; /*Color cálido del logo*/
+}
+
+#login {
+  color: #f4a261;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#login:hover {
+  color: #121212;
+}
+
+#contactanos {
+  border-color: #f4a261;
+  color: #121212;
+  background-color: #f4a261;
+  transition: all 0.3s ease;
+}
+
+#contactanos:hover {
+  background-color: transparent;
+  color: #f4a261;
+}
+
+a {
+  color: #f4a261;
+}
+
+
+
+/* Main */
+.hero-section {
+  height: calc(100vh - 180px); /*Para que se vea footer sin scroll*/
+  position: relative;
+  display: flex;
+  align-items: flex-end; /*Frases abajo*/
+  justify-content: flex-start; /*Frases a la izquierda*/
+  padding: 4rem; /*Espacio interior*/
+}
+
+.hero-section .overlay { /*Capa oscura*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+#primera {
+  font-size: 32px;
+  margin-bottom: 0.5rem;
+  color: #f4a261; 
+  font-weight: bold;
+}
+
+#segunda {
+  font-size: 42px;
+  font-weight: bold;
+  color: #fafafa; /*Texto claro*/
+  -webkit-text-stroke: 2px #f4a261; /*Contorno cálido*/
+}
+
+.tomorrow {
+  font-weight: 900;
+  color: #f4a261; /*Resalta más*/
+}
+
+
+
+/* Footer */
+footer {
+  height: 100px;
+  padding: 1rem 2rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #1a1a1a; /*Fondo oscuro*/
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer h3 {
+  margin: 0;
+  color: #f4a261;
+}
+
+#correo a {
+  text-decoration: none;
+  color: #f4a261;
+}
+
+#derechos {
+  color: #f4a261;
+  margin: 0;
+}

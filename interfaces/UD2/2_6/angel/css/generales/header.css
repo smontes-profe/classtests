@@ -1,0 +1,200 @@
+/* ========== HEADER GENERAL ========== */
+.header {
+  background-color: #4fd2e2; /* Azul cielo */
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  flex-wrap: wrap;
+}
+
+/* ===== Logo y título ===== */
+.logo {
+  width: 90px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.site-title a {
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.site-title a:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Navegación ===== */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+/* ===== Enlaces de menú con nubes ===== */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #291a17; /* Marrón tierra */
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Imagen de nube */
+.nube-img {
+  display: block;
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Texto encima de la nube */
+.nube-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+/* Hover flotante */
+.nav-link:hover .nube-img {
+  transform: translateY(-6px);
+  filter: brightness(1.1) drop-shadow(0 5px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* ===== Botón hamburguesa ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 35px;
+  height: 25px;
+  gap: 6px;
+  z-index: 20;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animación al abrir */
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Césped debajo del header */
+.header::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 50px; /* altura del césped */
+  background-color: #27a52b; /* verde césped */
+  
+  /* Hacemos la parte superior irregular */
+  clip-path: polygon(
+    0% 50%, 
+    10% 40%, 
+    20% 55%, 
+    30% 45%, 
+    40% 50%, 
+    50% 42%, 
+    60% 48%, 
+    70% 44%, 
+    80% 50%, 
+    90% 43%, 
+    100% 50%, 
+    100% 100%, 
+    0% 100%
+  );
+
+  position: absolute;
+  bottom: -20px; /* lo colocamos justo debajo del header */
+  left: 0;
+  z-index: 5;
+}
+
+/* ===== Responsive ===== */
+
+/* --- Tablets (<=992px) --- */
+@media (max-width: 992px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .site-title a {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    width: 75px;
+  }
+
+  .nav-list {
+    gap: 1.2rem;
+  }
+
+  .nube-img {
+    width: 150px;
+  }
+
+  .nube-text {
+    font-size: 1rem;
+  }
+}
+
+/* --- Móviles (<=768px) --- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-list {
+    display: none !important; /* fuerza ocultar en móvil */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #4fd2e2;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1.5rem 0;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-list.active {
+    display: flex !important;
+  }
+}

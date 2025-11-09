@@ -1,0 +1,122 @@
+/* Le pongo colores y tipografias GLOBALES */
+:root {
+  --brand-color: #0d6efd;
+  --accent-color: #20c997;
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --muted-color: #6c757d;
+  --heading-font: 'Segoe UI', Roboto, sans-serif;
+  --body-font: 'Inter', Arial, sans-serif;
+}
+
+/* Pongo una fuente general, color global y desplazamiento suave y fluido */
+body {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  scroll-behavior: smooth;
+}
+
+/* Para la barra de navegacion fondo blanco y un borde inferior sutil para dar separacion visual */
+.navbar {
+  background-color: #fff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Color y fuente para el nombre del gimnasio */
+.navbar-brand {
+  color: var(--brand-color) !important;
+  font-family: var(--heading-font);
+}
+
+/* Transicion suave al color de los enlaces del menu */
+.nav-link {
+  transition: color 0.2s ease;
+}
+
+/* Cuando paso el raton cambia el color(secciones de la pagina) */
+.nav-link:hover {
+  color: var(--brand-color);
+}
+
+/* Para el contenido principal de la pagina (la bienvenida) le he puesto un fondo degradado muy suave y el texto alineado a la izquierda */
+#hero-section {
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.05), rgba(32, 201, 151, 0.05));
+  text-align: left;
+}
+
+/* Color y fuente para el titulo */
+#hero-title {
+  color: var(--brand-color);
+  font-family: var(--heading-font);
+}
+
+/* Borde redondeado y un poquito de sombra a la imagen */
+#hero-image {
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Para las tarjetas de las clases le quito el borde predeterminado de bootstrap y le agregro una sombra suave y una animacion al pasar el raton */
+.card {
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto de elvacion a las tarjetas */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Le pongo color y peso al titulo */
+.card-title {
+  color: var(--brand-color);
+  font-weight: 600;
+}
+
+/* Color gris claro al a los textos de descripcion */
+.card-text {
+  color: var(--muted-color);
+}
+
+/* Pongo que la imaen se recorte dentro del circulo y el borde del circulo azul */
+#trainers-section img {
+  object-fit: cover;
+  border: 3px solid var(--brand-color);
+}
+
+/* Fondo oscuro y texto gris claro para el footer */
+#site-footer {
+  background-color: #0b1220;
+  color: #e9ecef;
+}
+
+/* Quito el subrayado al enlace de contacto */
+#site-footer a {
+  text-decoration: none;
+}
+
+/* Cuando pongo el cursor encima del contacto se subraya */
+#site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* El color de fondo de cambio de tema se pone verde al pasar el raton y el texto blanco*/
+.btn-outline-secondary:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+}
+
+/* Responsividad */
+/* Contenido centrado para moviles y un margen superior a la imagen para mejorar la separacion */
+@media (max-width: 768px) {
+  #hero-section {
+    text-align: center;
+  }
+  #hero-image {
+    margin-top: 1rem;
+  }
+}

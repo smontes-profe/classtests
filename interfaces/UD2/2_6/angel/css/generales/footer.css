@@ -1,0 +1,117 @@
+/* ========== FOOTER GENERAL ========== */
+.footer {
+  background-color: #3a070c; /* Lava oscura */
+  color: #fff;
+  font-family: 'Josefin Slab', serif;
+  text-shadow: 0 0 8px rgba(255, 100, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* ===== Contenido centrado ===== */
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Texto ===== */
+.footer-text {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* ===== Redes sociales ===== */
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 1.6rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  transform: scale(1.2);
+  color: #ffc700; /* Amarillo sol */
+}
+
+/* ===== Burbujas de lava ===== */
+.lava-bubbles {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.lava-bubbles span {
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 80, 0, 0.8);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: bubbleUp linear infinite;
+}
+
+.lava-bubbles span:nth-child(1) { left: 5%; width: 8px; height: 8px; animation-duration: 4s; animation-delay: 0s; }
+.lava-bubbles span:nth-child(2) { left: 20%; width: 12px; height: 12px; animation-duration: 5s; animation-delay: 1s; }
+.lava-bubbles span:nth-child(3) { left: 35%; width: 10px; height: 10px; animation-duration: 6s; animation-delay: 0.5s; }
+.lava-bubbles span:nth-child(4) { left: 50%; width: 14px; height: 14px; animation-duration: 4.5s; animation-delay: 1.2s; }
+.lava-bubbles span:nth-child(5) { left: 65%; width: 10px; height: 10px; animation-duration: 5.5s; animation-delay: 0.7s; }
+.lava-bubbles span:nth-child(6) { left: 80%; width: 12px; height: 12px; animation-duration: 4.2s; animation-delay: 1.5s; }
+.lava-bubbles span:nth-child(7) { left: 92%; width: 9px; height: 9px; animation-duration: 6.5s; animation-delay: 0.3s; }
+
+@keyframes bubbleUp {
+  0% { transform: translateY(0) scale(0.5); opacity: 0.7; }
+  100% { transform: translateY(-140px) scale(1.3); opacity: 0; }
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* --- Tablets (<=992px) --- */
+@media (max-width: 992px) {
+  .footer-container {
+    max-width: 90%;
+    padding: 0 15px;
+  }
+
+  .footer-text {
+    font-size: 0.95rem;
+  }
+
+  .footer-socials a {
+    font-size: 1.4rem;
+  }
+}
+
+/* --- Móviles (<=768px) --- */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-socials a {
+    font-size: 1.5rem;
+  }
+}

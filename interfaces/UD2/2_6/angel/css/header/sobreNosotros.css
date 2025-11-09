@@ -1,0 +1,102 @@
+/* ================================
+   🌳 SOBRE NOSOTROS.CSS — SOLO ESTE HTML
+=================================== */
+
+.sobreNosotros-main {
+  background-color: #5b3a29;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 1rem;
+}
+
+.sobreNosotros-section {
+  max-width: 900px;
+  width: 100%;
+  padding: 3rem 2rem;
+  background-color: #c9c9c9;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobreNosotros-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.sobreNosotros-titulo {
+  color: #4b2d17;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sobreNosotros-descripcion {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #5b3a29;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+/* Grid de tarjetas */
+.sobreNosotros-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.sobreNosotros-card {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #ffc700;
+  border-radius: 15px;
+  padding: 1.8rem 1.5rem;
+  flex: 1 1 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sobreNosotros-card h3 {
+  color: #ffc700;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.sobreNosotros-card p {
+  font-size: 1rem;
+  color: #3b2314;
+  line-height: 1.5;
+}
+
+.sobreNosotros-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .sobreNosotros-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobreNosotros-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobreNosotros-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .sobreNosotros-titulo {
+    font-size: 1.6rem;
+  }
+
+  .sobreNosotros-card h3 {
+    font-size: 1.3rem;
+  }
+}

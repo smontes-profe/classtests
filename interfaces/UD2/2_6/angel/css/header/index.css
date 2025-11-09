@@ -1,0 +1,169 @@
+/* ================================
+   🏡 INDEX.CSS — ESTILOS ESPECÍFICOS
+=================================== */
+
+/* 🌳 Contenedor principal */
+.main-content {
+  background-color: var(--color-earth);
+  color: var(--color-text-light);
+  font-family: 'Josefin Slab', serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding-top: 4rem;
+  overflow: hidden;
+}
+
+/* 🌿 Botón principal "Arte" */
+.btn-main {
+  background-color: var(--color-earth-dark);
+  color: var(--color-gold);
+  border: 2px solid var(--color-gold);
+  font-size: 1.6rem;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.btn-main:hover {
+  background-color: var(--color-gold);
+  color: var(--color-earth-dark);
+  transform: scale(1.05);
+}
+
+/* ✨ Descripción bajo el botón */
+.arte-desc {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  text-align: center;
+  margin-top: 1rem;
+  max-width: 600px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* 🌾 SVG de raíces */
+#rootsSvg {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin-top: 1rem;
+  overflow: visible;
+}
+
+.root-path {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 2.5s ease;
+}
+
+/* Variantes de raíz */
+.root-1 { stroke: #4b2d17; }
+.root-2 { stroke: #3b2314; }
+.root-3 { stroke: #4a2a15; }
+
+/* 🎨 Secciones de arte */
+.art-sections {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.art-section {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-gold);
+  border-radius: 20px;
+  padding: 1.5rem;
+  width: 260px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.art-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.art-section h2 {
+  color: var(--color-gold);
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.art-section p {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+/* 🎨 Botones de cada arte */
+.btn-art {
+  background-color: var(--color-gold);
+  color: var(--color-earth-dark);
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.btn-art:hover {
+  background-color: var(--color-earth-dark);
+  color: var(--color-gold);
+  transform: scale(1.1);
+}
+
+/* 📱 Responsive */
+@media (max-width: 992px) {
+  #rootsSvg {
+    max-width: 600px;
+    height: 350px;
+  }
+  .art-sections {
+    gap: 1rem;
+  }
+  .art-section {
+    width: 220px;
+  }
+  .btn-main {
+    font-size: 1.4rem;
+    padding: 0.7rem 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 3rem;
+  }
+  #rootsSvg {
+    max-width: 400px;
+    height: 250px;
+  }
+  .art-sections {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .art-section {
+    width: 80%;
+  }
+  .btn-main {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.5rem;
+  }
+}

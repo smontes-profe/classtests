@@ -1,0 +1,170 @@
+.literatura-main {
+  background-color: var(--color-earth);
+  color: var(--color-text-light);
+}
+
+/* HERO */
+.literatura-hero {
+  background-image: url('../assets/img/fondo-literatura.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 0.5rem;
+  text-align: center;
+  color: var(--color-text-light);
+  position: relative;
+}
+.literatura-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(41, 26, 23, 0.6);
+}
+.literatura-hero-content {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 15px;
+}
+.literatura-hero-content h1 {
+  color: var(--color-gold);
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+.literatura-hero-content p {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* INFO */
+.literatura-info {
+  padding: 2rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+/* TIPOS */
+.literatura-tipos {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.literatura-tipos h2 {
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+}
+.literatura-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.literatura-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--color-gold);
+  border-radius: 15px;
+  width: 270px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  color: var(--color-text-light);
+}
+.literatura-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.literatura-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.literatura-card h3 {
+  color: var(--color-gold);
+  margin-bottom: 0.4rem;
+}
+
+/* AUTORES */
+.literatura-autores {
+  text-align: center;
+  padding: 2rem 1rem 4rem;
+}
+.literatura-autores h2 {
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+}
+.literatura-autores-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.literatura-autor-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-gold);
+  border-radius: 15px;
+  width: 270px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  color: var(--color-text-light);
+}
+.literatura-autor-card:hover {
+  transform: translateY(-5px);
+}
+.literatura-autor-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+.literatura-autor-card h3 {
+  color: var(--color-gold);
+  margin-bottom: 0.4rem;
+}
+
+/* NAVEGACIÓN */
+.literatura-navigation {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  background-color: rgba(41, 26, 23, 0.6);
+  border-top: 1px solid var(--color-gold);
+}
+.literatura-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.btn-literatura-nav {
+  background-color: var(--color-gold);
+  color: var(--color-earth-dark);
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-literatura-nav:hover {
+  background-color: var(--color-earth-dark);
+  color: var(--color-gold);
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .literatura-hero-content h1 {
+    font-size: 2rem;
+  }
+  .literatura-info {
+    padding: 1.5rem;
+  }
+  .literatura-card,
+  .literatura-autor-card {
+    width: 90%;
+  }
+}

@@ -1,0 +1,21 @@
+/* ================================
+   DARK MODE — VERSIÓN OSCURA
+=================================== */
+
+/* Cuerpo y fondo general */
+body.dark-mode {
+  background-color: #1e1e1e; /* fondo general oscuro */
+  color: #e0e0e0; /* texto general claro */
+}
+
+/* Header */
+body.dark-mode .header {
+  background-color: #0f1236; /* header más oscuro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Ocultar logo del header */
+body.dark-mode .site-title img.logo {
+  display: none;
+}
+

@@ -1,0 +1,85 @@
+/* ================================
+   🎨 GENERAL.CSS — ESTILOS GLOBALES
+=================================== */
+
+/* 🌈 Paleta de colores */
+:root {
+  --color-earth-dark: #291a17;
+  --color-earth: #5b3a29;
+  --color-earth-light: #705a43;
+  --color-gold: #ffc700;
+  --color-text-light: #fff;
+  --color-bg-neutral: #f7f3ef;
+}
+
+/* ✨ Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌍 Base */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--color-bg-neutral);
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* 🪵 Sección general tipo “tierra” */
+.main {
+  background-color: var(--color-earth-light);
+  position: relative;
+  padding: 60px 0;
+}
+
+/* 🌱 Nodo raíz genérico */
+.root-node {
+  position: relative;
+  background: rgba(88, 123, 46, 0.2); /* verde tierra tenue */
+  padding: 40px 20px;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.root-node::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  width: 4px;
+  height: 30px;
+  background: #5e4636; /* raíz */
+  transform: translateX(-50%);
+}
+
+.root-node:hover {
+  transform: translateY(-5px);
+}
+
+/* ✍️ Tipografía */
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;  /* títulos elegantes y profesionales */
+  color: var(--color-gold);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* 🔘 Botones genéricos */
+button {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}

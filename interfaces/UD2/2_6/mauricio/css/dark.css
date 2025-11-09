@@ -1,0 +1,166 @@
+/* Variables CSS para modo oscuro */
+:root {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2d2d2d;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --accent-color: #A2FF00;
+  --card-bg: #2d2d2d;
+  --border-color: #444;
+}
+
+/* Estilos generales para modo oscuro */
+body.dark-mode {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: var(--text-primary) !important;
+}
+
+/* Títulos específicos en modo oscuro */
+body.dark-mode .display-4.fw-bold {
+  color: var(--text-primary) !important;
+}
+
+/* Navbar en modo oscuro */
+body.dark-mode .navbar-dark.bg-dark {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Hero section en modo oscuro */
+body.dark-mode .hero-section {
+  background-color: #222 !important;
+  color: var(--text-primary) !important;
+}
+
+/* Secciones con fondo claro en modo oscuro */
+body.dark-mode .bg-light {
+  background-color: var(--bg-secondary) !important;
+}
+
+/* Sección de servicios en modo oscuro */
+body.dark-mode #servicios {
+  background-color: var(--bg-primary) !important;
+}
+
+/* Tarjetas en modo oscuro */
+body.dark-mode .card {
+  background-color: var(--card-bg) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+body.dark-mode .card .btn-outline-dark {
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode .card .btn-outline-dark:hover {
+  background-color: var(--accent-color) !important;
+  color: var(--bg-primary) !important;
+  border-color: var(--accent-color) !important;
+}
+
+/* Testimonios en modo oscuro */
+body.dark-mode #testimonios {
+  background-color: var(--bg-primary) !important;
+}
+
+body.dark-mode #testimonios .blockquote {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode #testimonios .text-dark {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode #testimonios .blockquote-footer {
+  color: var(--text-secondary) !important;
+}
+
+/* Footer en modo oscuro */
+body.dark-mode footer.bg-dark {
+  background-color: var(--bg-secondary) !important;
+}
+
+body.dark-mode footer .text-white {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode footer a.text-white {
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode footer a.text-white:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Botón de modo oscuro en modo oscuro */
+body.dark-mode #darkModeToggle {
+  border-color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+body.dark-mode #darkModeToggle:hover {
+  background-color: var(--text-primary) !important;
+  color: var(--bg-primary) !important;
+}
+
+/* Carrusel en modo oscuro */
+body.dark-mode .carousel-caption {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Iconos de Bootstrap en modo oscuro */
+body.dark-mode .card i.text-primary {
+  color: var(--accent-color) !important;
+}
+
+body.dark-mode .card i.text-success {
+  color: var(--accent-color) !important;
+}
+
+body.dark-mode .card i.text-warning {
+  color: var(--accent-color) !important;
+}
+
+/* Enlaces de navegación en modo oscuro */
+body.dark-mode .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+body.dark-mode .navbar-nav .nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Estilos para el footer del blockquote en modo oscuro */
+body.dark-mode .blockquote-footer {
+    background-color: transparent !important;
+    color: var(--text-secondary) !important;
+    border-top: none !important;
+}
+
+body.dark-mode .blockquote-footer::before {
+    content: "" !important;
+}
+
+/* Color del título principal en modo oscuro */
+body.dark-mode .hero-section h1 {
+    color: var(--accent-color) !important;
+}
+
+body.dark-mode .carousel-caption h5 {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: var(--text-primary) !important;
+
+}

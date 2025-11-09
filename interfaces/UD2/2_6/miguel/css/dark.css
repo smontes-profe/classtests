@@ -1,0 +1,38 @@
+html[data-bs-theme="dark"] #hero-home {
+  background-image: var(--fondo-oscuro);
+  background-position: top;
+}
+
+html[data-bs-theme="dark"] .text-nav {
+  color: #FFFFFF;
+}
+
+html[data-bs-theme="dark"] footer {
+  background-color: #8787876a;
+}
+
+#btn-dark-mode {
+  background-color: rgba(0, 0, 0, 0.1); 
+  
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--bs-border-radius);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  
+  color: var(--color-text-nav);
+  line-height: 1
+}
+
+#btn-dark-mode:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--color-text-nav);
+}
+
+html[data-bs-theme="dark"] #btn-dark-mode {
+  background-color: rgba(255, 255, 255, 0.252); 
+  color: #f8f9fa;
+}
+
+html[data-bs-theme="dark"] #btn-dark-mode:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f8f9fa;
+}

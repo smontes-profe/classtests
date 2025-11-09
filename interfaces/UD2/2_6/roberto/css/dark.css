@@ -1,0 +1,18 @@
+body {
+  background-color: #121212;
+  color: #eee;
+}
+
+.navbar, footer {
+  background-color: #000 !important;
+}
+
+.card {
+  background-color: #1f1f1f;
+  color: #eee;
+}
+
+.btn-primary {
+  background-color: #bb86fc;
+  border: none;
+}

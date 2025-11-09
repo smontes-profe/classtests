@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte - Raíces Creativas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Parte del cielo -->
+        <div class="sky-section">
+            <!-- Logo sol -->
+            <div class="sun-logo">
+                <div class="sun-circle">
+                </div>
+            </div>
+            
+            <!-- Menú nubes -->
+            <nav class="cloud-menu">
+                <a href="#" class="cloud-link">
+                    <div class="cloud">Home</div>
+                </a>
+                <a href="#" class="cloud-link">
+                    <div class="cloud">Sobre Nosotros</div>
+                </a>
+                <a href="#" class="cloud-link">
+                    <div class="cloud">Contacto</div>
+                </a>
+            </nav>
+        </div>
+        
+        <!-- Parte del césped -->
+        <div class="grass-section"></div>
+    </header>
+
+    <!-- Main -->
+    <main class="main-soil">
+        <!-- Botón principal -->
+        <div class="tree-structure">
+            <button class="btn-arte" id="btnArte">Arte</button>
+            
+            <!-- Nivel 2 -->
+            <div class="level-2" id="level2">
+                <button class="btn-category" data-category="pintura">Pintura</button>
+                <button class="btn-category" data-category="musica">Música</button>
+                <button class="btn-category" data-category="poesia">Poesía</button>
+            </div>
+            
+            <!-- Nivel 3 -->
+
+            <div class="level-3" id="pintura-level3">
+                <a href="pintura1.html" class="btn-final">Pintura 1</a>
+                <a href="pintura2.html" class="btn-final">Pintura 2</a>
+                <a href="pintura3.html" class="btn-final">Pintura 3</a>
+            </div>
+            
+            <div class="level-3" id="musica-level3">
+                <a href="musica1.html" class="btn-final">Música 1</a>
+                <a href="musica2.html" class="btn-final">Música 2</a>
+                <a href="musica3.html" class="btn-final">Música 3</a>
+            </div>
+            
+            <div class="level-3" id="poesia-level3">
+                <a href="poesia1.html" class="btn-final">Poesía 1</a>
+                <a href="poesia2.html" class="btn-final">Poesía 2</a>
+                <a href="poesia3.html" class="btn-final">Poesía 3</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>© 2025 All rights reserved</p>
+            </div>
+            
+            <div class="footer-center">
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Privacy Policy</a>
+            </div>
+            
+            <div class="footer-right">
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                        <path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.493 4.797l-.013.01z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" fill="white" width="24" height="24">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

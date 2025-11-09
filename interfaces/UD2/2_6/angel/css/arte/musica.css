@@ -1,0 +1,167 @@
+.musica-main {
+  background-color: #5b3a29;
+  color: #fff;
+}
+
+/* HERO */
+.musica-hero {
+  background-image: url('../assets/img/fondo-musica.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 0.5rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.musica-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(41, 26, 23, 0.6);
+}
+.musica-hero-content {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 15px;
+}
+.musica-hero-content h1 {
+  color: #ffc700;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+.musica-hero-content p {
+  font-size: 1.1rem;
+  color: #fff;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* INFO */
+.musica-info {
+  padding: 2rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* TIPOS */
+.musica-tipos {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.musica-tipos h2 {
+  color: #ffc700;
+  margin-bottom: 1.5rem;
+}
+.musica-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.musica-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #ffc700;
+  border-radius: 15px;
+  width: 270px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.musica-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.musica-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.musica-card h3 {
+  color: #ffc700;
+  margin-bottom: 0.4rem;
+}
+
+/* ARTISTAS */
+.musica-artistas {
+  text-align: center;
+  padding: 2rem 1rem 4rem;
+}
+.musica-artistas h2 {
+  color: #ffc700;
+  margin-bottom: 1.5rem;
+}
+.musica-artistas-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.musica-artista-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffc700;
+  border-radius: 15px;
+  width: 270px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.musica-artista-card:hover {
+  transform: translateY(-5px);
+}
+.musica-artista-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+.musica-artista-card h3 {
+  color: #ffc700;
+  margin-bottom: 0.4rem;
+}
+
+/* NAVEGACIÓN */
+.musica-navigation {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem 0;
+  background-color: rgba(41, 26, 23, 0.6);
+  border-top: 1px solid #ffc700;
+}
+.musica-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.btn-musica-nav {
+  background-color: #ffc700;
+  color: #291a17;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-musica-nav:hover {
+  background-color: #291a17;
+  color: #ffc700;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .musica-hero-content h1 {
+    font-size: 2rem;
+  }
+  .musica-info {
+    padding: 1.5rem;
+  }
+  .musica-card,
+  .musica-artista-card {
+    width: 90%;
+  }
+}

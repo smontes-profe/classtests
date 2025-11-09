@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+:root {
+  --fondo-claro: url("../img/portadaWhite.png");
+  --fondo-oscuro: url("../img/portadaBlack.jpeg");
+  --color-text-nav: #543F2F;
+  --color-text-home: #543F2F;
+  --color-text-footer-title: #A3C6DC;
+}
+
+#hero-home {
+  height: 100vh;
+  background-image: var(--fondo-claro);
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.nav-home {
+  background: transparent; 
+}
+
+.text-nav {
+  color: var(--color-text-nav);
+}
+
+.imagen-logo {
+  width: 110px;
+  height: auto;
+}
+
+.text-home {
+  font-family: "Anton SC", sans-serif;
+  color: var(--color-text-home);
+  text-align: right;
+  font-weight: 700;
+  margin-right: 5%;
+  padding-bottom: 20%;
+}
+
+.text-indv-home{
+  margin: -4%;
+}
+
+.imagen-footer {
+  width: 190px;
+  height: auto;
+}
+
+.copy-right {
+ padding: 5% 0%;
+}
+
+.list-footer span {
+  color: var(--color-text-footer-title)
+}
+
+
+
+@media (max-width: 600px) {
+  .text-home {
+    margin-right: 40%;
+  }
+}

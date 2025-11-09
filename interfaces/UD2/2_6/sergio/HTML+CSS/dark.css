@@ -1,0 +1,102 @@
+/* Pongo un fondo muy oscuro y cambio el color del texto a gris claro para tener contraste y legibilidad */
+.dark-mode {
+  background-color: #0b0f14;
+  color: #e9eef6;
+}
+
+/* Para la barra de navegacion el fondo es oscuro y mantiene el contraste */           
+.dark-mode .navbar {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* El nombre del gimnasio se pone azul claro */
+.dark-mode .navbar-brand {
+  color: #6fb3ff !important;
+}
+
+/* Enlace del menu en gris claro */
+.dark-mode .nav-link {
+  color: #e9eef6 !important;
+}
+
+/* Se cambia el color a verde al pasar el cursor */
+.dark-mode .nav-link:hover {
+  color: #5ee5b7 !important;
+}
+
+/* Fondo degradado con tonos azulados y verdosos, texto claro sobre el fondo oscuro */
+.dark-mode #hero-section {
+  background: linear-gradient(135deg, rgba(111, 179, 255, 0.08), rgba(94, 229, 183, 0.05)) !important;
+  color: #e9eef6 !important;
+}
+
+/* Para las tarjetas fondo semitransparente oscuro con bordes, texto principal claro */
+.dark-mode .card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e9eef6;
+}
+
+/* Titulo en azul claro */
+.dark-mode .card-title {
+  color: #6fb3ff;
+}
+
+/* Texto secundario en gris */
+.dark-mode .card-text {
+  color: #a1a9b3;
+}
+
+/* Para las imagenes entrenadores borde color verde */
+.dark-mode #trainers-section img {
+  border-color: #5ee5b7;
+}
+
+/* Para el footer fondo mas oscuro */
+.dark-mode #site-footer {
+  background-color: #050a10 !important;
+}
+
+/* Bordes blanco al boton de cambiar de tema  y texto blanco */
+.dark-mode .btn-outline-secondary {
+  color: #e9eef6;
+  border-color: #e9eef6;
+}
+
+/* Cuando se pasa el cursor se pone el fondo y bordes en verde y el color del texto en negro  */
+.dark-mode .btn-outline-secondary:hover {
+  background-color: #5ee5b7;
+  border-color: #5ee5b7;
+  color: #000;
+}
+
+/* Sobreescribo los colores predeterminados de bootstrap y lo adapto al modo oscuro, se convierten en fondos casi negros */
+.dark-mode .bg-light {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+.dark-mode .bg-white {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* Para los textos que tienen text muted color gris claro */
+.dark-mode .text-muted {
+  color: #a1a9b3 !important;
+}
+
+/* Ajusto los fondos de las secciones de clases y entrenadores para dar una diferenciacion del fondo global */
+.dark-mode #trainers-section,
+.dark-mode #classes-section {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* Para los encabezados y subtitulos le he puesto colores */
+.dark-mode #hero-title,
+.dark-mode #classes-title,
+.dark-mode #trainers-title {
+  color: #6fb3ff !important;
+}
+.dark-mode #hero-subtitle,
+.dark-mode #classes-desc,
+.dark-mode #trainers-desc {
+  color: #a1a9b3 !important;
+}

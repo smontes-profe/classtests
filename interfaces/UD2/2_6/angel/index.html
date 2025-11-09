@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arte Raíz</title>
+
+    <link rel="icon" href="assets/img/logo.png" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.js" defer></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/generales/header.css" />
+    <link rel="stylesheet" href="css/generales/footer.css" />
+    <link rel="stylesheet" href="css/generales/general.css" />
+    <link rel="stylesheet" href="css/header/index.css" />
+    <link rel="stylesheet" href="css/darkMode.css">
+
+    <!-- JS -->
+    <script src="js/main.js" defer></script>
+    <script src="js/header.js" defer></script>
+    <script src="js/darkMode.js" defer></script>
+
+    <!-- Font Awesome para íconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header
+      class="header d-flex justify-content-between align-items-center px-5 py-3"
+    >
+      <!-- LOGO + NOMBRE -->
+      <h1 class="site-title mb-0">
+        <a
+          href="index.html"
+          class="d-flex align-items-center text-decoration-none"
+        >
+          <img
+            src="assets/img/header/LogoHeader.png"
+            alt="Logo Arte Raíz"
+            class="logo me-2"
+          />
+          <span class="text-light">Arte Raíz</span>
+        </a>
+      </h1>
+
+      <!-- Botón hamburguesa -->
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- NAV con nubes como imágenes -->
+      <nav class="nav">
+        <ul class="nav-list d-flex gap-4 mb-0">
+          <li>
+            <a href="index.html" class="nav-link">
+              <img
+                src="assets/img/header/nubeHeader.png"
+                alt="Nube Home"
+                class="nube-img"
+              />
+              <span class="nube-text">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="html/sobreNosotros.html" class="nav-link">
+              <img
+                src="assets/img/header/nubeHeader.png"
+                alt="Nube Sobre Nosotros"
+                class="nube-img"
+              />
+              <span class="nube-text">Sobre Nosotros</span>
+            </a>
+          </li>
+          <li>
+            <a href="html/contacto.html" class="nav-link">
+              <img
+                src="assets/img/header/nubeHeader.png"
+                alt="Nube Contacto"
+                class="nube-img"
+              />
+              <span class="nube-text">Contacto</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content text-center">
+      <!-- Botón principal -->
+      <button id="arteBtn" class="btn btn-main">Arte</button>
+      <p class="arte-desc">
+        El arte es la raíz que conecta nuestra imaginación con el mundo.
+      </p>
+      <p class="arte-desc">Pulsa "Arte" para ver los distintos artes.</p>
+
+      <!-- SVG de raíces -->
+      <svg
+        id="rootsSvg"
+        viewBox="0 0 800 400"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <!-- Raíz izquierda -->
+        <path
+          class="root-path root-1"
+          d="M400,10 C300,170 180,250 20,420"
+        ></path>
+
+        <!-- Raíz central -->
+        <path
+          class="root-path root-2"
+          d="M400,10 C400,180 400,260 400,420"
+        ></path>
+
+        <!-- Raíz derecha -->
+        <path
+          class="root-path root-3"
+          d="M400,10 C500,170 620,250 780,420"
+        ></path>
+      </svg>
+
+      <!-- Secciones de arte -->
+      <section class="art-sections gap-4 pb-5">
+        <div class="art-section m-2" id="pintura">
+          <h2>Pintura</h2>
+          <p>Explora el color, la forma y la emoción plasmada en lienzo.</p>
+          <a href="html/pintura.html" class="btn btn-art">Ver más</a>
+        </div>
+
+        <div class="art-section m-2" id="musica">
+          <h2>Música</h2>
+          <p>Descubre el arte del sonido, el ritmo y la melodía.</p>
+          <a href="html/musica.html" class="btn btn-art">Ver más</a>
+        </div>
+
+        <div class="art-section m-2" id="literatura">
+          <h2>Literatura</h2>
+          <p>Sumérgete en el poder de las palabras y las historias.</p>
+          <a href="html/literatura.html" class="btn btn-art">Ver más</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer position-relative py-4">
+      <div
+        class="footer-container d-flex justify-content-between align-items-center"
+      >
+        <p class="footer-text mb-0">
+          © 2025 Arte Raíz | Creciendo desde lo más profundo
+        </p>
+
+        <!-- Redes sociales a la derecha -->
+        <div class="footer-socials d-flex gap-5">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="text-light fs-4 social-link"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            class="text-light fs-4 social-link"
+          >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            class="text-light fs-4 social-link"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Burbujas animadas -->
+      <div class="lava-bubbles">
+        <span></span><span></span><span></span><span></span><span></span
+        ><span></span><span></span>
+      </div>
+    </footer>
+  </body>
+</html>

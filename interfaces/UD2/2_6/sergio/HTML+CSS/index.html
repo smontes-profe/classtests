@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Centro de Deportes y Fitness Moderno</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos css -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dark.css">
+
+  <!-- Estilo interno, color azul para los titulos de nuestras clases y nuestro equipo -->
+  <style>
+  #classes-title,
+  #trainers-title {
+    color: var(--brand-color) !important;
+  }
+</style>
+</head>
+<body id="page-root" class="dark-mode">
+
+  <!-- Barra de navegacion -->
+  <header>
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-light shadow-sm"> <!-- Responsive con bootstrap -->
+      <div class="container-lg">
+        <a id="brand-link" class="navbar-brand fw-bold" href="#">FitCala Pro</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-collapse" aria-controls="nav-collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav-collapse">
+
+          <!-- Lista para los apartadops de la pagina -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a id="nav-home" class="nav-link active" href="#hero-section">Inicio</a></li>
+            <li class="nav-item"><a id="nav-classes" class="nav-link" href="#classes-section">Clases</a></li>
+            <li class="nav-item"><a id="nav-trainers" class="nav-link" href="#trainers-section">Entrenadores</a></li>
+            <li class="nav-item"><a id="nav-contact" class="nav-link" href="#site-footer">Contacto</a></li>
+          </ul>
+          <button id="theme-toggle" class="btn btn-outline-secondary btn-sm ms-3" type="button">Modo oscuro</button> <!-- Boton para cambiar el tema -->
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenido principal de la pagina (bienvenida) -->
+  <section id="hero-section" class="py-5 text-center bg-light">
+    <div class="container-lg">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 id="hero-title" class="display-5 fw-bold">Bienvenido a FitCala Pro</h1>
+          <p id="hero-subtitle" class="lead">Tu centro de deportes moderno con entrenadores profesionales, clases dinámicas y espacios diseñados para tu bienestar.</p>
+          <a id="cta-primary" href="#classes-section" class="btn btn-primary btn-lg">Descubre nuestras clases</a>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <img id="hero-image" src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74?q=80&w=1600&auto=format&fit=crop" alt="Gimnasio moderno" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seccion de clases -->
+  <!-- Muestro las tarjetas con bootstrap -->
+  <section id="classes-section" class="py-5 bg-white">
+    <div class="container-lg">
+      <div class="text-center mb-5">
+        <h2 id="classes-title" class="fw-bold">Nuestras Clases</h2>
+        <p id="classes-desc" class="text-muted">Programas para todos los niveles, desde entrenamiento funcional hasta yoga y spinning.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="ChatGPT Image 29 oct 2025, 12_20_57.png" class="card-img-top" alt="Entrenamiento funcional">
+            <div class="card-body">
+              <h5 class="card-title">Entrenamiento Funcional</h5>
+              <p class="card-text">Mejora tu fuerza y resistencia con rutinas personalizadas en grupo reducido.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="ChatGPT Image 27 oct 2025, 19_38_55.png" class="card-img-top" alt="Yoga">
+            <div class="card-body">
+              <h5 class="card-title">Yoga & Mindfulness</h5>
+              <p class="card-text">Equilibra cuerpo y mente en nuestras clases guiadas por instructores expertos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 text-center">
+            <img src="https://ae-pic-a1.aliexpress-media.com/kf/Scf1b921f072648cfb34d2e3d6fecf0dev.jpg" class="card-img-top" alt="Spinning">
+            <div class="card-body">
+              <h5 class="card-title">Spinning</h5>
+              <p class="card-text">Cardio intenso con música motivadora y entrenadores certificados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seccion de entrenadores -->
+  <!-- Muestro los entrenadores con una imagen circular -->
+  <section id="trainers-section" class="py-5 bg-light">
+    <div class="container-lg">
+      <div class="text-center mb-5">
+        <h2 id="trainers-title" class="fw-bold">Nuestro Equipo</h2>
+        <p id="trainers-desc" class="text-muted">Profesionales apasionados por el deporte y tu bienestar.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <img src="https://objetos-xlk.estaticos-marca.com/uploads/2024/10/09/67069cf660011.jpeg" alt="Entrenador personal" class="rounded-circle mb-3" width="150" height="150">
+          <h5 class="fw-bold">Mauricio Pacheco</h5>
+          <p class="text-muted">Entrenador personal especializado en fuerza y rendimiento.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="https://cienciasdeportivas.com/wp-content/uploads/ECD006-300x190.jpg" alt="Instructora de yoga" class="rounded-circle mb-3" width="150" height="150">
+          <h5 class="fw-bold">Alejandro Garrido</h5>
+          <p class="text-muted">Instructor de Yoga y bienestar mental.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="https://as1.ftcdn.net/jpg/05/44/77/98/1000_F_544779864_FSTikuGP1zIU7I85c1dCGd9tlijUCq1z.jpg" alt="Coach de spinning" class="rounded-circle mb-3" width="150" height="150">
+          <h5 class="fw-bold">Miguel Diaz</h5>
+          <p class="text-muted">Coach de spinning con energía y motivación asegurada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="site-footer" class="py-4 bg-dark text-light">
+    <div class="container-lg text-center">
+      <p id="footer-info" class="mb-0">© 2025 FitCala Pro — Centro de Deportes y Fitness Moderno</p>
+      <small id="footer-contact">Contacto: <a href="mailto:info@fitcalapro.com" class="link-light">info@fitcalapro.com</a></small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <!-- Para que el menu desplegable funcione -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para cambiar de claro a oscuro -->
+  <script>
+    const btn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    btn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const darkActive = body.classList.contains('dark-mode');
+    btn.textContent = darkActive ? 'Modo claro' : 'Modo oscuro';
+    });
+  </script>
+</body>
+</html>
