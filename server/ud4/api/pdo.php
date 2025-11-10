@@ -3,9 +3,9 @@ try {
     // Datos de conexión
     $host = "localhost";
     $port = 3306; // Puerto MySQL en MAMP
-    $dbname = "apitests";
+    $dbname = "empresa";
     $user = "root"; //"sergio";
-    $pass = "root"; //"ser";
+    $pass = ""; //"ser";
     // DSN (Data Source Name)
     $dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8";
     $pdo = new PDO($dsn, $user, $pass);
