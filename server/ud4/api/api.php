@@ -29,7 +29,7 @@ switch ($metodo) {
 
       if (!$datos || !isset($datos['nombre']) || !isset($datos['puesto']) || !isset($datos['salario'])) {
           http_response_code(400);
-          echo json_encode(['error' => 'Datos incompletos o en formato incorrecto.']);
+          echo json_encode(['error' => 'Datos incompletos o en formato incorrecto.Datos recibidos=' . json_encode($datos)]);
           break;
       }
 
