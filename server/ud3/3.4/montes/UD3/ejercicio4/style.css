@@ -1,0 +1,23 @@
+/* ud3_2/ejercicio4/estilos.css */
+
+/* Estilo para el contenedor del var_dump */
+.cookie-dump {
+    background-color: #f8f9fa; /* Color de fondo claro de Bootstrap */
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 0.25rem; /* Bordes redondeados de Bootstrap */
+    overflow-x: auto; /* Para manejar contenido largo */
+}
+
+/* Estilo para resaltar el valor de la cookie */
+.valor-cookie {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #007bff; /* Color azul primario de Bootstrap */
+}
+
+/* Estilo para la lista de verificación */
+.list-group-item strong {
+    color: #dc3545; /* Color rojo de Bootstrap para resaltar acciones */
+}

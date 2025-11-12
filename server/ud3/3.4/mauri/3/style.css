@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.content {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cookie-status {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#statusMessage {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 15px 0;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.button {
+    background-color: #b022c0;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #852e9f;
+}
+
+.details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 4px solid #b022c0;
+    margin-top: 20px;
+}
+
+.details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.details li {
+    margin: 10px 0;
+    color: #555;
+}
+
+.details strong {
+    color: #333;
+}
+
+.note {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+}
+
+.countdown {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.status-message.exists {
+    color: #165f2e;
+    background: #e6f7ea;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.status-message.missing {
+    color: #7a1414;
+    background: #fdecea;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.status-message.created {
+    color: #7a3b7a;
+    background: #f8eef9;
+    padding: 8px;
+    border-radius: 4px;
+}

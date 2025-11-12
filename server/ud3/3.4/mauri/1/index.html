@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    
+    <div class="container">
+        <form action="redirigir2.php" method="GET">
+            <label for="centro">Introduce el nombre del centro:</label>
+            <input type="text" id="centro" name="centro" required>
+            <button type="submit">Enviar</button>
+        </form>
+        
+        <div class="info">
+            <h3>Instrucciones:</h3>
+            <ul>
+                <li>Si escribes "Ilerna", serás redirigido a la página web de Ilerna</li>
+                <li>Si escribes cualquier otra cosa, verás un mensaje de error</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
