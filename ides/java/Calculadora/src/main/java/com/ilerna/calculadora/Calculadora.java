@@ -3,7 +3,6 @@ package com.ilerna.calculadora;
 public class Calculadora {
 
     public static int sumar(int a, int b) {
-    	//testing changes
         return a + b;
     }
 
