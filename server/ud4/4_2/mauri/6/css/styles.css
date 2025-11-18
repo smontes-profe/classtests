@@ -1,0 +1,60 @@
+:root{
+	--primary: #9c27b0;
+	--muted: #666;
+	--surface: #fff;
+	--soft: #fbf5ff;
+	--radius: 8px;
+}
+
+/* Notificaciones sencillas */
+.success{
+	color: #155724;
+	background:#e6f4ea;
+	padding:10px 12px;
+	border-left:4px solid #2e7d32;
+	border-radius:6px;
+}
+.error{
+	color:#7f1d1d;
+	background:#fdecea;
+	padding:10px 12px;
+	border-left:4px solid #c62828;
+	border-radius:6px;
+}
+
+/* Tablas responsivas y limpias */
+.table-wrap{overflow-x:auto;border-radius:var(--radius);}
+table{
+	width:100%;
+	border-collapse:separate;
+	border-spacing:0;
+	background:var(--surface);
+}
+th, td{
+	padding:10px 12px;
+	text-align:left;
+	border-bottom:1px solid #eee;
+}
+th{
+	background:#fafafa;
+	color:var(--primary);
+	font-weight:600;
+}
+tbody tr:nth-child(odd){background:var(--soft);}
+tbody tr:hover{background:rgba(156,39,176,0.03);}
+
+/* Botones/acciones básicos */
+.actions{display:flex;gap:6px;align-items:center;}
+.btn{display:inline-block;padding:6px 10px;border-radius:6px;text-decoration:none;font-size:0.9rem;cursor:pointer}
+.btn-primary{background:var(--primary);color:#fff;border:none}
+.btn-ghost{background:transparent;border:1px solid #e6e6e6;color:var(--muted)}
+.btn-danger{background:#ef5350;color:#fff;border:none}
+
+.actions a{margin:0 4px;text-decoration:none}
+.delete{color:var(--primary)}
+
+/* Helpers */
+.muted{color:var(--muted);font-size:0.9rem}
+.center{text-align:center}
+
+@media (max-width:560px){th,td{padding:8px 10px;font-size:0.9rem}.btn{padding:6px 8px}}
