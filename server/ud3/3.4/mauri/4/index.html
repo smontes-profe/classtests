@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - Lectura de Cookie</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio 4: Lectura de una Cookie</h1>
+
+        <p>Objetivo: crear una cookie llamada <code>centro</code> y, en la siguiente petición, comprobar su existencia e imprimir su valor.</p>
+
+        <div class="actions">
+            <a class="button" href="crear_cookie.php?action=create&ttl=30">Crear cookie (30s)</a>
+            <a class="button" href="crear_cookie.php">Leer cookie (var_dump)</a>
+            <a class="button secondary" href="index.html">Volver</a>
+        </div>
+
+        <div class="note">
+            Pulsa "Crear cookie (30s)" para crear la cookie. El script redirige y en la siguiente petición verás el contenido de <code>$_COOKIE</code> (con <code>var_dump($_COOKIE)</code>) y el valor de la cookie "centro".
+            Abre la consola de desarrollador (Network / Application -> Cookies) para verificar la fecha de expiración y el valor.
+        </div>
+    </div>
+    
+</body>
+</html>

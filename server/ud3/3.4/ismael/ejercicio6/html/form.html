@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ejercicio 6 - Form</title>
+  </head>
+  <body>
+    <main>
+      <h1>Ejercicio 6 — Formulario (guardar cookie)</h1>
+
+      <p>
+        Introduce un centro. Al enviar la petición, el servidor guardará la
+        cookie <code>centro</code> (1 minuto) y redirigirá a
+        <code>receptor.php</code>, que la mostrará y la eliminará.
+      </p>
+
+      <form action="../php/form.php" method="get" autocomplete="off">
+        <label for="centro">Centro:</label>
+        <input
+          id="centro"
+          name="centro"
+          type="text"
+          required
+          placeholder="Ej: Ilerna"
+        />
+        <button type="submit">Enviar</button>
+      </form>
+
+      <p>
+        <a href="../php/receptor.php" target="_blank"
+          >Ir a receptor.php (ver comportamiento)</a
+        >
+      </p>
+    </main>
+  </body>
+</html>

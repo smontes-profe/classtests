@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio 2: Evitar Caché</h1>
+        
+        <div class="content">
+            <div class="demo-section">
+                <h2>Hora del Servidor</h2>
+                <div id="serverTime" class="time">Cargando...</div>
+                <button onclick="actualizarHora()" class="button">Actualizar hora</button>
+                <p class="info">Cada vez que presiones el botón, se mostrará la hora actual del servidor.</p>
+            </div>
+
+            <div class="details">
+                <h2>¿Cómo funciona?</h2>
+                <p>Este ejercicio demuestra cómo evitar que el navegador almacene en caché una página PHP usando tres cabeceras HTTP:</p>
+                <ul>
+                    <li>
+                        <code>Cache-Control: no-store, no-cache, must-revalidate</code>
+                        <span class="explanation">→ Dice al navegador que no guarde la página y siempre pida una nueva</span>
+                    </li>
+                    <li>
+                        <code>Pragma: no-cache</code>
+                        <span class="explanation">→ Para compatibilidad con navegadores antiguos</span>
+                    </li>
+                    <li>
+                        <code>Expires: Thu, 01 Jan 1970 00:00:00 GMT</code>
+                        <span class="explanation">→ Indica que la página ya está caducada</span>
+                    </li>
+                </ul>
+                <p class="note">Cada vez que solicitas la hora, el navegador hace una nueva petición al servidor sin usar la caché.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función para actualizar la hora
+        function actualizarHora() {
+            fetch('evitar_cache.php')
+                .then(response => response.text())
+                .then(hora => {
+                    document.getElementById('serverTime').innerHTML = hora;
+                });
+        }
+
+        // Actualizar la hora al cargar la página
+        actualizarHora();
+    </script>
+</body>
+</html>

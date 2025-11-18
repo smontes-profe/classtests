@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cookies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Gestión de Cookies</h1>
+            
+            <div class="cookie-status">
+                <h2>Estado de la Cookie</h2>
+                <div id="statusMessage" class="status-message"></div>
+                <div class="actions">
+                    <button id="createCookie" class="button">Crear Cookie (30s)</button>
+                    <button id="checkStatus" class="button">Comprobar Estado</button>
+                </div>
+                <div id="countdown" class="countdown"></div>
+            </div>
+
+            <div class="details">
+                <h2>Detalles de la Cookie</h2>
+                <ul>
+                    <li><strong>Nombre:</strong> centro</li>
+                    <li><strong>Valor:</strong> Ilerna</li>
+                    <li><strong>Duración:</strong> 30 segundos</li>
+                    <li><strong>Path:</strong> /</li>
+                </ul>
+            </div>
+
+            <div class="note">
+                Nota: La cookie se creará con una duración de 30 segundos. 
+                Puedes usar los botones para crear la cookie y comprobar su estado.
+            </div>
+        </div> 
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const statusMessage = document.getElementById('statusMessage');
+            const createButton = document.getElementById('createCookie');
+            const checkButton = document.getElementById('checkStatus');
+            const countdownDiv = document.getElementById('countdown');
+            let countdownInterval;
+
+            function updateStatusMessage(data) {
+                statusMessage.textContent = data.message;
+                statusMessage.className = 'status-message ' + data.status;
+            }
+
+            function startCountdown(ttl) {
+                clearInterval(countdownInterval);
+                let timeLeft = ttl;
+                
+                function updateCountdown() {
+                    if (timeLeft <= 0) {
+                        countdownDiv.textContent = 'Cookie expirada';
+                        clearInterval(countdownInterval);
+                        return;
+                    }
+                    countdownDiv.textContent = `Tiempo restante: ${timeLeft} segundos`;
+                    timeLeft--;
+                }
+
+                updateCountdown();
+                countdownInterval = setInterval(updateCountdown, 1000);
+            }
+
+            function checkStatus() {
+                fetch('crear_cookie.php')
+                    .then(response => response.json())
+                    .then(data => {
+                        updateStatusMessage(data);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        statusMessage.textContent = 'Error al comprobar el estado de la cookie';
+                    });
+            }
+
+            createButton.addEventListener('click', function() {
+                fetch('crear_cookie.php?action=create&ttl=30')
+                    .then(response => response.json())
+                    .then(data => {
+                        updateStatusMessage(data);
+                        if (data.ttl) {
+                            startCountdown(data.ttl);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        statusMessage.textContent = 'Error al crear la cookie';
+                    });
+            });
+
+            checkButton.addEventListener('click', checkStatus);
+
+            // Comprobar el estado inicial
+            checkStatus();
+        });
+    </script>
+</body>
+</html>

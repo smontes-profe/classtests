@@ -1,0 +1,20 @@
+<?php
+if (!isset($_COOKIE['centro'])) {
+    header("Location: form.php");
+    exit();
+}
+setcookie("centro", "", time() - 3600);
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6 - Receptor Cookie</title>
+</head>
+<body>
+<h1>Ejercicio 6 - Receptor</h1>
+<p>Cookie centro: <?php echo htmlspecialchars($_COOKIE['centro']); ?></p>
+<p>La cookie ha sido borrada.</p>
+<a href="../index.html">Volver al índice</a>
+</body>
+</html>
