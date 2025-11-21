@@ -1,4 +1,5 @@
 // Obtener referencias a los elementos
+//comentario de prueba
 const zona = document.getElementById("zona-sensible");
 const input = document.getElementById("input-teclado");
 const log = document.getElementById("log-eventos");
