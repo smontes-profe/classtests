@@ -1,0 +1,99 @@
+/* --- Estilos Generales --- */
+body {
+  /* Fuente base para toda la página */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4; /* Un fondo gris claro */
+}
+
+/* Contenedor principal blanco */
+.container {
+  width: 90%;
+  max-width: 900px; /* Ancho máximo */
+  margin: 20px auto; /* Centrado automático */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* --- Menú de Navegación (Nav) --- */
+nav {
+  background-color: #333; /* Fondo oscuro */
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+nav ul {
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+nav ul li {
+  display: inline; /* Pone los elementos en horizontal */
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white; /* Letra blanca */
+  text-decoration: none; /* Quita el subrayado */
+  font-weight: bold;
+}
+nav ul li a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* --- Formularios (Login, Registro, Edición) --- */
+form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20px auto; /* Centra el formulario */
+}
+form div {
+  margin-bottom: 15px; /* Espacio entre cada campo */
+}
+form label {
+  display: block; /* Para que esté encima del input */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%; /* Ocupa todo el ancho del formulario */
+  padding: 8px;
+  box-sizing: border-box; /* Evita que el padding aumente el ancho */
+}
+form input[type="submit"] {
+  /* Botón de enviar (azul) */
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+form input[type="submit"]:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+
+/* --- Mensajes de Alerta --- */
+.error {
+  /* Caja roja para errores */
+  color: red;
+  font-weight: bold;
+  border: 1px solid red;
+  padding: 10px;
+  background: #ffebeb;
+  border-radius: 4px;
+}
+.success {
+  /* Caja verde para mensajes de éxito */
+  color: green;
+  font-weight: bold;
+  border: 1px solid green;
+  padding: 10px;
+  background: #e6ffec;
+  border-radius: 4px;
+}
