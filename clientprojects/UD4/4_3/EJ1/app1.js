@@ -3,7 +3,6 @@
 const zona = document.getElementById("zona-sensible");
 const input = document.getElementById("input-teclado");
 const log = document.getElementById("log-eventos");
-const newConst = document.getElementById("log-eventos");
 
 // Función para agregar mensajes al log
 function agregarLog(mensaje) {
