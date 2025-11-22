@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio interactivo de MiArma, artista digital especializada en paisajes de ciencia ficción">
+    <title>MiArma - Artista Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="assets/images/logo.svg" alt="Logo MiArma" class="logo">
+                <h1>MiArma</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#sobre">Sobre Mi</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Bienvenido al Universo de MiArma</h2>
+                <p>Explorando paisajes de ciencia ficción a través del arte digital</p>
+            </div>
+            <img src="assets/images/hero-image.jpg" alt="Paisaje futurista - Obra de MiArma" class="hero-image">
+        </section>
+
+        <section id="sobre" class="about">
+            <div class="container">
+                <h2>Sobre Mi</h2>
+                <p>MiArma es una artista digital especializada en la creación de paisajes futuristas y escenarios de ciencia ficción. Cada obra es una ventana a mundos imaginarios donde la tecnología y la naturaleza se fusionan en armonía.</p>
+                <div class="media-presentation">
+                    <button id="videoBtn" class="btn-primary">Ver Reel</button>
+                    <audio controls class="ambient-audio">
+                        <source src="assets/audio/ambient-space.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="gallery-section">
+            <div class="container">
+                <h2>Galería de Trabajos</h2>
+                <div class="gallery">
+                    <div class="main-image-container">
+                        <img id="mainImage" src="assets/images/gallery/gallery-1-full.jpg" alt="Obra de arte digital - Paisaje futurista 1" class="main-image">
+                    </div>
+                    <div class="thumbnails">
+                        <img src="assets/images/gallery/gallery-1-thumb.jpg" alt="Miniatura - Obra 1" class="thumbnail active" data-full="assets/images/gallery/gallery-1-full.jpg">
+                        <img src="assets/images/gallery/gallery-2-thumb.jpg" alt="Miniatura - Obra 2" class="thumbnail" data-full="assets/images/gallery/gallery-2-full.jpg">
+                        <img src="assets/images/gallery/gallery-3-thumb.jpg" alt="Miniatura - Obra 3" class="thumbnail" data-full="assets/images/gallery/gallery-3-full.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>¿Interesado en colaborar o adquirir una obra?</p>
+                <button class="btn-contact">
+                    <img src="assets/images/contact-button.gif" alt="Botón de contacto animado" class="contact-gif">
+                    <span>Contáctame</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para el video -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video controls id="modalVideo">
+                <source src="assets/video/space-animation.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="license-info">
+                    <p>Esta obra está bajo una</p>
+                    <a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="license noopener" target="_blank">
+                        <img src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons Attribution-NonCommercial 4.0 International License" class="cc-license-icon">
+                    </a>
+                    <p><a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="license noopener" target="_blank">Licencia Creative Commons Atribución-NoComercial 4.0 Internacional</a></p>
+                </div>
+                <div class="credits-link">
+                    <a href="credits.html">Créditos y Licencias</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 MiArma. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
