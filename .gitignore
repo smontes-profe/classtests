@@ -43,3 +43,5 @@ tmp/
 # -------------------
 *.log
 hs_err_pid*
+
+claude/
