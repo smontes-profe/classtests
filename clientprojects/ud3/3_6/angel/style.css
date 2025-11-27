@@ -1,0 +1,20 @@
+.tarea-detallada {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+
+.tarea-detallada p {
+    margin: 0 0 4px 0;
+}
+
+.tarea-detallada small {
+    display: block;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.tarea-detallada input[type="checkbox"] {
+    transform: scale(1.2);
+}
