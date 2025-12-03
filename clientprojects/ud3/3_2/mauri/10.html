@@ -1,0 +1,43 @@
+// Archivo JavaScript 10
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Saludo Interactivo</h2>
+    <input id="nombre" placeholder="Ingresa tu nombre">
+    <button id="saludar">Saludar</button>
+    <div id="mensajes"></div>
+
+    <script>
+        let boton = document.getElementById("saludar");
+        let inputNombre = document.getElementById("nombre");
+        let mensajesDiv = document.getElementById("mensajes");
+
+        boton.addEventListener("click", function() {
+            let nombre = inputNombre.value;
+            let mensaje = document.createElement("p");
+
+            // Mostrar mensaje en la página
+            mensaje.textContent = "Hola, " + nombre + "! Bienvenido/a.";
+            mensajesDiv.appendChild(mensaje);
+
+            // Alerta
+            window.alert("Saludo enviado a " + nombre);
+
+            // Ventana emergente
+            let nuevaVentana = window.open("", "Nueva Ventana", "width=300,height=200");
+            nuevaVentana.document.write("<p>Hola, " + nombre + "! Esta es una nueva ventana.</p>");
+
+            // Para eliminar el mensaje después de 5 segundos
+            setTimeout(function() {
+                mensajesDiv.removeChild(mensaje);
+            }, 5000);
+
+        });
+    </script>
+</body>
+</html>
