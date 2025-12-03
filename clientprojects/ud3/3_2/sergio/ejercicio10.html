@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Saludo Interactivo</title>
+</head>
+<body>
+     <h2>Saludo Interactivo</h2>
+    <input id="nombre" placeholder="Ingresa tu nombre">
+    <button id="saludar">Saludar</button>
+    <div id="mensajes"></div>
+
+    <script>
+        let boton = document.getElementById("saludar");
+        let input = document.getElementById("nombre");
+        let divMensajes = document.getElementById("mensajes");
+
+        boton.addEventListener("click", function() {
+            let nombre = input.value;
+            let mensaje = "¡Hola " + nombre + "! Bienvenido/a.";
+
+            //Muestro el mensaje en el div
+            let p = document.createElement("p");
+            p.textContent = mensaje;
+            divMensajes.appendChild(p);
+
+            //Muestro la alerta
+            window.alert(mensaje);
+
+            //Para abrir la ventaana nueva
+            let nuevaVentana = window.open("", "", "width=300,height=200");
+            nuevaVentana.document.write("<p>" + mensaje + "</p>");
+
+            //Para que el mesaje se elimine despues de 5 segundos
+            setTimeout(function() {
+                divMensajes.removeChild(p);
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

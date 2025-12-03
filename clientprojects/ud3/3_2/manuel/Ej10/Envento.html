@@ -1,0 +1,35 @@
+<h2>Saludo Interactivo</h2>
+<input id="nombre" placeholder="Ingresa tu nombre">
+<button id="saludar">Saludar</button>
+<div id="mensajes"></div>
+
+<script>
+document.getElementById("saludar").addEventListener("click", () => {
+  const nombre = document.getElementById("nombre").value.trim();
+  const divMensajes = document.getElementById("mensajes");
+
+  if (!nombre) {
+    alert("Por favor, ingresa tu nombre.");
+    return;
+  }
+
+  const mensaje = `¡Hola ${nombre}! Bienvenido/a.`;
+  const nuevoMensaje = document.createElement("p");
+  nuevoMensaje.textContent = mensaje;
+  divMensajes.appendChild(nuevoMensaje);
+
+  alert(mensaje);
+
+  const ventanaHija = window.open("", "saludo", "width=400,height=300");
+  ventanaHija.document.body.innerHTML = `<h2>${mensaje}</h2>
+  <button id="volver">Enviar mensaje al padre</button>`;
+
+  ventanaHija.document.getElementById("volver").addEventListener("click", () => {
+    window.opener.postMessage("Hola desde la ventana", "*");
+  });
+
+  setTimeout(() => {
+    nuevoMensaje.remove();
+  }, 5000);
+});
+</script>

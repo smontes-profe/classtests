@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Saludo Interactivo</title>
+    <style>
+        #mensajes div {
+            background-color: #f0f0f0;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 4px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Saludo Interactivo</h2>
+
+    <input id="nombre" placeholder="Ingresa tu nombre">
+    <button id="saludar">Saludar</button>
+
+    <div id="mensajes"></div>
+
+    <script>
+        const btnSaludar = document.getElementById('saludar');
+        const inputNombre = document.getElementById('nombre');
+        const divMensajes = document.getElementById('mensajes');
+
+        btnSaludar.addEventListener('click', () => {
+            const nombre = inputNombre.value.trim();
+
+            // Validar que no esté vacío
+            if (!nombre) {
+                alert("Por favor, ingresa tu nombre.");
+                return;
+            }
+
+            const mensaje = `¡Hola ${nombre}! Bienvenido/a.`;
+
+            // 1️⃣ Mostrar mensaje en el div
+            const mensajeDiv = document.createElement('div');
+            mensajeDiv.textContent = mensaje;
+            divMensajes.appendChild(mensajeDiv);
+
+            // 2️⃣ Desaparecer automáticamente tras 5 segundos
+            setTimeout(() => {
+                divMensajes.removeChild(mensajeDiv);
+            }, 5000);
+
+            // 3️⃣ Mostrar alerta
+            alert(mensaje);
+
+            // 4️⃣ Abrir ventana hija con mensaje de bienvenida
+            const ventanaHija = window.open("", "ventanaHija", "width=400,height=200");
+            ventanaHija.document.write(`
+        <h3>Bienvenido/a, ${nombre}!</h3>
+        <button id="enviarMensaje">Enviar mensaje a ventana principal</button>
+        <script>
+            const btn = document.getElementById('enviarMensaje');
+            btn.addEventListener('click', () => {
+            window.opener.postMessage('Hola desde la ventana hija', '*');
+            });
+        <\/script>
+        `);
+        });
+
+        // Escuchar mensajes desde la ventana hija
+        window.addEventListener('message', (event) => {
+            const mensajeDiv = document.createElement('div');
+            mensajeDiv.textContent = `Mensaje recibido: ${event.data}`;
+            divMensajes.appendChild(mensajeDiv);
+
+            // Desaparecer automáticamente tras 5 segundos
+            setTimeout(() => {
+                divMensajes.removeChild(mensajeDiv);
+            }, 5000);
+        });
+    </script>
+
+</body>
+
+</html>
