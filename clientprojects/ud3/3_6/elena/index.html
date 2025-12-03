@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 1rem;
+        background-color: white;
+      }
+
+      h1 {
+        text-align: left;
+        color: purple;
+      }
+
+      .agregar {
+        background-color: purple;
+        color: white;
+      }
+
+      .tarea {
+        border: 1px solid purple;
+      }
+
+      .tarea-detallada {
+        background: white;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <h1>Gestor de Tareas</h1>
+
+    <input id="nueva-tarea" class="tarea" type="text" placeholder="Nueva tarea" />
+    <button id="btn-agregar" class="agregar">Agregar</button>
+
+    <div id="lista-tareas"></div>
+    
+    <script type="module" src="./app.js"></script>
+
+  </body>
+</html>
+
+

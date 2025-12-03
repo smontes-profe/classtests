@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3.4. Actividades con funciones</title>
+
+  <!-- Link al CSS externo -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>3.4. Actividades con funciones</h1>
+  <p>Selecciona un ejercicio y observa el resultado en la <strong>consola</strong> (F12 → Consola).</p>
+
+  <select id="selector">
+    <option value="">-- Selecciona un ejercicio --</option>
+    <option value="ejercicio1/ejercicio1.js">Ejercicio 1</option>
+    <option value="ejercicio2/ejercicio2.js">Ejercicio 2</option>
+    <option value="ejercicio3/ejercicio3.js">Ejercicio 3</option>
+    <option value="ejercicio4/ejercicio4.js">Ejercicio 4</option>
+    <option value="ejercicio5/ejercicio5.js">Ejercicio 5</option>
+    <option value="ejercicio6/ejercicio6.js">Ejercicio 6</option>
+    <option value="ejercicio7/ejercicio7.js">Ejercicio 7</option>
+  </select>
+
+  <button onclick="cargarEjercicio()">Cargar</button>
+
+  <footer>
+    <p>Proyecto educativo – Programación con Colecciones y Funciones en JavaScript</p>
+  </footer>
+
+  <script>
+    let scriptActual = null;
+
+    function cargarEjercicio() {
+      const archivo = document.getElementById('selector').value;
+      if (!archivo) {
+        alert("Selecciona un ejercicio primero.");
+        return;
+      }
+
+      // ✅ Eliminar script anterior si ya existe
+      if (scriptActual) {
+        document.body.removeChild(scriptActual);
+        scriptActual = null;
+      }
+
+      // ✅ Crear nuevo script y cargar el ejercicio seleccionado
+      const script = document.createElement('script');
+      script.src = archivo + '?v=' + new Date().getTime(); // Evita caché
+      script.onload = () => console.log(`✅ Ejecutando ${archivo}`);
+      document.body.appendChild(script);
+
+      // Guardar referencia al script actual
+      scriptActual = script;
+    }
+  </script>
+</body>
+</html>

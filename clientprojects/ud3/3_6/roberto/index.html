@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad - Patrones JS</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 20px; }
+        h1, h2 { border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        ul { list-style: none; padding-left: 0; }
+        button { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Gestor de Tareas (Patrones)</h1>
+
+    <div>
+        <input type="text" id="nueva-tarea-texto" placeholder="Escribe una nueva tarea...">
+        <button id="btn-agregar">Añadir Tarea</button>
+    </div>
+
+    <h2>Lista Simple (Factory)</h2>
+    <ul id="lista-simple-dom">
+        </ul>
+
+    <h2>Lista Detallada (Factory)</h2>
+    <div id="lista-detallada-dom">
+        </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

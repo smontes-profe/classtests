@@ -2,3 +2,44 @@
 *.pdf
 *.zip
 *.rar
+
+# -------------------
+# Compilados de Java
+# -------------------
+*.class
+
+# -------------------
+# Archivos específicos de Eclipse
+# -------------------
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*.xml
+.settings/
+.loadpath
+.recommenders
+
+# Archivos de configuración del proyecto Eclipse
+# NOTA: Generalmente se ignoran si usas Maven o Gradle.
+# Si es un proyecto puro de Eclipse compartido, quizás quieras descomentar (quitar) estas líneas:
+.classpath
+.project
+
+# -------------------
+# Paquetes y ejecutables (Evita subir binarios pesados)
+# -------------------
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# -------------------
+# Logs y Errores de la JVM
+# -------------------
+*.log
+hs_err_pid*

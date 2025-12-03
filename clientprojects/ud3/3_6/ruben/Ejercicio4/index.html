@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Tareas</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        /* Lista simple */
+        #lista-simple {
+            background: #f0f0f0;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        #lista-simple li {
+            margin: 8px 0;
+        }
+        
+        #lista-simple li.completada {
+            color: green;
+        }
+        
+        /* Lista detallada */
+        #lista-detallada {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+        
+        .tarea-detallada {
+            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+        }
+        
+        .tarea-fecha {
+            font-size: 12px;
+            color: gray;
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Tareas</h1>
+    
+    <h2>Vista Simple:</h2>
+    <ul id="lista-simple"></ul>
+    
+    <h2>Vista Detallada:</h2>
+    <div id="lista-detallada"></div>
+    
+    <button onclick="agregarTarea()">Añadir tarea</button>
+    
+    <!-- IMPORTANTE: Los scripts deben cargarse en orden -->
+    <!-- Primero Tarea, luego TaskManager (que usa Tarea), luego Factory (que usa Tarea) -->
+    <script src="Tarea.js"></script>
+    <script src="TaskManager.js"></script>
+    <script src="ElementoUIFactory.js"></script>
+    
+    <script>
+        // Inicializar el gestor y la factory
+        const gestor = TaskManager.getInstance();
+        const factory = new ElementoUIFactory();
+        
+        // Función que actualiza ambas listas usando la factory
+        function actualizar() {
+            // Actualizar lista simple
+            const simple = document.getElementById('lista-simple');
+            simple.innerHTML = '';
+            gestor.obtenerTareas().forEach(tarea => {
+                const elem = factory.crearElementoTarea(tarea, 'simple');
+                simple.appendChild(elem);
+            });
+            
+            // Actualizar lista detallada
+            const detallada = document.getElementById('lista-detallada');
+            detallada.innerHTML = '';
+            gestor.obtenerTareas().forEach(tarea => {
+                const elem = factory.crearElementoTarea(tarea, 'detallado');
+                detallada.appendChild(elem);
+            });
+        }
+        
+        // Suscribimos la función actualizar al gestor (patrón Observer)
+        gestor.suscribir(actualizar);
+        
+        // Añadir algunas tareas de ejemplo al cargar
+        gestor.agregarTarea('Comprar pan');
+        gestor.agregarTarea('Estudiar JS');
+        
+        // Función para añadir tareas con el botón
+        function agregarTarea() {
+            const texto = prompt('¿Qué tarea quieres añadir?');
+            if (texto) {
+                gestor.agregarTarea(texto);
+            }
+        }
+    </script>
+</body>
+</html>

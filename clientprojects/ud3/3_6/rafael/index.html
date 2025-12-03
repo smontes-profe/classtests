@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #EFEFEF;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #315762;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .form-container {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(49, 87, 98, 0.15);
+            margin-bottom: 30px;
+            border: 2px solid #315762;
+        }
+
+        #form-tarea {
+            display: flex;
+            gap: 10px;
+        }
+
+        #input-tarea {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #315762;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            background: #EFEFEF;
+        }
+
+        #input-tarea:focus {
+            border-color: #315762;
+            box-shadow: 0 0 0 3px rgba(49, 87, 98, 0.1);
+            background: white;
+        }
+
+        button[type="submit"] {
+            padding: 12px 30px;
+            background: #315762;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(49, 87, 98, 0.3);
+            background: #264651;
+        }
+
+        .listas-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .lista-section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(49, 87, 98, 0.15);
+            border: 2px solid #315762;
+        }
+
+        .lista-section h2 {
+            color: #315762;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #315762;
+        }
+
+        #lista-simple {
+            list-style: none;
+        }
+
+        #lista-simple li {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background: #EFEFEF;
+            border-radius: 8px;
+            border-left: 4px solid #315762;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s;
+        }
+
+        #lista-simple li:hover {
+            background: #e0e0e0;
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(49, 87, 98, 0.1);
+        }
+
+        #lista-simple li.tarea-completada {
+            border-left-color: #5a9;
+            opacity: 0.7;
+            text-decoration: line-through;
+        }
+
+        .tarea-detallada {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #EFEFEF;
+            border-radius: 8px;
+            border: 2px solid #d0d0d0;
+            transition: all 0.3s;
+        }
+
+        .tarea-detallada:hover {
+            border-color: #315762;
+            box-shadow: 0 3px 10px rgba(49, 87, 98, 0.2);
+        }
+
+        .tarea-checkbox {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #315762;
+        }
+
+        .tarea-texto {
+            flex: 1;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .tarea-fecha {
+            font-size: 12px;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .btn-eliminar {
+            padding: 8px 15px;
+            background: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-eliminar:hover {
+            background: #b71c1c;
+        }
+
+        .info-box {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(49, 87, 98, 0.15);
+            margin-top: 20px;
+            text-align: center;
+            border: 2px solid #315762;
+        }
+
+        .info-box p {
+            color: #315762;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .listas-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Tareas</h1>
+        
+        <div class="form-container">
+            <form id="form-tarea">
+                <input 
+                    type="text" 
+                    id="input-tarea" 
+                    placeholder="Escribe una nueva tarea..."
+                    required
+                >
+                <button type="submit">Añadir</button>
+            </form>
+        </div>
+
+        <div class="listas-container">
+            <div class="lista-section">
+                <h2>Vista Simple</h2>
+                <ul id="lista-simple"></ul>
+            </div>
+
+            <div class="lista-section">
+                <h2>Vista Detallada</h2>
+                <div id="lista-detallada"></div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <p>Abre la consola del navegador para ver las acciones</p>
+        </div>
+    </div>
+
+    <!-- Cargar los scripts en orden correcto -->
+    <script src="Tarea.js"></script>
+    <script src="TaskManager.js"></script>
+    <script src="ElementoUIFactory.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

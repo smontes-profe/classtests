@@ -2,6 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Suma",
+            "request": "launch",
+            "mainClass": "Suma",
+            "projectName": "classtests_64cc24a"
+        },
+        {
             "name": "Listen for Xdebug",
             "type": "php",
             "request": "launch",

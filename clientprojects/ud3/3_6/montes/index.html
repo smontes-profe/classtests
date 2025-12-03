@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Tareas con Patrones</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .contenedor {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        #controles {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #nueva-tarea-input {
+            flex-grow: 1;
+        }
+
+        /* Estilos de la Factory (Ejercicio 4) */
+        li {
+            margin-bottom: 5px;
+        }
+
+        .tarea-detallada {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tarea-detallada .fecha-creacion {
+            font-size: 0.8em;
+            color: #777;
+        }
+
+        .eliminar-btn {
+            cursor: pointer;
+            color: red;
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gestor de Tareas (Patrones de Diseño)</h1>
+
+    <div id="controles">
+        <input type="text" id="nueva-tarea-input" placeholder="Escribe una nueva tarea..." />
+        <button id="anadir-tarea-btn">Añadir</button>
+    </div>
+
+    <h2>Lista Simple (Factory)</h2>
+    <div class="contenedor">
+        <ul id="lista-simple">
+        </ul>
+    </div>
+
+    <h2>Lista Detallada (Factory)</h2>
+    <div class="contenedor">
+        <div id="lista-detallada">
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

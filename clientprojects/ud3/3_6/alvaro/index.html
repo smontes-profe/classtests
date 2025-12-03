@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de Patrones de Diseño - Gestor de Tareas</title>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>Gestor de Tareas con Patrones de Diseño</h1>
+        <p>Una demo de Singleton, Observer y Factory en JavaScript.</p>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        
+        <!-- Panel Izquierdo: Agregar Tareas y Lista Detallada -->
+        <div class="panel">
+            <h2>Agregar Nueva Tarea</h2>
+            <div class="form-agregar">
+                <input type="text" id="nueva-tarea-input" placeholder="Escribe tu tarea...">
+                <button id="agregar-tarea-btn">Agregar</button>
+            </div>
+            
+            <div id="lista-detallada-container">
+                <h2>Lista Detallada (Factory 'detallado')</h2>
+                <div id="lista-detallada">
+                    <!-- Las tareas detalladas (con checkbox, etc.) se insertarán aquí vía JS -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Panel Derecho: Lista Simple -->
+        <div class="panel">
+            <div id="lista-simple-container">
+                <h2>Lista Simple (Factory 'simple')</h2>
+                <p>Clic en una tarea para completarla.</p>
+                <ul id="lista-simple">
+                    <!-- Las tareas simples (<li>) se insertarán aquí vía JS -->
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>Abre la consola del desarrollador (F12) para ver los logs de los Observadores.</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <!-- Cargamos app.js como módulo para que pueda usar import/export -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
