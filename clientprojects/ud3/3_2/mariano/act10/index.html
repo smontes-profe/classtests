@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Saludo Interactivo</title>
+</head>
+<body>
+
+<h2>Saludo Interactivo</h2>
+
+<input id="nombre" placeholder="Ingresa tu nombre">
+<button id="saludar">Saludar</button>
+
+<div id="mensajes"></div>
+
+<script>
+// Obtener elementos del DOM
+const btnSaludar = document.getElementById("saludar");
+const inputNombre = document.getElementById("nombre");
+const mensajesDiv = document.getElementById("mensajes");
+
+// Evento click
+btnSaludar.addEventListener("click", () => {
+    const nombre = inputNombre.value.trim();
+
+    if (nombre === "") {
+        alert("Por favor, ingresa un nombre.");
+        return;
+    }
+
+    
+    const mensajeTexto = `¡Hola ${nombre}! Bienvenido/a.`;
+
+    
+    const nuevoMensaje = document.createElement("p");
+    nuevoMensaje.textContent = mensajeTexto;
+    mensajesDiv.appendChild(nuevoMensaje);
+
+  
+    window.alert(mensajeTexto);
+
+    
+    const nuevaVentana = window.open("", "", "width=300,height=200");
+    nuevaVentana.document.write(`<h3>${mensajeTexto}</h3>`);
+
+   
+    setTimeout(() => {
+        nuevoMensaje.remove();
+    }, 5000);
+});
+</script>
+
+</body>
+</html>
