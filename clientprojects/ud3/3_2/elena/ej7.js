@@ -1,0 +1,13 @@
+
+// Conversión de objetos a valores primitivos
+
+let cuentaBancaria = {
+    saldo: 1000,
+    toString() {
+        return `Saldo: ${this.saldo} EUR`;
+    ;}
+}
+
+console.log(cuentaBancaria.toString());
+
+

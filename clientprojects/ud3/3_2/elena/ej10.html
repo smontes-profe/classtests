@@ -1,0 +1,53 @@
+
+<!--Objeto Window, DOM y eventos--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saludo interactivo</title>
+</head>
+
+<body>
+  <h2>Saludo Interactivo</h2>
+
+  <input id="nombre" placeholder="Ingresa tu nombre">
+  <button id="saludar">Saludar</button>
+  <div id="mensajes"></div>
+
+  <script>
+    const inputNombre = document.getElementById("nombre");
+    const botonSaludar = document.getElementById("saludar");
+    const divMensajes = document.getElementById("mensajes");
+
+    botonSaludar.addEventListener("click", () => {
+      const nombre = inputNombre.value.trim();
+      if (nombre === "") {
+        alert("Ingresa tu nombre"); // Para ingresar nombre
+        return;
+      }
+
+      const mensaje = `¡Hola ${nombre}! Bienvenido/a.`; // Cuando ingresa nombre le sale este mensaje
+
+      // Se agrega el mensaje al DOM
+      const nuevoMensaje = document.createElement("p");
+      nuevoMensaje.textContent = mensaje;
+      divMensajes.appendChild(nuevoMensaje);
+
+      window.alert(mensaje); // Alerta con mensaje
+
+      const ventanaHija = window.open("", "_blank", "width=300,height=200"); // Ventana hija
+      ventanaHija.document.write(`<h3>${mensaje}</h3>`); // Mensaje  de bienvenida
+
+      setTimeout(() => { // Se elimina el mensaje a los 5 segundos
+        nuevoMensaje.remove();
+      }, 5000);
+    });
+
+  </script>
+
+</body>
+</html>
+
+
