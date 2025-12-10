@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="MiArma - Portfolio de arte digital futurista. Explora paisajes vibrantes donde la tecnología y la naturaleza coexisten en armonía." />
+  <meta name="author" content="MiArma" />
+  <title>MiArma - Portfolio de Arte Digital Futurista</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/bootstrap.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- Scripts -->
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+  <!-- Header con navegación -->
+  <header role="banner" id="header" class="header">
+    <nav class="navbar bg-body-tertiary" role="navigation" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand" href="#hero-section" aria-label="MiArma - Inicio">
+          <img src="./assets/img/fingerprint-9546040.svg" alt="Logo de MiArma - Pulpo estilizado" width="50"
+            height="50" />
+        </a>
+        <a class="nav-link active" aria-current="page" href="#hero-section">Home</a>
+        <a class="nav-link" href="#projects">About</a>
+        <a class="nav-link" href="#selected-works">Projects</a>
+      </div>
+    </nav> 
+  </header>
+
+  <!-- Contenido principal -->
+  <main role="main">
+    <!-- Hero Section -->
+    <section id="hero-section" class="hero-container" aria-label="Sección principal">
+      <div class="text-princi d-flex">
+        <article class="section-item" id="st1">
+          <small>Welcome to --</small>
+          <br /><br />
+          <hr class="section-hr" aria-hidden="true" />
+          <br />
+          <h1><a href="#" rel="history">MiArma</a></h1>
+        </article>
+
+        <article class="section-item" id="st2">
+          <small>Explore my--</small>
+          <br /><br />
+          <hr class="section-hr" aria-hidden="true" />
+          <br />
+          <h1><a href="#selected-works">PROJECTS</a></h1>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects Section - Modern Art Gallery Style -->
+    <section id="projects" class="projects-section" aria-label="Proyectos y galería">
+      <div class="container-fluid px-0">
+        <!-- Artist Statement Section -->
+        <div class="artist-statement-section" id="artist-statement">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 col-md-10">
+                <div class="statement-content">
+                  <span class="statement-label">Artist Statement</span>
+                  <h2 class="statement-title">Explorando Futuros Posibles</h2>
+                  <div class="statement-divider"></div>
+                  <p class="statement-text">
+                    En un mundo donde la realidad y la imaginación se entrelazan,
+                    mis obras buscan capturar la esencia de lo que podría ser
+                    nuestro futuro. A través de paisajes vibrantes y surrealistas,
+                    invito a los espectadores a explorar espacios donde la
+                    naturaleza y la tecnología coexisten en armonía.
+                  </p>
+                  <p class="statement-text">
+                    Mis creaciones son un reflejo de un futuro donde la sostenibilidad y la
+                    innovación se han fusionado. Utilizo colores intensos y formas
+                    abstractas para representar ciudades flotantes, bosques
+                    luminescentes y océanos de cristal.
+                  </p>
+                  <p class="statement-text">
+                    Cada pieza es una ventana a un universo alternativo, donde la humanidad
+                    ha aprendido a vivir en equilibrio con su entorno. A través de mi arte,
+                    aspiro a inspirar un diálogo sobre el futuro que queremos construir.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-section" id="selected-works">
+          <div class="container">
+            <!-- Gallery Header -->
+            <div class="row">
+              <div class="col-12">
+                <div class="gallery-header">
+                  <h2 class="gallery-main-title">Selected Works</h2>
+                  <p class="gallery-subtitle">Una colección curada de paisajes futuristas</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gallery Grid with Bootstrap -->
+            <div class="row g-4 gallery-row">
+              <!-- Gallery Item 1 -->
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <figure class="gallery-artwork" role="listitem">
+                  <div class="artwork-image-container">
+                    <img src="./assets/img/city-7529912_1920.jpg"
+                      alt="Ciudad futurista con rascacielos iluminados y arquitectura avanzada"
+                      class="gallery-thumbnail img-fluid" loading="lazy" />
+                    <div class="artwork-overlay">
+                      <span class="artwork-view-text">Ver Obra</span>
+                    </div>
+                  </div>
+                  <figcaption class="artwork-caption">
+                    <h3 class="artwork-title">Ciudad Futurista</h3>
+                    <p class="artwork-medium">Digital Art, 2024</p>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <!-- Gallery Item 2 -->
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <figure class="gallery-artwork" role="listitem">
+                  <div class="artwork-image-container">
+                    <img src="./assets/img/fantasy-5025750_1920.jpg"
+                      alt="Paisaje fantástico con formaciones rocosas y cielo colorido"
+                      class="gallery-thumbnail img-fluid" loading="lazy" />
+                    <div class="artwork-overlay">
+                      <span class="artwork-view-text">Ver Obra</span>
+                    </div>
+                  </div>
+                  <figcaption class="artwork-caption">
+                    <h3 class="artwork-title">Paisaje Fantástico</h3>
+                    <p class="artwork-medium">Digital Art, 2024</p>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <!-- Gallery Item 3 -->
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <figure class="gallery-artwork" role="listitem">
+                  <div class="artwork-image-container">
+                    <img src="./assets/img/planets-6403048_1920.jpg"
+                      alt="Escena espacial con múltiples planetas y nebulosas" class="gallery-thumbnail img-fluid"
+                      loading="lazy" />
+                    <div class="artwork-overlay">
+                      <span class="artwork-view-text">Ver Obra</span>
+                    </div>
+                  </div>
+                  <figcaption class="artwork-caption">
+                    <h3 class="artwork-title">Cosmos Infinito</h3>
+                    <p class="artwork-medium">Digital Art, 2024</p>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-Width Image Section -->
+    <section class="full-width-image-section" aria-label="Imagen destacada">
+      <img src="./assets/img/spaceship-5848274.jpg"
+        alt="Paisaje fantástico con formaciones rocosas y atmósfera mística" class="full-width-image" loading="lazy" />
+    </section>
+
+    <!-- Multimedia Section -->
+    <section class="multimedia-section" aria-label="Contenido multimedia">
+      <div class="multimedia-container">
+        <!-- Botón para abrir modal de vídeo -->
+        <div class="video-section">
+          <h2>Video Reel</h2>
+          <button class="video-reel-btn btn-primary" aria-label="Ver video reel">
+            <span class="btn-icon">▶</span>
+            Ver Reel
+          </button>
+        </div>
+
+        <!-- Reproductor de audio -->
+        <div class="audio-section">
+          <h2>Audio Ambiental</h2>
+          <audio controls class="audio-player" aria-label="Reproductor de audio ambiental">
+            <source src="./assets/audio/matrix-redux-78819.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+          <p class="audio-description">Música ambiental para acompañar la experiencia visual</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="multimedia-gift">
+      <div>
+        <img src="assets/img/statue-23962_512.gif" alt="">
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer - Modern Art Gallery Style -->
+  <footer role="contentinfo" class="modern-footer">
+    <div class="container">
+      <div class="row g-5 py-5">
+        <!-- Column 1: About -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-section-modern">
+            <h3 class="footer-heading">MiArma</h3>
+            <p class="footer-description">
+              Artista digital especializada en paisajes futuristas y surrealistas.
+              Explorando la intersección entre tecnología, naturaleza y creatividad.
+            </p>
+            
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-section-modern">
+            <h3 class="footer-heading">Navegación</h3>
+            <nav aria-label="Enlaces del pie de página">
+              <ul class="footer-nav-list">
+                <li><a href="#hero-section" class="footer-nav-link">Home</a></li>
+                <li><a href="#projects" class="footer-nav-link">About</a></li>
+                <li><a href="credits.html" class="footer-nav-link">Créditos y Licencias</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Column 3: License -->
+        <div class="col-lg-4 col-md-12">
+          <div class="footer-section-modern">
+            <h3 class="footer-heading">Licencia</h3>
+            <div class="license-container">
+              <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"
+                rel="license noopener noreferrer" aria-label="Licencia Creative Commons BY-NC-SA 4.0"
+                class="license-badge-link">
+                <img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"
+                  alt="Licencia Creative Commons BY-NC-SA 4.0" class="license-image" loading="lazy" />
+              </a>
+              <p class="license-description">
+                Esta obra está bajo una
+                <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"
+                  rel="license noopener noreferrer" class="license-link">
+                  Licencia CC BY-NC-SA 4.0
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="row">
+        <div class="col-12">
+          <div class="footer-bottom">
+            <p class="footer-copyright">&copy; 2024 MiArma. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>>
+
+  <!-- Modal de Vídeo -->
+  <div class="video-modal" role="dialog" aria-modal="true" aria-labelledby="video-modal-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <h2 id="video-modal-title" class="visually-hidden">Video Reel</h2>
+      <div class="video-container">
+        <video controls aria-label="Video reel de trabajos">
+          <source src="./assets/video/249338_small.mp4" type="video/mp4">
+          Tu navegador no soporta el elemento de vídeo.
+        </video>
+        <p class="video-caption">Reel de trabajos seleccionados</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

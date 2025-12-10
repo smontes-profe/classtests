@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiArma | Artista Digital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="MiArma Logo" class="logo">
+            <h1>MiArma</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <img src="assets/images/hero.png" alt="Paisaje Futurista" class="hero-bg">
+            <div class="hero-content">
+                <h2>Explorando Nuevos Horizontes</h2>
+                <p>Arte Digital</p>
+                <button id="play-reel" class="cta-button">Ver Reel</button>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <h3>Galería de Trabajos</h3>
+            <div class="gallery-container">
+                <div class="main-image-container">
+                    <img id="main-display" src="assets/images/gallery1.png" alt="Obra Destacada">
+                </div>
+                <div class="thumbnails">
+                    <img src="assets/images/gallery1_thumb.png" alt="Cyborg Portrait"
+                        data-full="assets/images/gallery1.png" class="thumb active">
+                    <img src="assets/images/gallery2_thumb.png" alt="Desert Vehicle"
+                        data-full="assets/images/gallery2.png" class="thumb">
+                    <img src="assets/images/gallery3_thumb.png" alt="Data Matrix" data-full="assets/images/gallery3.png"
+                        class="thumb">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h3>Experiencia Inmersiva</h3>
+            <div class="audio-player">
+                <p>Ambientación Sonora:</p>
+                <audio controls loop>
+                    <source src="assets/audio/ambient.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h3>Conecta Conmigo</h3>
+            <a href="mailto:contact@miarma.art" class="contact-btn-wrapper">
+                <img src="assets/images/contact_button.png" alt="Contactar" class="contact-gif">
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 MiArma Art. Todos los derechos reservados.</p>
+            <div class="license-info">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                    <img alt="Licencia Creative Commons" style="border-width:0"
+                        src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+                </a>
+                <br />Esta obra está bajo una <a rel="license"
+                    href="http://creativecommons.org/licenses/by-nc/4.0/">Licencia Creative Commons
+                    Atribución-NoComercial 4.0 Internacional</a>.
+            </div>
+            <a href="credits.html" class="credits-link">Créditos y Licencias</a>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="presentation-video" controls>
+                <source src="assets/video/presentation.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

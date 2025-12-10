@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | MiArma</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Form CSS -->
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+
+<body>
+    <!-- Hero Section con Fondo -->
+    <section class="hero-section fondo1">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a href="../index.html">
+                        <img src="../assets/img/favicon.svg" alt="logo" class="logo">
+                        <a class="navbar-brand letra-futurista" href="../index.html">MiArma</a>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item letra-futurista"><a class="nav-link" href="../index.html">Home</a></li>
+                            <li class="nav-item letra-futurista"><a class="nav-link"
+                                    href="https://kemekeosinweb.com">About us</a></li>
+                            <li class="nav-item letra-futurista"><a class="nav-link" href="form.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="form-hero">
+            <div class="container">
+                <h1 class="form-title letra-futurista">Contáctanos</h1>
+                <p class="form-subtitle">Envíanos un mensaje y te responderemos pronto</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Content Section -->
+    <section class="info-section fondo-section">
+        <div class="container py-5 letra-futurista">
+            <div class="form-container">
+                <form class="contact-form" id="contactForm">
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comentario">Comentario</label>
+                        <textarea id="comentario" name="comentario" placeholder="Escribe tu mensaje aquí..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+
+                    <div class="form-info">
+                        <p>Nos pondremos en contacto contigo lo antes posible</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>
+                            <a href="credits.html" target="_blank"
+                                title="Ver las atribuciones de todo el contenido multimedia">
+                                Créditos y Licencias del Contenido
+                            </a>
+                        </p>
+
+                        <div class="licencia-propia">
+                            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"
+                                title="Licencia Creative Commons Atribución-No Comercial 4.0 Internacional">
+                                <img src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png"
+                                    alt="Licencia Creative Commons Atribución-No Comercial">
+                            </a>
+
+                            <span id="licencia-texto">
+                                Landing Page © MiArma - Licenciada bajo
+                                <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC
+                                    4.0</a>
+                            </span>
+                        </div>
+
+                        <p class="copyright-info mb-0">
+                            Proyecto Integrado de Artista Digital Ficticia | Desarrollado por Rubén Ojeda y Rafael
+                            Verdugo
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script>
+        // Simple form validation and feedback (visual only, no backend)
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const comentario = document.getElementById('comentario').value;
+
+            // Simple validation
+            if (nombre && correo && comentario) {
+                // Show success message
+                alert('¡Gracias por tu mensaje, ' + nombre + '! (Nota: Este es solo un formulario visual, no se envía realmente)');
+
+                // Reset form
+                this.reset();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

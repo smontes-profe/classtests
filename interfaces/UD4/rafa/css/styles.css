@@ -1,0 +1,640 @@
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.fondo1 {
+    background-image: url("../assets/img/paisaje1.png");
+}
+
+.fondo2 {
+    background-image: url("../assets/img/paisaje2.png");
+}
+
+.fondo3 {
+    background-image: url("../assets/img/paisaje3.jpg");
+}
+
+.fondo4 {
+    background-image: url("../assets/img/paisaje4.jpg");
+}
+
+/* Header & Navbar */
+header {
+    background-color: rgba(218, 218, 218, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #1a1a1a;
+}
+
+.nav-link {
+    color: #1a1a1a;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff0000;
+    transform: scale(1.2);
+}
+
+.nav-color-green .nav-link:hover {
+    /* Aquí usamos el color de .nav-link1:hover */
+    color: #009307;
+    transform: scale(1.2);
+}
+
+.nav-color-red .nav-link:hover {
+    /* Color de .nav-link:hover */
+    color: #ff0000;
+    transform: scale(1.2);
+}
+
+/* Navbar Toggler - Menú Hamburguesa */
+.navbar-toggler {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 0.75rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.15);
+    outline: none;
+}
+
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.navbar-collapse {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+
+/* Main Content */
+.hero-section main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnFondo {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+#btnFondo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Carousel de Miniaturas - Bootstrap Grid */
+.thumbnail-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.thumbnail-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.img-thumbnail-custom {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail-item:hover .img-thumbnail-custom {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    color: #1a1a1a;
+    font-size: 0.85em;
+    text-align: center;
+    line-height: 1.6;
+    border-top: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: auto;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #000;
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.licencia-propia {
+    display: block;
+    margin: 10px 0;
+}
+
+.licencia-propia img {
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.copyright-info {
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    #btnFondo {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    footer {
+        font-size: 0.75em;
+        padding: 15px 10px;
+    }
+
+    .copyright-info {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #btnFondo {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .col-12,
+    .col-md-6 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    footer {
+        font-size: 0.7em;
+        padding: 15px 5px;
+    }
+}
+
+/* Futuristic Font */
+@font-face {
+    font-family: 'ScienceGothic';
+    src: url('../assets/fonts/ScienceGothic-VariableFont_CTRS,slnt,wdth,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.letra-futurista {
+    font-family: 'ScienceGothic', sans-serif;
+}
+
+.fondo-section {
+    background-image: url('../assets/img/fondosingift1.png');
+}
+
+.info-section {
+    color: white;
+    /* 1. Ruta a tu archivo GIF. Asegúrate de que la ruta es correcta. */
+
+
+    /* 2. Propiedades para que el GIF se vea bien: */
+
+    /* Evita que el fondo se repita (se muestre una sola vez) */
+    background-repeat: no-repeat;
+
+    /* Centra la imagen en el cuerpo de la página */
+    background-position: center center;
+
+    /* Asegura que el GIF cubra toda el área del fondo */
+    background-size: cover;
+
+    /* Fija el GIF en su lugar (opcional, para que no se mueva al hacer scroll) */
+    background-attachment: fixed;
+
+    /* OPCIONAL: Un color de fondo sólido por si el GIF no carga */
+    background-color: #000000;
+
+    /* Para que el cuerpo ocupe al menos toda la altura de la ventana */
+    min-height: 100vh;
+    margin: 0;
+    /* Elimina el margen predeterminado del navegador */
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.info-card {
+    padding: 30px;
+    border-radius: 10px;
+    height: 50vh;
+}
+
+.fondogif1 {
+    background-image: url('../assets/videos/gif-fire.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fondogif2 {
+    background-image: url('../assets/videos/gif-calle.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fondosingift1 {
+    background-image: url('../assets/img/fondosingift1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fondosingift2 {
+    background-image: url('../assets/img/fondosingift2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ============================================
+   SECCIÓN MULTIMEDIA - Video y Audio
+   ============================================ */
+
+.multimedia-card {
+    background: linear-gradient(135deg, rgba(30, 30, 50, 0.95), rgba(20, 20, 40, 0.9));
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+}
+
+.multimedia-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(138, 43, 226, 0.6);
+    box-shadow: 0 12px 40px rgba(138, 43, 226, 0.35);
+}
+
+.multimedia-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.multimedia-card p {
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* Botón Ver Reel */
+.btn-reel {
+    background-color: #303030;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(195, 195, 195, 0.4);
+}
+
+.btn-reel:hover {
+    background-color: #f3f3f3;
+    color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(92, 92, 92, 0.5);
+}
+
+.btn-reel:focus {
+    outline: 3px solid rgba(98, 98, 98, 0.5);
+    outline-offset: 2px;
+}
+
+/* Reproductor de Audio */
+.audio-player {
+    width: 100%;
+    max-width: 350px;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+}
+
+.audio-player::-webkit-media-controls-panel {
+    background: radial-gradient(135deg, #636363, #9c9c9c);
+    border-radius: 25px;
+}
+
+/* ============================================
+   MODAL DE VIDEO
+   ============================================ */
+
+.video-modal {
+    display: none !important;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+.video-modal.show {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.video-modal-content {
+    position: relative;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.video-modal-content video {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 10px;
+    display: block;
+}
+
+.close-modal {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+    z-index: 10000;
+}
+
+.close-modal:hover {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    transform: scale(1.1) rotate(90deg);
+}
+
+.close-modal:focus {
+    outline: 3px solid rgba(239, 68, 68, 0.5);
+    outline-offset: 2px;
+}
+
+/* Responsive para sección multimedia */
+@media (max-width: 768px) {
+    .multimedia-card {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .multimedia-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .btn-reel {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    .audio-player {
+        max-width: 100%;
+    }
+
+    .video-modal-content {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .close-modal {
+        top: -10px;
+        right: -10px;
+        width: 35px;
+        height: 35px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .multimedia-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .multimedia-card p {
+        font-size: 0.85rem;
+    }
+
+    .btn-reel {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   ESTILOS PARA TARJETAS MULTIMEDIA CON CREDIT-ITEM
+   ============================================ */
+
+.info-section .credit-item {
+    text-align: left;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+
+
+.info-section .credit-item strong {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.info-section .credit-item p {
+    margin-bottom: 20px;
+}
+
+.info-section .credit-item .btn-reel {
+    margin-top: 10px;
+}
+
+.info-section .credit-item strong {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.info-section .credit-item p {
+    margin-bottom: 20px;
+}
+
+.info-section .credit-item .btn-reel {
+    margin-top: 10px;
+}
+
+.info-section .credit-item .audio-player {
+    margin-top: 10px;
+}
+
+
+.homecard {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.homecard:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}

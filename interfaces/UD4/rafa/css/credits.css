@@ -1,0 +1,160 @@
+/* Credits Page Specific Styles */
+
+.credits-hero {
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credits-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.credits-subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.credits-content {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.credit-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.credit-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.credit-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.credit-section h3 {
+    font-size: 1.5rem;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.credit-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.credit-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.credit-item strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.credit-item p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.credit-item a {
+    color: #60a5fa;
+    text-decoration: none;
+    word-break: break-all;
+    transition: color 0.3s ease;
+}
+
+.credit-item a:hover {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+.credit-item em {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.license-info {
+    background: rgba(102, 126, 234, 0.1);
+    border-left: 4px solid #667eea;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.license-info ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.license-info ul li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.license-info ul li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.license-badge {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.license-badge img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .credits-title {
+        font-size: 2rem;
+    }
+
+    .credits-content {
+        padding: 25px;
+    }
+
+    .credit-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .credit-section h3 {
+        font-size: 1.2rem;
+    }
+}
