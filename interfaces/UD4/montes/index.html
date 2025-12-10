@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Arte del Sabor - Recetario Interactivo</title>
+    <!-- !FUENTES E ICONOS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- !ENLACES CSS -->
+    <link rel="stylesheet" href="css/styleBase.css" />
+    <link rel="stylesheet" href="css/styleComponents.css" />
+    <link rel="stylesheet" href="css/styleHeader.css" />
+    <link rel="stylesheet" href="css/styleHero.css" />
+    <link rel="stylesheet" href="css/styleGallery.css" />
+    <link rel="stylesheet" href="css/styleVideo.css" />
+    <link rel="stylesheet" href="css/styleFooter.css" />
+
+    <!-- !SCRIPTS -->
+    <script src="js/script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- !CABECERA -->
+    <header class="main-header">
+      <div class="container header-container">
+        <a href="#" class="logo">
+          <!-- USUARIO: LOGO ACTUALIZADO -->
+          <img
+            src="assets/images/L_Food.svg"
+            alt="Logo El Arte del Sabor"
+            class="logo-img placeholder-img"
+          />
+          <span class="logo-text">El Arte del Sabor</span>
+        </a>
+        <button class="hamburger-btn" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#gallery">Recetas</a></li>
+            <li><a href="#video-section">Video</a></li>
+            <li><a href="#footer">Contacto</a></li>
+          </ul>
+          <!-- Mobile Menu Footer Logo -->
+          <div class="mobile-nav-logo">
+            <img src="assets/images/L_Food.svg" alt="Logo" />
+            <span>El Arte del Sabor</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- !SECCIÓN HERO -->
+      <section id="hero" class="hero-section">
+        <!-- USUARIO: IMAGEN DE FONDO ACTUALIZADA -->
+        <div
+          class="hero-bg placeholder-bg"
+          style="background-image: url('assets/images/P_main.jpg')"
+        ></div>
+        <div class="hero-content">
+          <h1>Descubre la Magia de la Cocina</h1>
+          <p>Un viaje culinario a través de sabores, texturas y aromas.</p>
+          <a href="#gallery" class="btn-primary">Ver Recetas</a>
+        </div>
+      </section>
+
+      <!-- !SECCIÓN GALERÍA -->
+      <section id="gallery" class="gallery-section container">
+        <div class="section-header">
+          <h2>Nuestras Creaciones</h2>
+        </div>
+
+        <div class="gallery-container">
+          <!-- Visor Principal -->
+          <div class="main-viewer">
+            <!-- USUARIO: LA IMAGEN GRANDE CAMBIARÁ DINÁMICAMENTE -->
+            <img
+              src="assets/images/P_Receta1.jpg"
+              alt="Food at Steamworks"
+              id="mainImage"
+              class="placeholder-img"
+            />
+          </div>
+
+          <!-- Miniaturas -->
+          <div class="thumbnails">
+            <!-- USUARIO: COLOCA TUS MINIATURAS AQUÍ (assets/images/recipeX-thumb.jpg) -->
+            <!-- USUARIO: ASEGÚRATE DE QUE data-full APUNTE A LA IMAGEN GRANDE CORRESPONDIENTE -->
+
+            <div
+              class="thumb-item active"
+              data-full="assets/images/P_Receta1.jpg"
+            >
+              <img
+                src="assets/images/P_Receta1.jpg"
+                alt="Food at Steamworks"
+                class="placeholder-img"
+              />
+              <div class="thumb-overlay">Food at Steamworks</div>
+            </div>
+
+            <div class="thumb-item" data-full="assets/images/P_Receta2.jpg">
+              <img
+                src="assets/images/P_Receta2.jpg"
+                alt="Food Dish"
+                class="placeholder-img"
+              />
+              <div class="thumb-overlay">Food Dish</div>
+            </div>
+
+            <div class="thumb-item" data-full="assets/images/P_Receta3.jpg">
+              <img
+                src="assets/images/P_Receta3.jpg"
+                alt="Food Gourmet"
+                class="placeholder-img"
+              />
+              <div class="thumb-overlay">Food Gourmet</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- !SECCIÓN VIDEO -->
+      <section id="video-section" class="video-section container">
+        <!-- Background Video -->
+        <div class="video-bg-container">
+          <video autoplay muted loop playsinline class="bg-video">
+            <source src="assets/video/V_ADate.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- Mosaic Overlay -->
+        <div class="mosaic-overlay" id="mosaicOverlay"></div>
+
+        <!-- Content -->
+        <div class="content-overlay">
+          <h2>Experiencia Visual</h2>
+          <p>Sumérgete en el proceso creativo.</p>
+
+          <button id="openModalBtn" class="btn-video">
+            <!-- USUARIO: PUEDES USAR UN GIF AQUÍ SI QUIERES (assets/images/contact_button.gif) -->
+            <span class="icon">▶</span> Ver Reel de Cocina
+          </button>
+        </div>
+      </section>
+
+      <!-- !VIDEO MODAL -->
+      <div id="videoModal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <!-- USUARIO: COLOCA TU VIDEO AQUÍ (assets/video/cooking_intro.mp4) -->
+          <video controls id="modalVideo" class="placeholder-video">
+            <source src="assets/video/V_ADate.mp4" type="video/mp4" />
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </div>
+      </div>
+
+      <!-- !SECCIÓN AUDIO (Oculta o mínima) -->
+      <section class="audio-section container">
+        <p>Ambiente Sonoro:</p>
+        <!-- USUARIO: COLOCA TU AUDIO AQUÍ (assets/audio/ambient_kitchen.mp3) -->
+        <audio controls class="placeholder-audio">
+          <source src="assets/audio/S_Cocina.wav" type="audio/wav" />
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </section>
+    </main>
+
+    <!-- !PIE DE PÁGINA -->
+    <footer id="footer" class="main-footer">
+      <div class="container footer-content">
+        <div class="footer-info">
+          <h3>El Arte del Sabor</h3>
+          <p>Pasión por la gastronomía en cada plato.</p>
+        </div>
+
+        <div class="footer-license">
+          <!-- USUARIO: LICENCIA ACTUALIZADA A 2.0 -->
+          <p>Licencia del Proyecto:</p>
+          <a
+            rel="license"
+            href="https://creativecommons.org/licenses/by-nc-sa/2.0/"
+            target="_blank"
+          >
+            <img
+              alt="Licencia Creative Commons"
+              style="border-width: 0"
+              src="https://i.creativecommons.org/l/by-nc-sa/2.0/88x31.png"
+            />
+          </a>
+          <br />Esta obra está bajo una
+          <a
+            rel="license"
+            href="https://creativecommons.org/licenses/by-nc-sa/2.0/"
+            target="_blank"
+            >Licencia Creative Commons Atribución-NoComercial-CompartirIgual 2.0
+            Genérica</a
+          >.
+        </div>
+
+        <div class="footer-links">
+          <a href="credits.html" class="credits-link"
+            >Créditos y Licencias de Recursos</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

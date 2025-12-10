@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Empleados</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/create.js" type="module"></script>
+    <script src="js/index.js" type="module"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Gestión de Empleados</h1>
+
+      <section class="form-section">
+        <h2>➕ Nuevo Empleado</h2>
+        <form id="form-empleado">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" placeholder="Ej: Laura M." required />
+            </div>
+            <div class="form-group">
+              <label for="puesto">Puesto</label>
+              <input type="text" id="puesto" placeholder="Ej: Analista" required />
+            </div>
+            <div class="form-group">
+              <label for="salario">Salario</label>
+              <input type="number" id="salario" step="0.01" placeholder="0.00" required />
+            </div>
+          </div>
+          <button type="submit" class="btn-guardar">Guardar Empleado</button>
+        </form>
+        <div id="form-msg" class="feedback-msg" style="display: none"></div>
+      </section>
+
+      <hr />
+
+      <section class="list-section">
+        <div class="header-lista">
+          <h2>Listado Actual</h2>
+          <div id="loading" style="display: none">Cargando... ⏳</div>
+        </div>
+
+        <div id="error-msg" class="feedback-msg error" style="display: none"></div>
+
+        <table id="tabla-empleados">
+          <thead>
+            <tr>
+              <th style="width: 50px;">ID</th>
+              <th>Nombre</th>
+              <th>Puesto</th>
+              <th>Salario</th>
+              <th style="width: 100px; text-align: center;">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="lista-empleados"></tbody>
+        </table>
+
+        <div style="margin-top: 15px; text-align: center">
+          <button id="btn-recargar" class="btn-recargar">🔄 Actualizar Lista</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

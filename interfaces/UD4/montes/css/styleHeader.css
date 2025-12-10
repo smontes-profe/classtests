@@ -1,0 +1,213 @@
+/* !CABECERA (Efecto Cristal) */
+.main-header {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1.2rem 0;
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    border: none;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.3));
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+.main-nav a {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    color: var(--white);
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover { color: var(--primary-color); }
+.main-nav a:hover::after { width: 100%; }
+
+/* !HAMBURGER MENU (Hidden by default on Desktop) */
+.hamburger-btn {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover {
+    background: rgba(212, 175, 55, 0.1);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.mobile-nav-logo {
+    display: none;
+}
+
+/* !RESPONSIVO: TABLET VERTICAL Y MÓVIL (< 1024px) */
+@media (max-width: 1023px) {
+    .header-container {
+        justify-content: space-between; /* Default: Logo Left, Burger Right */
+        align-items: center;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    /* Move button to left when menu is open */
+    .hamburger-btn.open {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1002;
+        border-color: var(--white);
+        color: var(--white);
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(18, 18, 18, 0.98);
+        backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 1000;
+        padding-bottom: 50px;
+        left: auto; 
+    }
+
+    .main-nav.nav-active {
+        right: 0;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    
+    .main-nav a {
+        font-size: 1.8rem;
+        font-weight: 400;
+        font-family: var(--font-heading);
+    }
+
+    /* Mobile Logo inside Menu */
+    .mobile-nav-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease 0.2s;
+        position: absolute;
+        bottom: 40px;
+    }
+
+    .main-nav.nav-active .mobile-nav-logo {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .mobile-nav-logo img { width: 50px; height: auto; }
+    .mobile-nav-logo span {
+        font-family: var(--font-heading);
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+}
+
+/* !RESPONSIVO: MÓVIL (< 768px) */
+@media (max-width: 767px) {
+    .header-container {
+        flex-direction: column; /* Stack vertically */
+        justify-content: center;
+        align-items: center;
+        gap: 10px; /* Space between logo and button */
+        padding-bottom: 5px;
+    }
+
+    .logo {
+        position: static; /* Reset absolute */
+        transform: none;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .logo-text {
+        display: block;
+        font-size: 1.1rem; /* Slightly larger for readability */
+        text-align: center;
+    }
+    
+    .logo-img {
+        height: 40px;
+    }
+
+    .hamburger-btn {
+        margin-top: 5px;
+    }
+
+    /* Adjust close button position when menu is open */
+    .hamburger-btn.open {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        margin-top: 0; /* Reset margin */
+    }
+}

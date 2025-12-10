@@ -1,0 +1,29 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    gap: 20px;
+}
+
+#zona-mouse {
+    width: 300px;
+    height: 200px;
+    border: 2px dashed blue;
+    background: #f0f8ff;
+}
+
+#zona-teclado {
+    padding: 10px;
+}
+
+#log {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ccc;
+    overflow-y: scroll;
+    list-style: none;
+    padding: 5px;
+}
+
+.highlight {
+    background: #e0f0ff;
+}

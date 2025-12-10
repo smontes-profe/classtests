@@ -1,0 +1,44 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Changed to min-height to allow scrolling */
+    position: relative;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    position: relative;
+    /* We don't want overflow hidden globally if we want scroll, 
+       but for this "app-like" single page feeling, hidden works if children scroll */
+    background: var(--bg-color);
+    transition: background-color 0.3s ease;
+}
+
+.view {
+    width: 100%;
+    /* Removed absolute positioning to restore document flow */
+}
+
+.view.hidden {
+    display: none !important;
+    /* Ensures the hidden view takes no space */
+}
+
+.view.active {
+    /* position: relative; is default for block */
+    display: block;
+    /* Gallery overrides this to flex via ID */
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

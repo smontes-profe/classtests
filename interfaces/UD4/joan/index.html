@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiArma - Artista Digital</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="assets/images/logo.svg" alt="Logo MiArma" class="logo">
+            <nav>
+                <a href="#about">Sobre Mí</a>
+                <a href="#gallery">Galería</a>
+                <a href="#reel">Reel</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>MiArma</h1>
+                <p>Artista Digital · Paisajes de Ciencia Ficción</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Sobre Mí</h2>
+                <p>Creadora de mundos futuristas y paisajes de ciencia ficción que exploran los límites entre la
+                    realidad y la imaginación.</p>
+                <div class="audio-player">
+                    <label for="ambient-audio">Ambiente Sonoro:</label>
+                    <audio id="ambient-audio" controls>
+                        <source src="assets/audio/ambient.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>Galería de Trabajos</h2>
+                <div class="gallery-main">
+                    <img id="gallery-display" src="assets/images/gallery-1-full.jpg" alt="Obra principal">
+                </div>
+                <div class="gallery-thumbnails">
+                    <img src="assets/images/gallery-1-thumb.jpg" alt="Obra 1" class="thumbnail active"
+                        data-full="assets/images/gallery-1-full.jpg">
+                    <img src="assets/images/gallery-2-thumb.jpg" alt="Obra 2" class="thumbnail"
+                        data-full="assets/images/gallery-2-full.jpg">
+                    <img src="assets/images/gallery-3-thumb.jpg" alt="Obra 3" class="thumbnail"
+                        data-full="assets/images/gallery-3-full.jpg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="reel" class="reel">
+            <div class="container">
+                <h2>Reel de Animación</h2>
+                <button id="open-modal" class="btn-primary">
+                    <img src="assets/images/contact-btn.gif" alt="" class="btn-icon">
+                    Ver Reel
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="credits.html">Créditos y Atribuciones</a>
+            </p>
+            <p class="license">
+                Esta obra está bajo una licencia
+                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
+                    Creative Commons Atribución 4.0 Internacional (CC BY 4.0)
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal">&times;</button>
+            <video id="modal-video" controls>
+                <source src="assets/video/reel.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

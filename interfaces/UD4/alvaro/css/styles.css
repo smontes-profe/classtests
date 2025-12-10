@@ -1,0 +1,283 @@
+/* --- 1. Paleta y Reset Básico --- */
+:root {
+    --color-dark-bg: #181818; /* Fondo principal muy oscuro */
+    --color-lighter-bg: #222222; /* Fondos de sección o contenedores */
+    --color-accent-red: #D04B2C; /* Naranja/Rojo marciano */
+    --color-highlight-blue: #00FFFF; /* Azul aguamarina brillante para acentos/GIF */
+    --color-light-text: #E0E0E0; /* Texto claro */
+    --color-white: #FFFFFF; /* Blanco puro */
+    --color-gray-border: #333333; /* Bordes sutiles */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: var(--color-accent-red);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* --- 2. HEADER y FOOTER --- */
+.main-header {
+    background-color: var(--color-lighter-bg);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-gray-border);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+/* LOGO PRINCIPAL: AJUSTE DE TAMAÑO Y FILTRO DE COLOR A BLANCO */
+.site-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    filter: invert(100%); /* Convierte el negro a blanco */
+}
+
+.main-footer {
+    background-color: var(--color-lighter-bg);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid var(--color-gray-border);
+    margin-top: 40px;
+}
+
+.footer-legal a, .credits-link {
+    color: var(--color-accent-red);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover, .credits-link:hover, .footer-legal a:focus {
+    color: var(--color-highlight-blue); /* Feedback suave */
+}
+
+/* LOGO CC: AJUSTE DE TAMAÑO Y FILTRO DE COLOR A BLANCO */
+.cc-icon {
+    width: 30px; 
+    height: 30px;
+    vertical-align: middle; 
+    margin-right: 5px;
+    filter: invert(100%); /* Convierte el negro a blanco */
+}
+
+/* --- 3. HERO SECTION --- */
+.hero-section {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 500px; 
+    object-fit: cover;
+}
+
+.hero-text-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    width: 100%;
+}
+
+/* --- 4. GALERÍA INTERACTIVA (TRANSICIONES Y FEEDBACK) --- */
+.gallery-section {
+    padding-bottom: 40px;
+}
+
+.gallery-viewer {
+    margin: 0 auto 20px;
+    max-width: 900px;
+    border: 1px solid var(--color-gray-border);
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9; 
+    object-fit: cover;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    width: 150px; 
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease, transform 0.2s ease; /* TRANSICIÓN */
+}
+
+.thumbnail:hover, .thumbnail:focus {
+    border-color: var(--color-highlight-blue); /* FEEDBACK VISUAL */
+    transform: scale(1.05); 
+    outline: none;
+}
+
+/* --- 5. VÍDEO Y AUDIO CONTROLES (TRANSICIONES Y FEEDBACK) --- */
+.video-audio-section {
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.video-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.action-button {
+    background-color: var(--color-accent-red);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* TRANSICIÓN */
+}
+
+.action-button:hover, .action-button:focus {
+    background-color: #F07A4B; /* FEEDBACK VISUAL */
+    transform: translateY(-2px); 
+    outline: none;
+}
+
+.animated-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.ambient-audio {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* --- 6. MODAL (Oculto por defecto y clase visible) --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.is-visible {
+    display: flex; /* Clase que JS activa */
+}
+
+.modal-content {
+    position: relative;
+    padding: 20px;
+    background-color: var(--color-dark-bg);
+    border-radius: 8px;
+    max-width: 90%;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Sombra futurista */
+}
+
+.modal-video {
+    display: block;
+    width: 90vw; 
+    max-width: 800px; 
+    height: auto;
+}
+
+.close-button {
+    color: var(--color-white);
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover, .close-button:focus {
+    color: var(--color-accent-red); /* FEEDBACK VISUAL */
+    text-decoration: none;
+}
+
+/* --- 7. RESPONSIVE (USABILIDAD MÓVIL) --- */
+@media (max-width: 768px) {
+    .hero-text-overlay h2 {
+        font-size: 1.8em;
+    }
+
+    .thumbnails {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .thumbnail {
+        width: calc(33.33% - 10px); 
+        height: auto;
+        aspect-ratio: 3/2;
+    }
+    
+    .video-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .ambient-audio {
+        max-width: 90%;
+    }
+
+    .modal-content {
+        padding: 10px;
+    }
+    
+    .modal-video {
+        width: 100%;
+    }
+}

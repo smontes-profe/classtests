@@ -1,0 +1,83 @@
+/*Hago variables globales para colores y sombras*/
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --light: #ecf0f1;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/*Hago un reset para evitar errores con otros navegadores*/
+* { 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+}
+
+/*Le pongo fuente fuente, un fondo, color negro, posicionamiento con padding a todo el cuerpo de la pagina*/
+body { 
+    font-family: sans-serif; 
+    line-height:1.6; 
+    color:#333; 
+    background:#f9f9f9; 
+    padding:20px; 
+}
+
+/*Color y margen para eltitulo principal*/
+h2 { 
+    color: var(--primary); 
+    margin-bottom: 1rem; 
+}
+
+/*Estilo general de toda la tabla, sobras, bordes redondeados, separaciones*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+
+/*Para el encabezado de la tabla fondo, color de texto, que se alinee a la izquierda y un espaciado interior*/
+th {
+    background: var(--primary);
+    color: white;
+    text-align: left;
+    padding: 12px;
+}
+
+/*Para las celdas de la tabla le he puesto un espaciado interior y una linea divisoria inferior*/
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/*Efecto hover en las filas al pasar el raton*/
+tr:hover { background:#f1f1f1; }
+
+/*Ajustes de colores, posicionamiento y hover para caundo pasemos el raton por encima*/
+.btn-back {
+    display: inline-block;
+    background: var(--secondary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background:#2980b9;
+    transform: translateY(-2px);
+}
+
+
+/*Posicionamiento y color para el pie de pagina*/
+footer {
+    text-align:center;
+    margin-top:2rem;
+    color:#7f8c8d;
+    font-size:0.9rem;
+}

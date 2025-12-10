@@ -1,0 +1,124 @@
+/*
+Un style chiquitito que se lo he pedido al chato que asi queda mas bonito
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 2em;
+}
+
+h2 {
+    text-align: center;
+    color: #4CAF50;
+    margin: 40px 0;
+    font-weight: 300;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form>div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 0.95em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+input.error {
+    border-color: #f44336;
+}
+
+.error-msg {
+    display: block;
+    color: #f44336;
+    font-size: 0.85em;
+    margin-top: 5px;
+    min-height: 18px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+input[type="checkbox"]:first-of-type {
+    margin-left: 0;
+}
+
+#resumen-total {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    border: 2px solid #4CAF50;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #45a049;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}

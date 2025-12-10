@@ -1,0 +1,55 @@
+/* --- style3.css --- */
+
+/* Estilo base (copiado del HTML por simplicidad, puedes ampliarlo) */
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+form > div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Para un efecto más suave */
+}
+
+
+/* Estilo para el input cuando falla la validación */
+.error {
+    border-color: red !important; /* !important asegura que sobrescriba el estilo normal */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+}
+
+/* Estilo para el mensaje de error */
+.error-msg {
+    color: red;
+    font-size: 0.9em;
+    display: block; 
+    min-height: 1.2em; /* Mantiene el espacio y evita que el layout salte */
+    margin-top: 2px;
+}
+
+/* Estilo para el resumen total */
+#resumen-total {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #004d99;
+    margin: 20px 0;
+    padding: 10px;
+    border-top: 2px solid #ddd;
+}

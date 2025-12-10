@@ -1,0 +1,74 @@
+/* Sidebar */
+.gallery-sidebar {
+    flex: 1;
+    background: var(--card-bg);
+    /* Distinct card background */
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    /* Card shape */
+    padding: 1.5rem;
+    padding-top: 1.5rem;
+    /* Reset padding */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    min-width: 300px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+}
+
+.gallery-sidebar::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari/Edge */
+}
+
+.gallery-sidebar h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.thumbnail-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.thumb-card {
+    cursor: pointer;
+    border-radius: var(--radius);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.thumb-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.thumb-card.active {
+    border: 2px solid var(--primary-color);
+}
+
+.thumb-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+}
+
+.thumb-label {
+    display: block;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+}

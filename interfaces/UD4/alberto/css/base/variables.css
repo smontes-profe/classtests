@@ -1,0 +1,43 @@
+:root {
+    /* Classic Dark Theme (Default) */
+    --primary-color: #1a73e8;
+    --secondary-color: #9aa0a6;
+    --bg-color: #000000;
+    /* Page Background */
+    --card-bg: #121212;
+    /* Element Background */
+    --text-color: #e8eaed;
+    --text-white: #ffffff;
+    --text-secondary: #9aa0a6;
+    --border-color: #3c4043;
+    --header-bg: #000000;
+    /* Opaque Header (matches page or card?) User said "classic header". If bg is black, header can be black. */
+    --header-border: #333;
+    --footer-bg: #000000;
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+
+    --header-height: 70px;
+    --font-main: 'Roboto', sans-serif;
+    --radius: 12px;
+    /* More visible radius for cards */
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+
+    --gap-size: 8px;
+    /* "Little space" */
+}
+
+/* Optional Light Mode (swapped) */
+[data-theme="light"] {
+    --primary-color: #1a73e8;
+    --secondary-color: #5f6368;
+    --bg-color: #f1f3f4;
+    --card-bg: #ffffff;
+    --text-color: #202124;
+    --text-secondary: #5f6368;
+    --border-color: #e0e0e0;
+    --header-bg: #ffffff;
+    --header-border: #e0e0e0;
+    --footer-bg: #f8f9fa;
+    --shadow-sm: 0 1px 2px 0 rgba(60, 64, 67, 0.3);
+}

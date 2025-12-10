@@ -1,0 +1,127 @@
+'use strict';
+
+let a = 5;
+let b = 10;
+let result = a + b;
+console.log("Resultado es: " + result);
+
+// valor de la variable en la impresión mal escrita
+
+
+'use strict';
+
+ 
+let edad = 16;
+if (edad >= 18) {
+    console.log("Eres mayor de edad");
+} else {
+    console.log("Eres menor de edad");
+}
+// Operador dentro de la estructura de condicional mal ordenado
+
+
+'use strict';
+ 
+function multiplicar(a, b) {
+    return a * b;
+}
+ 
+let total = multiplicar(3, 4);
+console.log("Total: " + total);
+
+// el resultado esta en comentarios y además se define una variables axilar sin necesidad
+
+
+'use strict';
+
+function saludar(nombre) {
+    console.log("Hola " + nombre);
+}
+ 
+saludar("Ana");
+
+// variable mal escrita en console.log
+
+
+'use strict';
+ 
+let numeros = [1, 2, 3, 4];
+let suma = Number(0);
+ 
+for (let i = 0; i < numeros.length; i++) {
+    suma += parseInt(numeros[i]);
+}
+ 
+console.log(`Suma total: ${suma}`);
+
+// dentro del enunciado del for, teníamos <= por tanto entre en una posición del array no definida
+
+
+'use strict';
+
+function esPar(num) {
+    if (num % 2 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+ 
+console.log(esPar(3));
+console.log(esPar(4));
+
+// en la estructura de control del if, se asigna el valor no se compara
+
+
+'use strict';
+
+function procesarDatos(datos, callback) {
+    callback(datos);
+}
+ 
+procesarDatos([1,2,3], function(d) {
+    console.log("Datos recibidos:", d);
+});
+
+
+// en la llamada del callback la variable está mal escrita
+
+
+<!DOCTYPE html>
+<html lang="es">
+<body>
+  <button id="miBoton">Click me</button>
+ 
+  <script>
+    const btn = document.getElementById("miBoton");
+    btn.addEventListener("click", function() {
+      let msg = "Hola mundo";
+      console.log(msg);
+    });
+  </script>
+</body>
+</html>
+
+// mensaje mal escrito
+
+'use strict';
+
+
+function calcularPrecio(base, descuento) {
+    let precioFinal = 0;
+
+    if (descuento > 0) {
+        descuento = descuento / 100;
+    }
+
+    if (descuento) {
+        precioFinal = base - (base * descuento);
+    }
+    return precioFinal.toFixed(2);
+}
+ 
+console.log(calcularPrecio(100, 0.2));
+console.log(calcularPrecio(100, 60));
+
+
+// falta comprobar si el porcentaje

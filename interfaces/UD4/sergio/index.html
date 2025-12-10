@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MiArma - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="assets/images/logo.png" alt="Logo" class="logo">
+        <h2>MiArma - Portfolio</h2>
+    </div>
+</header>
+
+<!--Imagen principal-->
+<section class="hero">
+    <img src="assets/images/hero.png" alt="Imagen principal">
+</section>
+
+<!--Boton del video y el gif-->
+<section class="video-section">
+    <div class="video-wrapper">
+        <img src="assets/images/flechaGif.gif" alt="Gif animado" class="gif-video">
+        <button id="btnVideo">
+            <i class="fas fa-play-circle"></i> Ver Reel
+        </button>
+    </div>
+</section>
+
+<!--Galeria de imagenes-->
+<section class="galeria">
+    <h3>Galería</h3>
+    <!--Miniatura de cada imagen-->
+    <div class="miniaturas">
+        <img src="assets/images/imagen1_pequeña.jpg" data-full="assets/images/imagen1_full.jpg" alt="Miniatura 1">
+        <img src="assets/images/imagen2_pequeña.jpg" data-full="assets/images/imagen2_full.jpg" alt="Miniatura 2">
+        <img src="assets/images/imagen3_pequeña.jpg" data-full="assets/images/imagen3_full.jpg" alt="Miniatura 3">
+    </div>
+    <!--Imagen grande que se cambia segun la miniatura que se seleccione-->
+    <img id="imagenGrande" src="assets/images/imagen1_full.jpg" alt="Imagen en grande">
+</section>
+
+<!--Modal del video-->
+<div id="modal" class="modal">
+    <!--Boton para que se pueda cerrar el modal-->
+    <button id="cerrarModal"><i class="fas fa-times"></i></button>
+    <!--Video que quiero que se reproduzca dentro del modal-->
+    <video controls>
+        <source src="assets/video/reel.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+    </video>
+</div>
+
+<!--Para el audio de la pagina-->
+<div class="audio-container">
+    <audio controls>
+        <source src="assets/audio/ambient.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<!--Pie de pagina-->
+<footer>
+    <div class="footer-content">
+        <img src="assets/images/cc.svg" alt="Creative Commons" class="cc-logo">
+        <span>MiArma — Sergio Gómez Galván</span>
+    </div>
+    <div>
+        <a href="credits.html">Créditos de los archivos</a>
+    </div>
+</footer>
+
+<script>
+    //Hago que se seleccione todas las miniaturas y la imagen grande
+    const miniaturas = document.querySelectorAll(".miniaturas img");
+    const grande = document.getElementById("imagenGrande");
+
+    //Hago que se cambie la imagen grande al clickar en cualquiera de las miniaturas
+    miniaturas.forEach(img => {
+        img.onclick = () => {
+            grande.src = img.dataset.full;
+            grande.alt = img.alt;
+        };
+    });
+
+    //Para el modal del video
+    const modal = document.getElementById("modal");
+    const btnVideo = document.getElementById("btnVideo");
+    const cerrarModal = document.getElementById("cerrarModal");
+
+    //Para que se abra el modal al hacer click en el boton
+    btnVideo.onclick = () => modal.style.display = "flex";
+
+    //Para que se cierre cuando le de a la x
+    cerrarModal.onclick = () => { modal.style.display = "none"; modal.querySelector('video').pause(); };
+    
+    //Para que se cierre el modal al hacer click fuera del video
+    modal.onclick = e => { 
+        if(e.target === modal) {
+             modal.style.display = "none"; 
+             modal.querySelector('video').pause(); 
+             } 
+    };
+</script>
+
+</body>
+</html>

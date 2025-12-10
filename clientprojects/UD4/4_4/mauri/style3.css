@@ -1,0 +1,135 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 50%, #6c3483 100%);
+    min-height: 100vh;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos del formulario */
+#form-inscripcion {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(142, 68, 173, 0.3);
+}
+
+#form-inscripcion > div {
+    margin-bottom: 20px;
+}
+
+/* Estilos de labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #6c3483;
+}
+
+label[for="taller-js"],
+label[for="taller-css"] {
+    display: inline;
+    font-weight: normal;
+    margin-left: 5px;
+    color: #333;
+}
+
+/* Estilos de inputs y select */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-color: #9b59b6;
+    box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.1);
+}
+
+/* Estilo para inputs con error */
+input.error {
+    border-color: #e74c3c;
+    background-color: #ffe6e6;
+}
+
+/* Estilos de checkboxes */
+input[type="checkbox"] {
+    margin-right: 5px;
+    cursor: pointer;
+    accent-color: #9b59b6;
+}
+
+/* Mensajes de error */
+.error-msg {
+    display: block;
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+/* Resumen del total */
+#resumen-total {
+    background: linear-gradient(135deg, #f4ecf7 0%, #e8daef 100%);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #6c3483;
+    text-align: center;
+    border: 2px solid #9b59b6;
+}
+
+/* Botón de envío */
+#btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 50%, #6c3483 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(155, 89, 182, 0.5);
+}
+
+#btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    #form-inscripcion {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,85 @@
+/* Audio Player */
+.audio-player {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 200;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Added transition */
+    transform: translateY(0);
+}
+
+.audio-player.hidden {
+    transform: translateY(200%);
+    /* Slides down to hide */
+    opacity: 0;
+    pointer-events: none;
+}
+
+.audio-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-color);
+}
+
+.audio-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.audio-info span:first-child {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.audio-info span:last-child {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.close-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-secondary);
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.close-icon:hover {
+    background: #f1f3f4;
+    color: var(--text-color);
+}
+
+/* Theme Toggle */
+.theme-switch-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.theme-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}

@@ -1,0 +1,69 @@
+/* Header */
+.main-header {
+    position: relative;
+    /* Classic positioning */
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 100;
+    background: var(--header-bg);
+    /* Opaque */
+    border-bottom: 1px solid var(--header-border);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    mix-blend-mode: screen;
+    /* Hides black background */
+}
+
+.brand-name {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-color);
+    /* Dynamic text color */
+    letter-spacing: 0.5px;
+    /* Removed text-shadow for clean custom theme look */
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    /* Dynamic text color */
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 0.8rem;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--primary-color);
+}
+
+.nav-btn.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: 0;
+    /* Square usage for active tab indicator */
+}

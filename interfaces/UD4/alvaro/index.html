@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiArma Digital Art - Portfolio Interactivo</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="header-content container">
+            <a href="#" class="logo-link">
+                <img src="assets/images/logo.svg" alt="MiArma Digital Art Logo" class="site-logo">
+                <h1>MiArma Digital Art</h1>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <img src="assets/images/hero.jpg" alt="Paisaje marciano futurista" class="hero-image">
+                <div class="hero-text-overlay">
+                    <h2>Bienvenido al Cosmos de MiArma</h2>
+                    <p>Arte digital y diseño de ficción</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <h2>Galería de Trabajos</h2>
+                
+                <div class="gallery-viewer">
+                    <img id="main-gallery-image" src="assets/images/full-1.jpg" alt="Imagen principal: Explorador espacial en cueva roja" class="main-image">
+                </div>
+                
+                <div class="thumbnails">
+                    <img class="thumbnail" tabindex="0" src="assets/images/thumb-1.jpg" data-full-img="assets/images/full-1.jpg" alt="Miniatura: Explorador en cueva" title="Ver Explorador en cueva">
+                    <img class="thumbnail" tabindex="0" src="assets/images/thumb-2.jpg" data-full-img="assets/images/full-2.jpg" alt="Miniatura: Astronauta plateado en Marte" title="Ver Astronauta plateado">
+                    <img class="thumbnail" tabindex="0" src="assets/images/thumb-3.jpg" data-full-img="assets/images/full-3.jpg" alt="Miniatura: Robot Rover en el desierto" title="Ver Robot Rover">
+                </div>
+            </div>
+        </section>
+
+        <section id="video-audio" class="video-audio-section">
+            <div class="container">
+                <h2>Vídeo y Audio</h2>
+                <div class="video-controls">
+                    
+                    <button id="view-reel-button" class="action-button">Ver Reel</button>
+                    <img src="assets/images/contact-button.gif" alt="Icono de flecha animada para el botón" class="animated-icon">
+                    <span>Estelas de estrellas sobre paisaje marciano</span>
+                </div>
+                
+                <audio src="assets/audio/ambiente.mp3" controls loop class="ambient-audio"></audio>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 MiArma Digital Art. Derechos reservados.</p>
+            <div class="footer-legal">
+                <img src="assets/images/logoCC.svg" alt="Licencia Creative Commons Atribución No Comercial" class="cc-icon"> 
+                <p>Licencia de mi obra: <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.es" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a></p>
+                <a href="credits.html" class="credits-link">Créditos y Atribuciones</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" tabindex="0">&times;</span>
+            <video id="reel-video" controls src="assets/video/reel.mp4" class="modal-video"></video>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

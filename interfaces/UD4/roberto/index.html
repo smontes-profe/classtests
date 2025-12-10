@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiArma - Artista Digital</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.png" alt="MiArma Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#gallery">Galería</a></li>
+                    <li><a href="#reel">Showreel</a></li>
+                    <li><a href="credits.html">Créditos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <img src="assets/images/img1.jpg" alt="Paisaje futurista" class="hero-bg">
+            <div class="hero-content">
+                <h1>MiArma</h1>
+                <p>Explorando nuevos mundos digitales</p>
+                <a href="#contact" class="btn-contact">Contacto</a>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2>Galería de Trabajos</h2>
+                <div class="gallery-viewer">
+                    <img id="main-image" src="assets/images/img3.png" alt="Obra destacada 1">
+                </div>
+                <div class="gallery-thumbnails">
+                    <img src="assets/images/img3.png" alt="Miniatura 1" data-full="assets/images/img3.png"
+                        class="active">
+                    <img src="assets/images/img4.jpg" alt="Miniatura 2" data-full="assets/images/img4.jpg">
+                    <img src="assets/images/img5.jpg" alt="Miniatura 3" data-full="assets/images/img5.jpg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Audio Section -->
+        <section id="audio" class="audio">
+            <div class="container">
+                <h2>Ambiente Sonoro</h2>
+                <p>Escucha el audio.</p>
+                <audio controls>
+                    <source src="assets/audio/ambience.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </section>
+
+        <!-- Reel Section -->
+        <section id="reel" class="reel">
+            <div class="container">
+                <h2>Showreel 2025</h2>
+                <p>Una breve muestra de mis animaciones.</p>
+                <button id="open-modal" class="btn-primary">Ver Reel</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="license-info">
+                <p>
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                        <img alt="Licencia de Creative Commons" style="border-width:0"
+                            src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+                    </a><br />
+                    Esta obra de <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">MiArma
+                        Portfolio</span> está bajo una <a rel="license"
+                        href="http://creativecommons.org/licenses/by-nc/4.0/">Licencia Creative Commons
+                        Atribución-NoComercial 4.0 Internacional</a>.
+                </p>
+            </div>
+            <div class="credits-link">
+                <a href="credits.html">Créditos y Licencias</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video controls id="modal-video">
+                <source src="assets/video/reel.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

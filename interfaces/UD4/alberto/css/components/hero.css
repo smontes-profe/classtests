@@ -1,0 +1,57 @@
+/* Gallery View Grid */
+#gallery-view {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - var(--header-height));
+    /* Fixed height matching viewport minus header */
+    padding: var(--gap-size);
+    gap: var(--gap-size);
+}
+
+.hero-wrapper {
+    flex: 3;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+}
+
+.hero-display {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: none;
+    border: 1px solid var(--border-color);
+}
+
+#main-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+    color: white;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+.hero-overlay p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+}

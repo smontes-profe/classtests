@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MiArma - Landing</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Interactiva</title>
+  <link rel="icon" href="./ASSESTS/IMG/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <img src="./ASSESTS/IMG/logo.png" alt="Logo MiArma" class="logo">
+
+      <nav class="main-nav">
+        <a href="#gallery">Galería</a>
+        <a href="#video">Vídeo</a>
+        <a href="#audio">Audio</a>
+        <a href="creditos.html">Créditos</a>
+      </nav>
+    </div>
+
+    <section class="hero">
+      <img src="./ASSESTS/IMG/hero.jpg" alt="Paisaje futurista por MiArma" class="hero-img">
+      <div class="hero-overlay">
+        <p id="miarma">MiArma</p>
+        <p>Paisajes de ciencia ficción — Entornos extraños — Sensaciones nuevas</p>
+        <a href="#gallery" class="btn primary">Explorar trabajos</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+
+    <section id="video" class="audio">
+      <h2>Vídeo</h2>
+      <div id="videoModal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+
+        <div class="modal-content" role="dialog" aria-modal="true" aria-label="Reel de MiArma">
+          <button class="modal-close" id="closeModal">Cerrar</button>
+
+          <video id="modalVideo" controls preload="metadata" width="800">
+            <source src="ASSESTS/VIDEO/VideoEspacialAolenchic.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de vídeo.
+          </video>
+        </div>
+      </div>
+      <button id="reelBtnInline" class="btn">Ver vídeo</button>
+    </section>
+
+    <section>
+      <img id="mi-gif" src="ASSESTS/VIDEO/Gif.gif" alt="">
+    </section>
+
+    <section id="gallery" class="gallery container">
+      <h2>Galería</h2>
+      <div class="viewer">
+        <img id="mainImage" src="ASSESTS/IMG/galeriamainAutorYUSUFP.jpg" alt="Obra principal de la galería">
+      </div>
+      <div class="miniaturas">
+        <button class="miniat">
+          <img src="ASSESTS/IMG/pachoninmotiongaleria1.jpg" alt="Miniatura 1">
+        </button>
+        <button class="miniat">
+          <img src="ASSESTS/IMG/Davivyugaleria2.jpg" alt="Miniatura 2">
+        </button>
+        <button class="miniat">
+          <img src="ASSESTS/IMG/Gemini_Generated_Image_pk9tm1pk9tm1pk9t.png" alt="Miniatura 3">
+        </button>
+        <button class="miniat">
+          <img src="ASSESTS/IMG/Gemini_Generated_Image_pk9tm1pk9tm1pk9t (1).png" alt="Miniatura 4">
+        </button>
+        <button class="miniat">
+          <img src="ASSESTS/IMG/galeriamainAutorYUSUFP.jpg" alt="Miniatura 5">
+        </button>
+      </div>
+
+      <section id="audio" class="audio">
+        <h2>Audio</h2>
+        <div class="caja">
+          <audio src="./ASSESTS/VIDEO/AudioAmbiental.mp3" controls></audio>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> MiArma</p>
+      <p><a href="creditos.html">Créditos y Licencias</a></p>
+      <p class="license">
+        <img src="ASSESTS/IMG/Cc-by-nc-sa_icon.svg.png" alt="Licencia CC BY-NC-SA">
+        <span>Licencia: CC BY-NC-SA 4.0</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
+
+
